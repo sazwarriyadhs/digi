@@ -10,10 +10,36 @@ export const translations = {
             { href: "/#contact", label: "Kontak" },
         ],
         hero: {
-            title: "Solusi Media Digital Inovatif",
-            subtitle: "Kami menciptakan pengalaman digital yang indah, efektif, dan berpusat pada pengguna yang membantu merek Anda tumbuh dan berhasil di dunia modern.",
-            cta1: "Hubungi Kami",
-            cta2: "Karya Kami",
+            slides: [
+                {
+                    badge: "Pengembangan",
+                    title: "Pengembangan Aplikasi & Sistem Kustom",
+                    description: "Membangun solusi web dan mobile yang tangguh yang disesuaikan dengan kebutuhan unik Anda.",
+                    cta1: "Lihat Layanan",
+                    cta2: "Hubungi Kami"
+                },
+                {
+                    badge: "Infrastruktur",
+                    title: "Layanan Cloud & DevOps Modern",
+                    description: "Mengoptimalkan infrastruktur Anda untuk skalabilitas, keandalan, dan efisiensi.",
+                    cta1: "Lihat Layanan",
+                    cta2: "Hubungi Kami"
+                },
+                {
+                    badge: "Keamanan",
+                    title: "Konsultasi Keamanan Siber Proaktif",
+                    description: "Melindungi aset digital Anda dengan audit keamanan dan strategi mitigasi risiko yang komprehensif.",
+                    cta1: "Lihat Layanan",
+                    cta2: "Hubungi Kami"
+                },
+                {
+                    badge: "Strategi",
+                    title: "Konsultasi Strategi TI yang Andal",
+                    description: "Menyelaraskan teknologi dengan tujuan bisnis Anda untuk mendorong pertumbuhan dan inovasi.",
+                    cta1: "Lihat Layanan",
+                    cta2: "Hubungi Kami"
+                }
+            ]
         },
         about: {
             badge: "Tentang Kami",
@@ -114,10 +140,36 @@ export const translations = {
             { href: "/#contact", label: "Contact" },
         ],
         hero: {
-            title: "Innovative Digital Media Solutions",
-            subtitle: "We craft beautiful, effective, and user-centric digital experiences that help your brand grow and succeed in the modern world.",
-            cta1: "Get in Touch",
-            cta2: "Our Work",
+            slides: [
+                {
+                    badge: "Development",
+                    title: "Custom Application & System Development",
+                    description: "Building robust web and mobile solutions tailored to your unique needs.",
+                    cta1: "View Services",
+                    cta2: "Contact Us"
+                },
+                {
+                    badge: "Infrastructure",
+                    title: "Modern Cloud & DevOps Services",
+                    description: "Optimizing your infrastructure for scalability, reliability, and efficiency.",
+                    cta1: "View Services",
+                    cta2: "Contact Us"
+                },
+                {
+                    badge: "Security",
+                    title: "Proactive Cybersecurity Consulting",
+                    description: "Safeguarding your digital assets with comprehensive security audits and risk mitigation strategies.",
+                    cta1: "View Services",
+                    cta2: "Contact Us"
+                },
+                {
+                    badge: "Strategy",
+                    title: "Reliable IT Strategy Consulting",
+                    description: "Aligning technology with your business objectives to drive growth and innovation.",
+                    cta1: "View Services",
+                    cta2: "Contact Us"
+                }
+            ]
         },
         about: {
             badge: "About Us",
