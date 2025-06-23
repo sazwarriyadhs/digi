@@ -26,8 +26,8 @@ Follow these steps to get the project running on your local machine.
 First, clone the repository to your local machine:
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-directory>
+git clone https://github.com/your-username/your-repository-name.git
+cd your-repository-name
 ```
 
 ### 2. Install Dependencies
@@ -85,7 +85,7 @@ You can deploy this Next.js application to any hosting provider that supports No
 
 - **Vercel (Recommended):** As the creators of Next.js, Vercel provides the most seamless deployment experience. Simply connect your Git repository, and Vercel will handle the build and deployment process automatically.
 - **Other Providers (Netlify, AWS Amplify, etc.):** Most modern hosting platforms have built-in support for Next.js. The setup is typically similar to Vercel.
-- **Custom Node.js Server:** You can host the application on a traditional VPS or server.
+- **Custom Node.js Server:** You can host the application on a traditional VPS or server, as you are doing.
 
 ### 2. Configure Environment Variables on the Server
 
@@ -112,9 +112,11 @@ It's highly recommended to use a process manager like [PM2](https://pm2.keymetri
 npm install pm2 -g
 
 # Start the application with PM2
-pm2 start npm --name "digi-media-app" -- start
+pm2 start npm --name "digimediakomunika-app" -- start
 ```
 
 ### 4. Domain and SSL
 
 Finally, configure your custom domain to point to your hosting provider's server IP or CNAME record, and ensure you have an SSL certificate installed for HTTPS. Most modern providers handle SSL automatically.
+
+For your setup, you would configure your domain `digimediakomunika.cloud` to point to your server's IP address, which is `103.247.11.222`.
