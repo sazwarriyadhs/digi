@@ -20,20 +20,21 @@ export function PortfolioSection() {
         </div>
         <div className="mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mt-12">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+            <Card key={index} className="overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 flex flex-col">
               <Image
                 src={item.imageUrl}
-                alt={item[language].title}
+                alt={item[language].project}
                 width={600}
                 height={400}
                 className="w-full h-60 object-cover"
                 data-ai-hint={item.aiHint}
               />
               <CardHeader>
-                <CardTitle>{item[language].title}</CardTitle>
+                <CardDescription className="font-semibold">{item[language].client}</CardDescription>
+                <CardTitle>{item[language].project}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription>{item[language].description}</CardDescription>
+              <CardContent className="flex-grow">
+                 <p className="text-sm text-muted-foreground">{item[language].details}</p>
               </CardContent>
             </Card>
           ))}

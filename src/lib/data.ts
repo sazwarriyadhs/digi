@@ -150,27 +150,59 @@ export const packages = [
 
 export const portfolioItems = [
     {
-      id: { title: "Desain Ulang Platform E-commerce", description: "Perombakan total toko online klien, menghasilkan peningkatan konversi sebesar 40%." },
-      en: { title: "E-commerce Platform Redesign", description: "A complete overhaul of a client's online store, resulting in a 40% increase in conversions." },
-      imageUrl: "https://placehold.co/600x400.png",
-      aiHint: "modern ecommerce website",
+        id: {
+            client: "Bank Nusantara",
+            project: "Implementasi Sistem CRM berbasis Web",
+            details: "Kami membangun sistem CRM kustom yang terintegrasi dengan call center dan live chat, serta menyediakan dashboard analitik real-time untuk 100+ CS. Hasilnya, efisiensi layanan pelanggan meningkat sebesar 40%."
+        },
+        en: {
+            client: "Bank Nusantara",
+            project: "Web-based CRM System Implementation",
+            details: "We built a custom CRM system integrated with the call center and live chat, and provided a real-time analytics dashboard for 100+ customer service agents, increasing service efficiency by 40%."
+        },
+        imageUrl: "https://placehold.co/600x400.png",
+        aiHint: "crm dashboard",
     },
     {
-      id: { title: "Branding Korporat untuk Startup Teknologi", description: "Mengembangkan identitas merek baru yang memposisikan startup baru sebagai pemain utama di bidang AI." },
-      en: { title: "Corporate Branding for Tech Startup", description: "Developed a fresh brand identity that positioned a new startup as a major player in the AI space." },
-      imageUrl: "https://placehold.co/600x400.png",
-      aiHint: "technology brand logo",
+        id: {
+            client: "PT Astra Tech",
+            project: "Migrasi Infrastruktur ke AWS Cloud",
+            details: "Kami membantu migrasi 20+ microservices ke AWS dengan arsitektur serverless dan sistem monitoring otomatis (Grafana + Prometheus), yang berhasil mengurangi downtime sistem hingga 95%."
+        },
+        en: {
+            client: "PT Astra Tech",
+            project: "Infrastructure Migration to AWS Cloud",
+            details: "We assisted in migrating 20+ microservices to AWS with a serverless architecture and automated monitoring (Grafana + Prometheus), reducing system downtime by up to 95%."
+        },
+        imageUrl: "https://placehold.co/600x400.png",
+        aiHint: "cloud infrastructure",
     },
     {
-      id: { title: "Aplikasi Seluler untuk Kesehatan & Kebugaran", description: "Merancang dan mengembangkan aplikasi seluler intuitif untuk melacak tujuan kebugaran dan nutrisi." },
-      en: { title: "Mobile App for Health & Wellness", description: "Designed and developed an intuitive mobile app for tracking fitness goals and nutrition." },
-      imageUrl: "https://placehold.co/600x400.png",
-      aiHint: "fitness app interface",
+        id: {
+            client: "Universitas Digital Indonesia",
+            project: "Pengembangan Sistem Akademik Online",
+            details: "Platform ini terintegrasi dengan SSO, memiliki fitur jadwal otomatis, ekspor PDF, dan notifikasi via email/SMS, yang mengotomatisasi proses KRS & nilai untuk 10.000+ mahasiswa."
+        },
+        en: {
+            client: "Digital University of Indonesia",
+            project: "Online Academic System Development",
+            details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over 10,000 students."
+        },
+        imageUrl: "https://placehold.co/600x400.png",
+        aiHint: "university portal",
     },
-     {
-      id: { title: "Kampanye SEO untuk Bisnis Lokal", description: "Menjalankan strategi SEO yang sukses yang menempatkan bisnis lokal di peringkat #1 untuk kata kunci pencarian utama." },
-      en: { title: "SEO Campaign for Local Business", description: "Executed a successful SEO strategy that ranked a local business #1 for key search terms." },
-      imageUrl: "https://placehold.co/600x400.png",
-      aiHint: "analytics dashboard graph",
-    },
-  ];
+    {
+        id: {
+            client: "RS Sehat Sentosa",
+            project: "Audit Keamanan Sistem Informasi",
+            details: "Audit dilakukan pada sistem SIMRS dan server internal, dilengkapi laporan teknis dan SOP penanganan insiden, berhasil mengidentifikasi dan menutup 13 celah keamanan kritikal."
+        },
+        en: {
+            client: "Sehat Sentosa Hospital",
+            project: "Information System Security Audit",
+            details: "The audit was conducted on the hospital's information system and internal servers, including a technical report and incident handling SOPs, successfully identifying and closing 13 critical security vulnerabilities."
+        },
+        imageUrl: "https://placehold.co/600x400.png",
+        aiHint: "security audit",
+    }
+];
