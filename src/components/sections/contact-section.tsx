@@ -11,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useAppContext } from "@/context/AppContext";
+import Image from "next/image";
 
 export function ContactSection() {
   const { t } = useAppContext();
@@ -57,7 +58,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold">{t('contact.phoneTitle')}</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">{t('contact.phoneText')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -66,19 +67,36 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold">{t('contact.emailTitle')}</h3>
-                  <p className="text-muted-foreground">hello@digimediakom.com</p>
+                  <p className="text-muted-foreground">{t('contact.emailText')}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-start gap-4">
                 <div className="p-3 bg-muted rounded-full">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold">{t('contact.addressTitle')}</h3>
-                  <p className="text-muted-foreground">123 Innovation Drive, Tech City, 12345</p>
+                  <p className="text-muted-foreground">{t('contact.addressText')}</p>
                 </div>
               </div>
             </div>
+             <Card className="mt-8">
+                <CardHeader>
+                    <CardTitle>{t('contact.mapTitle')}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <div className="aspect-video w-full rounded-lg overflow-hidden border">
+                    <Image
+                        src="https://placehold.co/600x400.png"
+                        alt={t('contact.mapAlt')}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover"
+                        data-ai-hint="city map"
+                    />
+                    </div>
+                </CardContent>
+            </Card>
           </div>
           <Card>
             <CardHeader>
