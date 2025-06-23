@@ -1,8 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { Mountain } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
+import { Logo } from '../logo';
 
 export function Footer() {
   const { t } = useAppContext();
@@ -10,11 +10,10 @@ export function Footer() {
   return (
     <footer className="bg-muted py-8">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between">
-        <div className="flex items-center gap-2 mb-4 md:mb-0">
-          <Mountain className="h-6 w-6 text-primary" />
-          <span className="font-semibold">{t('companyName')}</span>
+        <div className="flex items-center mb-4 md:mb-0">
+          <Logo />
         </div>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground text-center md:text-left">
           © {new Date().getFullYear()} {t('companyName')}. {t('footer.rights')}
         </p>
         <div className="flex gap-4 mt-4 md:mt-0">

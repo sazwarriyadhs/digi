@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Mountain } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useAppContext } from "@/context/AppContext";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import { Logo } from "../logo";
 
 export function Header() {
   const { language, setLanguage, currency, setCurrency, t } = useAppContext();
@@ -14,9 +15,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <Link href="/" className="mr-6 flex items-center gap-2">
-          <Mountain className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">{t('companyName')}</span>
+        <Link href="/" className="mr-6 flex items-center">
+          <Logo />
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm">
           {navLinks.map((link: { href: string; label: string }) => (
@@ -55,9 +55,8 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <Link href="/" className="mr-6 flex items-center gap-2 mb-6">
-                  <Mountain className="h-6 w-6 text-primary" />
-                  <span className="font-bold">{t('companyName')}</span>
+                <Link href="/" className="mr-6 flex items-center mb-6">
+                  <Logo />
                 </Link>
                 <nav className="flex flex-col gap-4 mb-6">
                   {navLinks.map((link: { href: string; label: string }) => (

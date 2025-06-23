@@ -1,6 +1,6 @@
 export const translations = {
     id: {
-        companyName: "Digi Media Komunika",
+        companyName: "PT Digi Media Komunika",
         navLinks: [
             { href: "/#about", label: "Tentang" },
             { href: "/#services", label: "Layanan" },
@@ -138,7 +138,7 @@ export const translations = {
         },
     },
     en: {
-        companyName: "Digi Media Komunika",
+        companyName: "PT Digi Media Komunika",
         navLinks: [
             { href: "/#about", label: "About" },
             { href: "/#services", label: "Services" },
