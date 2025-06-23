@@ -6,7 +6,7 @@ export const translations = {
             { href: "/#services", label: "Layanan" },
             { href: "/#portfolio", label: "Portofolio" },
             { href: "/#faq", label: "FAQ" },
-            { href: "/demo/map", label: "Demo" },
+            { href: "/demo", label: "Demo" },
             { href: "/#contact", label: "Kontak" },
         ],
         hero: {
@@ -90,7 +90,13 @@ export const translations = {
             rights: "Semua hak dilindungi undang-undang.",
             privacy: "Kebijakan Privasi",
             terms: "Ketentuan Layanan",
-        }
+        },
+        demo: {
+            badge: "Galeri Demo",
+            title: "Galeri Demo Interaktif",
+            description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
+            viewDemo: "Lihat Demo"
+        },
     },
     en: {
         companyName: "Digi Media Komunika",
@@ -99,7 +105,7 @@ export const translations = {
             { href: "/#services", label: "Services" },
             { href: "/#portfolio", label: "Portfolio" },
             { href: "/#faq", label: "FAQ" },
-            { href: "/demo/map", label: "Demo" },
+            { href: "/demo", label: "Demo" },
             { href: "/#contact", label: "Contact" },
         ],
         hero: {
@@ -183,7 +189,13 @@ export const translations = {
             rights: "All rights reserved.",
             privacy: "Privacy Policy",
             terms: "Terms of Service",
-        }
+        },
+        demo: {
+            badge: "Demo Gallery",
+            title: "Interactive Demo Gallery",
+            description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
+            viewDemo: "View Demo"
+        },
     }
 }
 

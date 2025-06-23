@@ -206,3 +206,42 @@ export const portfolioItems = [
         aiHint: "security audit",
     }
 ];
+
+export const demoItems = [
+    {
+        href: "/demo/crm",
+        aiHint: "crm dashboard analytics",
+        id: {
+            name: "Sistem CRM Bank Nusantara",
+            description: "Demo aplikasi CRM untuk manajemen pelanggan, live chat, dan analitik."
+        },
+        en: {
+            name: "Bank Nusantara CRM System",
+            description: "Demo of a CRM application for customer management, live chat, and analytics."
+        }
+    },
+    {
+        href: "/demo/akademik",
+        aiHint: "student dashboard portal",
+        id: {
+            name: "Dashboard Akademik Mahasiswa",
+            description: "Platform akademik online dengan fitur KRS, jadwal, dan nilai."
+        },
+        en: {
+            name: "Student Academic Dashboard",
+            description: "Online academic platform with features for study plans, schedules, and grades."
+        }
+    },
+    {
+        href: "/demo/devops",
+        aiHint: "cloud monitoring dashboard",
+        id: {
+            name: "Monitoring Infrastruktur AWS",
+            description: "Demo real-time dashboard monitoring cloud server dan pipeline CI/CD."
+        },
+        en: {
+            name: "AWS Infrastructure Monitoring",
+            description: "Demo of a real-time dashboard for monitoring cloud servers and CI/CD pipelines."
+        }
+    }
+];
