@@ -42,16 +42,29 @@ yarn install
 
 ### 3. Set Up Environment Variables
 
-This project uses Genkit to connect to the Google AI platform. You will need a Google AI API key.
+This project uses environment variables for configuration. You'll need to set them up for the AI features and database connection.
 
-1.  Create a new file named `.env.local` in the root of your project.
-2.  Copy the contents of `.env.template` into your new `.env.local` file.
-3.  Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
-4.  Replace the placeholder in `.env.local` with your actual key:
+1.  This repository includes a file named `.env.template`. Make a copy of this file and rename it to `.env.local`.
+
+    ```bash
+    cp .env.template .env.local
+    ```
+
+2.  Update the `.env.local` file with your credentials:
+
+    -   **`GOOGLE_API_KEY`**: Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey). This is required for the FAQ section to work.
+    -   **`DATABASE_URL`**: Set this to the connection string for your PostgreSQL database. The default format is `postgresql://[user]:[password]@[host]:[port]/[database]`.
+
+    Your `.env.local` file should look something like this:
 
     ```
     # .env.local
+
+    # Genkit/Google AI API Key
     GOOGLE_API_KEY=your_google_api_key_here
+
+    # Database Connection URL
+    DATABASE_URL="postgresql://postgres:postgres@localhost:5432/digimed"
     ```
     **Note:** The `.env.local` file is included in `.gitignore` and should never be committed to your version control system.
 
@@ -93,8 +106,10 @@ On your hosting provider's dashboard, you must set the same environment variable
 
 -   **Variable:** `GOOGLE_API_KEY`
 -   **Value:** `your_google_api_key_here`
+-   **Variable:** `DATABASE_URL`
+-   **Value:** `your_production_database_url`
 
-This is a critical step. The application will not be able to connect to the AI services without this key.
+This is a critical step. The application will not be able to connect to the AI services or database without these keys.
 
 ### 3. Build and Start the Application
 
