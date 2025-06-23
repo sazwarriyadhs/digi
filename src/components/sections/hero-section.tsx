@@ -36,11 +36,11 @@ export function HeroSection() {
             <CarouselItem key={index}>
               <div className="relative h-[600px] md:h-[700px] w-full">
                 <Image
-                  src="https://placehold.co/1920x1080.png"
+                  src={slide.image}
                   alt={slide.title}
                   fill
                   className="object-cover"
-                  data-ai-hint="code programming"
+                  data-ai-hint={slide.aiHint}
                   priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-black/60" />

@@ -11,7 +11,7 @@ interface AppContextType {
   setLanguage: (language: Language) => void;
   currency: Currency;
   setCurrency: (currency: Currency) => void;
-  t: (key: keyof Translation['id']) => any;
+  t: (key: string) => any;
   formatCurrency: (amountIDR: number) => string;
 }
 
@@ -23,8 +23,34 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('id');
   const [currency, setCurrency] = useState<Currency>('IDR');
 
-  const t = (key: keyof Translation['id']) => {
-    return translations[language][key] || key;
+  const t = (key: string): any => {
+    const keys = key.split('.');
+    
+    const getValue = (langObj: any, keyParts: string[]) => {
+        let result = langObj;
+        for (const part of keyParts) {
+            if (result && typeof result === 'object' && part in result) {
+                result = result[part];
+            } else {
+                return undefined;
+            }
+        }
+        return result;
+    }
+
+    let value = getValue(translations[language], keys);
+    if (value !== undefined) {
+        return value;
+    }
+
+    if (language !== 'en') {
+        value = getValue(translations['en'], keys);
+        if (value !== undefined) {
+            return value;
+        }
+    }
+    
+    return undefined;
   };
 
   const formatCurrency = (amountIDR: number) => {

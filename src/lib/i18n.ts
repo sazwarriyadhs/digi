@@ -16,28 +16,36 @@ export const translations = {
                     title: "Pengembangan Aplikasi & Sistem Kustom",
                     description: "Membangun solusi web dan mobile yang tangguh yang disesuaikan dengan kebutuhan unik Anda.",
                     cta1: "Lihat Layanan",
-                    cta2: "Hubungi Kami"
+                    cta2: "Hubungi Kami",
+                    image: "https://placehold.co/1920x1080.png",
+                    aiHint: "code programming"
                 },
                 {
                     badge: "Infrastruktur",
                     title: "Layanan Cloud & DevOps Modern",
                     description: "Mengoptimalkan infrastruktur Anda untuk skalabilitas, keandalan, dan efisiensi.",
                     cta1: "Lihat Layanan",
-                    cta2: "Hubungi Kami"
+                    cta2: "Hubungi Kami",
+                    image: "https://placehold.co/1920x1080.png",
+                    aiHint: "server room"
                 },
                 {
                     badge: "Keamanan",
                     title: "Konsultasi Keamanan Siber Proaktif",
                     description: "Melindungi aset digital Anda dengan audit keamanan dan strategi mitigasi risiko yang komprehensif.",
                     cta1: "Lihat Layanan",
-                    cta2: "Hubungi Kami"
+                    cta2: "Hubungi Kami",
+                    image: "https://storage.googleapis.com/project-os-prod/images/425a86d2-7c30-4e09-8472-3518a221f7ed.png",
+                    aiHint: "cyber security"
                 },
                 {
                     badge: "Strategi",
                     title: "Konsultasi Strategi TI yang Andal",
                     description: "Menyelaraskan teknologi dengan tujuan bisnis Anda untuk mendorong pertumbuhan dan inovasi.",
                     cta1: "Lihat Layanan",
-                    cta2: "Hubungi Kami"
+                    cta2: "Hubungi Kami",
+                    image: "https://placehold.co/1920x1080.png",
+                    aiHint: "business strategy"
                 }
             ]
         },
@@ -146,28 +154,36 @@ export const translations = {
                     title: "Custom Application & System Development",
                     description: "Building robust web and mobile solutions tailored to your unique needs.",
                     cta1: "View Services",
-                    cta2: "Contact Us"
+                    cta2: "Contact Us",
+                    image: "https://placehold.co/1920x1080.png",
+                    aiHint: "code programming"
                 },
                 {
                     badge: "Infrastructure",
                     title: "Modern Cloud & DevOps Services",
                     description: "Optimizing your infrastructure for scalability, reliability, and efficiency.",
                     cta1: "View Services",
-                    cta2: "Contact Us"
+                    cta2: "Contact Us",
+                    image: "https://placehold.co/1920x1080.png",
+                    aiHint: "server room"
                 },
                 {
                     badge: "Security",
                     title: "Proactive Cybersecurity Consulting",
                     description: "Safeguarding your digital assets with comprehensive security audits and risk mitigation strategies.",
                     cta1: "View Services",
-                    cta2: "Contact Us"
+                    cta2: "Contact Us",
+                    image: "https://storage.googleapis.com/project-os-prod/images/425a86d2-7c30-4e09-8472-3518a221f7ed.png",
+                    aiHint: "cyber security"
                 },
                 {
                     badge: "Strategy",
                     title: "Reliable IT Strategy Consulting",
                     description: "Aligning technology with your business objectives to drive growth and innovation.",
                     cta1: "View Services",
-                    cta2: "Contact Us"
+                    cta2: "Contact Us",
+                    image: "https://placehold.co/1920x1080.png",
+                    aiHint: "business strategy"
                 }
             ]
         },

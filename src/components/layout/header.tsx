@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 
 export function Header() {
   const { language, setLanguage, currency, setCurrency, t } = useAppContext();
-  const navLinks = t("navLinks");
+  const navLinks = t("navLinks") || [];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -36,7 +36,7 @@ export function Header() {
                 <SelectItem value="en">EN</SelectItem>
               </SelectContent>
             </Select>
-            <Select value={currency} onValueChange={(value) => setCurrency(value as 'id' | 'USD')}>
+            <Select value={currency} onValueChange={(value) => setCurrency(value as 'IDR' | 'USD')}>
               <SelectTrigger className="w-[80px] h-9">
                 <SelectValue />
               </SelectTrigger>
@@ -76,7 +76,7 @@ export function Header() {
                       <SelectItem value="en">English</SelectItem>
                     </SelectContent>
                   </Select>
-                  <Select value={currency} onValueChange={(value) => setCurrency(value as 'id' | 'USD')}>
+                  <Select value={currency} onValueChange={(value) => setCurrency(value as 'IDR' | 'USD')}>
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
