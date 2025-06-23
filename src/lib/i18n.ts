@@ -1,3 +1,4 @@
+
 export const translations = {
     id: {
         companyName: "PT Digi Media Komunika",
@@ -7,6 +8,7 @@ export const translations = {
             { href: "/#portfolio", label: "Portofolio" },
             { href: "/#faq", label: "FAQ" },
             { href: "/demo", label: "Demo" },
+            { href: "/appointment", label: "Jadwalkan Temu" },
             { href: "/#contact", label: "Kontak" },
         ],
         hero: {
@@ -136,6 +138,39 @@ export const translations = {
             description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
             viewDemo: "Lihat Demo"
         },
+        appointment: {
+            badge: "Jadwalkan Temu",
+            title: "Pesan Sesi Konsultasi Anda",
+            description: "Siap untuk membahas proyek Anda? Jadwalkan konsultasi gratis dengan para ahli kami.",
+            form: {
+                title: "Buat Janji Temu",
+                description: "Pilih tanggal dan waktu yang paling sesuai untuk Anda.",
+                name: "Nama Lengkap",
+                namePlaceholder: "Nama Anda",
+                email: "Email",
+                emailPlaceholder: "email.anda@contoh.com",
+                service: "Layanan yang diminati",
+                servicePlaceholder: "Pilih layanan",
+                date: "Tanggal Pilihan",
+                datePlaceholder: "Pilih tanggal",
+                time: "Waktu Pilihan",
+                timePlaceholder: "Pilih waktu",
+                message: "Catatan Tambahan (Opsional)",
+                messagePlaceholder: "Beri tahu kami lebih banyak tentang proyek Anda...",
+                submit: "Jadwalkan Sekarang",
+            },
+            toast: {
+                title: "Janji Temu Dibuat!",
+                description: "Kami telah menerima permintaan Anda dan akan segera menghubungi Anda.",
+            },
+            validation: {
+                name: "Nama diperlukan.",
+                email: "Email yang valid diperlukan.",
+                service: "Silakan pilih layanan.",
+                date: "Tanggal diperlukan.",
+                time: "Waktu diperlukan.",
+            }
+        },
     },
     en: {
         companyName: "PT Digi Media Komunika",
@@ -145,6 +180,7 @@ export const translations = {
             { href: "/#portfolio", label: "Portfolio" },
             { href: "/#faq", label: "FAQ" },
             { href: "/demo", label: "Demo" },
+            { href: "/appointment", label: "Appointment" },
             { href: "/#contact", label: "Contact" },
         ],
         hero: {
@@ -273,6 +309,39 @@ export const translations = {
             title: "Interactive Demo Gallery",
             description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
             viewDemo: "View Demo"
+        },
+        appointment: {
+            badge: "Schedule an Appointment",
+            title: "Book Your Consultation Session",
+            description: "Ready to discuss your project? Schedule a free consultation with our experts.",
+            form: {
+                title: "Book an Appointment",
+                description: "Choose a date and time that works best for you.",
+                name: "Full Name",
+                namePlaceholder: "Your Name",
+                email: "Email",
+                emailPlaceholder: "your.email@example.com",
+                service: "Service of Interest",
+                servicePlaceholder: "Select a service",
+                date: "Preferred Date",
+                datePlaceholder: "Pick a date",
+                time: "Preferred Time",
+                timePlaceholder: "Select a time",
+                message: "Additional Notes (Optional)",
+                messagePlaceholder: "Tell us more about your project...",
+                submit: "Schedule Now",
+            },
+            toast: {
+                title: "Appointment Booked!",
+                description: "We've received your request and will be in touch shortly.",
+            },
+            validation: {
+                name: "Name is required.",
+                email: "A valid email is required.",
+                service: "Please select a service.",
+                date: "A date is required.",
+                time: "A time is required.",
+            }
         },
     }
 }
