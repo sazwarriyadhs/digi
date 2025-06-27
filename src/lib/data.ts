@@ -209,7 +209,7 @@ export const portfolioItems = [
 
 export const demoItems = [
     {
-        href: "https://serenityspawellness.vercel.app/",
+        href: "/demo/spademo",
         aiHint: "spa wellness website",
         id: {
             name: "Serenity Spa & Wellness",
