@@ -4,7 +4,7 @@ import { ServicesSection } from "@/components/sections/services-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { Separator } from "@/components/ui/separator";
-import { DemoLinkSection } from "@/components/sections/demo-link-section";
+import { PortfolioSection } from "@/components/sections/portfolio-section";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Separator className="my-16" />
       <ServicesSection />
       <Separator className="my-16" />
-      <DemoLinkSection />
+      <PortfolioSection />
       <Separator className="my-16" />
       <FaqSection />
       <Separator className="my-16" />

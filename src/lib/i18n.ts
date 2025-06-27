@@ -5,8 +5,8 @@ export const translations = {
         navLinks: [
             { href: "/#about", label: "Tentang" },
             { href: "/#services", label: "Layanan" },
+            { href: "/#portfolio", label: "Portofolio" },
             { href: "/#faq", label: "FAQ" },
-            { href: "/demo", label: "Demo" },
             { href: "/appointment", label: "Jadwalkan Temu" },
             { href: "/#contact", label: "Kontak" },
         ],
@@ -75,9 +75,10 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Portofolio Kami",
-            title: "Sekilas Karya Kami",
-            description: "Kami bangga dengan pekerjaan yang kami lakukan. Berikut adalah beberapa proyek favorit kami yang menunjukkan semangat dan keahlian kami.",
+            badge: "Galeri Demo",
+            title: "Galeri Demo Interaktif",
+            description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
+            cta: "Kunjungi Galeri"
         },
         faq: {
             badge: "FAQ Cerdas",
@@ -137,12 +138,6 @@ export const translations = {
             description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
             viewDemo: "Lihat Demo"
         },
-        demoLink: {
-            badge: "Galeri Demo",
-            title: "Galeri Demo Interaktif",
-            description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
-            cta: "Kunjungi Galeri"
-        },
         appointment: {
             badge: "Jadwalkan Temu",
             title: "Pesan Sesi Konsultasi Anda",
@@ -182,8 +177,8 @@ export const translations = {
         navLinks: [
             { href: "/#about", label: "About" },
             { href: "/#services", label: "Services" },
+            { href: "/#portfolio", label: "Portfolio" },
             { href: "/#faq", label: "FAQ" },
-            { href: "/demo", label: "Demo" },
             { href: "/appointment", label: "Appointment" },
             { href: "/#contact", label: "Contact" },
         ],
@@ -252,9 +247,10 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Our Portfolio",
-            title: "A Glimpse of Our Work",
-            description: "We're proud of the work we do. Here are some of our favorite projects that showcase our passion and expertise.",
+            badge: "Demo Gallery",
+            title: "Interactive Demo Gallery",
+            description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
+            cta: "Visit Gallery"
         },
         faq: {
             badge: "Intelligent FAQ",
@@ -313,12 +309,6 @@ export const translations = {
             title: "Interactive Demo Gallery",
             description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
             viewDemo: "View Demo"
-        },
-        demoLink: {
-            badge: "Demo Gallery",
-            title: "Interactive Demo Gallery",
-            description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
-            cta: "Visit Gallery"
         },
         appointment: {
             badge: "Schedule an Appointment",
