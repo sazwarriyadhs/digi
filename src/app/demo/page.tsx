@@ -26,7 +26,7 @@ export default function DemoPage() {
             {demoItems.map((item, index) => (
                 <Card key={index} className="overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 flex flex-col bg-background">
                 <Image
-                    src="https://placehold.co/600x400.png"
+                    src={item.imageUrl}
                     alt={item[language].name}
                     width={600}
                     height={400}

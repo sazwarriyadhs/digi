@@ -211,6 +211,7 @@ export const demoItems = [
     {
         href: "/demo/spademo",
         aiHint: "spa wellness website",
+        imageUrl: "https://placehold.co/600x400.png",
         id: {
             name: "Serenity Spa & Wellness",
             description: "Demo website untuk Spa & Wellness, menampilkan layanan dan pemesanan online."
@@ -222,7 +223,8 @@ export const demoItems = [
     },
     {
         href: "/demo/akademik",
-        aiHint: "hotel booking website",
+        aiHint: "hotel website",
+        imageUrl: "https://storage.googleapis.com/project-os-prod/images/5e679b33-e5ca-4a00-994c-e87e1a3e9c4f.png",
         id: {
             name: "Hotel Pelangi Website",
             description: "Demo website untuk Hotel Pelangi, menampilkan kamar dan pemesanan online."
@@ -235,6 +237,7 @@ export const demoItems = [
     {
         href: "/demo/devops",
         aiHint: "cloud monitoring dashboard",
+        imageUrl: "https://placehold.co/600x400.png",
         id: {
             name: "Monitoring Infrastruktur AWS",
             description: "Demo real-time dashboard monitoring cloud server dan pipeline CI/CD."
