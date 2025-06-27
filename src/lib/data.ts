@@ -222,14 +222,14 @@ export const demoItems = [
     },
     {
         href: "/demo/akademik",
-        aiHint: "student dashboard portal",
+        aiHint: "hotel booking website",
         id: {
-            name: "Dashboard Akademik Mahasiswa",
-            description: "Platform akademik online dengan fitur KRS, jadwal, dan nilai."
+            name: "Hotel Pelangi Website",
+            description: "Demo website untuk Hotel Pelangi, menampilkan kamar dan pemesanan online."
         },
         en: {
-            name: "Student Academic Dashboard",
-            description: "Online academic platform with features for study plans, schedules, and grades."
+            name: "Hotel Pelangi Website",
+            description: "Demo website for Hotel Pelangi, showcasing rooms and online booking."
         }
     },
     {
