@@ -209,15 +209,15 @@ export const portfolioItems = [
 
 export const demoItems = [
     {
-        href: "/demo/crm",
-        aiHint: "crm dashboard analytics",
+        href: "https://serenityspawellness.vercel.app/",
+        aiHint: "spa wellness website",
         id: {
-            name: "Sistem CRM Bank Nusantara",
-            description: "Demo aplikasi CRM untuk manajemen pelanggan, live chat, dan analitik."
+            name: "Serenity Spa & Wellness",
+            description: "Demo website untuk Spa & Wellness, menampilkan layanan dan pemesanan online."
         },
         en: {
-            name: "Bank Nusantara CRM System",
-            description: "Demo of a CRM application for customer management, live chat, and analytics."
+            name: "Serenity Spa & Wellness",
+            description: "Demo website for a Spa & Wellness center, showcasing services and online booking."
         }
     },
     {

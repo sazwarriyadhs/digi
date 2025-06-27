@@ -39,9 +39,15 @@ export default function DemoPage() {
                 <CardContent className="flex-grow flex flex-col justify-between">
                     <p className="text-sm text-muted-foreground mb-4">{item[language].description}</p>
                     <Button asChild className="mt-auto w-full">
-                    <Link href={item.href}>
-                        {t('demo.viewDemo')} <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                    {item.href.startsWith('http') ? (
+                        <a href={item.href} target="_blank" rel="noopener noreferrer">
+                            {t('demo.viewDemo')} <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                    ) : (
+                        <Link href={item.href}>
+                            {t('demo.viewDemo')} <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    )}
                     </Button>
                 </CardContent>
                 </Card>
