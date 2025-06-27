@@ -19,7 +19,7 @@ export const translations = {
                     description: "Membangun solusi web dan mobile yang tangguh yang disesuaikan dengan kebutuhan unik Anda.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "https://placehold.co/1920x1080.png",
+                    image: "/images/hero1.jpg",
                     aiHint: "code programming"
                 },
                 {
