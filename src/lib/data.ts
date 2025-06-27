@@ -239,11 +239,11 @@ export const demoItems = [
         aiHint: "cloud monitoring dashboard",
         imageUrl: "https://placehold.co/600x400.png",
         id: {
-            name: "Monitoring Infrastruktur AWS",
-            description: "Demo real-time dashboard monitoring cloud server dan pipeline CI/CD."
+            name: "Serenity Watcher",
+            description: "Demo real-time dashboard untuk monitoring cloud server dan pipeline CI/CD."
         },
         en: {
-            name: "AWS Infrastructure Monitoring",
+            name: "Serenity Watcher",
             description: "Demo of a real-time dashboard for monitoring cloud servers and CI/CD pipelines."
         }
     }
