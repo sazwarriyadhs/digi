@@ -14,11 +14,7 @@ const LogoIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export const Logo = () => {
   return (
     <div className="flex items-center gap-2">
-        <LogoIcon className="h-8 w-auto text-primary" />
-        <div className="flex flex-col">
-            <span className="font-bold text-lg leading-tight text-foreground">PT Digi Media Komunika</span>
-            <span className="text-xs text-muted-foreground tracking-wider leading-tight">LET'S DIGITIZE YOURS</span>
-        </div>
+ <img src="/images/logo.png" alt="Logo" className="h-[80px] w-auto" />
     </div>
   );
 };

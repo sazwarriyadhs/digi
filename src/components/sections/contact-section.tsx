@@ -87,12 +87,11 @@ export function ContactSection() {
                 <CardContent>
                     <div className="aspect-video w-full rounded-lg overflow-hidden border">
                     <Image
-                        src="https://placehold.co/600x400.png"
+                        src="/images/kantor.jpg"
                         alt={t('contact.mapAlt')}
                         width={600}
                         height={400}
                         className="w-full h-full object-cover"
-                        data-ai-hint="city map"
                     />
                     </div>
                 </CardContent>
