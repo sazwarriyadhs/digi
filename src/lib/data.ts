@@ -282,7 +282,7 @@ export const teamMembers = [
             role: "Chief Executive Officer",
             bio: "Jean is a visionary with over 15 years of experience in the tech industry, leading the company towards sustainable innovation and growth.",
         },
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "/images/jean.jpeg",
         aiHint: "male portrait business",
         social: {
             linkedin: "https://www.linkedin.com/",
