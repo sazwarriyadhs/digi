@@ -47,7 +47,7 @@ export const translations = {
                     description: "Menyelaraskan teknologi dengan tujuan bisnis Anda untuk mendorong pertumbuhan dan inovasi.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "https://storage.googleapis.com/project-os-prod/images/f3b8b6e6-1e6d-4c3e-9b5a-4e2a3c2d4a1b.png",
+                    image: "/images/hero2.jpg",
                     aiHint: "business strategy"
                 }
             ]

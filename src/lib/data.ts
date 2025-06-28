@@ -181,7 +181,7 @@ export const portfolioItems = [
             project: "Web-based CRM System Implementation",
             details: "We built a custom CRM system integrated with the call center and live chat, and provided a real-time analytics dashboard for 100+ customer service agents, increasing service efficiency by 40%."
         },
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/c2351239-2445-42b7-a3f1-7f41555e56d8.png",
+        imageUrl: "/images/crm.jpg",
         aiHint: "crm dashboard analytics",
     },
     {
@@ -195,7 +195,7 @@ export const portfolioItems = [
             project: "Infrastructure Migration to AWS Cloud",
             details: "We assisted in migrating 20+ microservices to AWS with a serverless architecture and automated monitoring (Grafana + Prometheus), reducing system downtime by up to 95%."
         },
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/4a87a1dc-b852-451d-912f-917223e7d56e.png",
+        imageUrl: "/images/aws.jpg",
         aiHint: "cloud infrastructure diagram",
     },
     {
@@ -209,7 +209,7 @@ export const portfolioItems = [
             project: "Online Academic System Development",
             details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over 10,000 students."
         },
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/f90f6580-1a1a-45fd-991f-17079e9a4c4e.png",
+        imageUrl: "/images/akademik.jpg",
         aiHint: "university student portal",
     },
     {
@@ -223,7 +223,7 @@ export const portfolioItems = [
             project: "Information System Security Audit",
             details: "The audit was conducted on the hospital's information system and internal servers, including a technical report and incident handling SOPs, successfully identifying and closing 13 critical security vulnerabilities."
         },
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/18e5b47a-9ff6-455b-9c24-5d985a1a14ea.png",
+        imageUrl: "/images/cyber.jpg",
         aiHint: "security audit report",
     }
 ];
@@ -232,7 +232,7 @@ export const demoItems = [
     {
         href: "/demo/spademo",
         aiHint: "spa wellness website",
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/5f0d9c4c-3523-4560-9b6f-79883652d3a3.png",
+        imageUrl: "/images/Serenity Spa & Wellness.png",
         id: {
             name: "Serenity Spa & Wellness",
             description: "Demo website untuk Spa & Wellness, menampilkan layanan dan pemesanan online."
@@ -245,7 +245,7 @@ export const demoItems = [
     {
         href: "/demo/akademik",
         aiHint: "hotel website",
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/5e679b33-e5ca-4a00-994c-e87e1a3e9c4f.png",
+        imageUrl: "/images/pelangihotel.png",
         id: {
             name: "Hotel Pelangi Website",
             description: "Demo website untuk Hotel Pelangi, menampilkan kamar dan pemesanan online."
@@ -258,7 +258,7 @@ export const demoItems = [
     {
         href: "/demo/devops",
         aiHint: "cloud monitoring dashboard",
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/2b7e9373-04b7-4b68-b3d1-4b130a08e7e1.png",
+        imageUrl: "/images/serenitywatcher.png",
         id: {
             name: "Serenity Watcher",
             description: "Demo real-time dashboard untuk monitoring cloud server dan pipeline CI/CD."
