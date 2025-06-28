@@ -291,17 +291,17 @@ export const teamMembers = [
     },
     {
         id: {
-            name: "Citra Lestari",
+            name: "Azwar Riyadh",
             role: "Chief Technology Officer",
-            bio: "Citra adalah seorang arsitek teknologi yang ahli dalam membangun solusi skalabel dan aman. Dia memastikan perusahaan tetap di garis depan teknologi.",
+            bio: "Azwar adalah seorang pemimpin teknologi berpengalaman dengan hasrat untuk mendorong inovasi dan membangun tim rekayasa berkinerja tinggi. Ia ahli dalam arsitektur cloud dan integrasi AI.",
         },
         en: {
-            name: "Citra Lestari",
+            name: "Azwar Riyadh",
             role: "Chief Technology Officer",
-            bio: "Citra is a technology architect adept at building scalable and secure solutions. She ensures the company remains at the forefront of technology.",
+            bio: "Azwar is a seasoned technology leader with a passion for driving innovation and building high-performing engineering teams. He is an expert in cloud architecture and AI integration.",
         },
         imageUrl: "https://placehold.co/400x400.png",
-        aiHint: "female portrait business",
+        aiHint: "male portrait tech",
         social: {
             linkedin: "https://www.linkedin.com/",
             twitter: "https://twitter.com/",
