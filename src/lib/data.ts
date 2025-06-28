@@ -273,14 +273,14 @@ export const demoItems = [
 export const teamMembers = [
     {
         id: {
-            name: "Budi Santoso",
+            name: "Jean Philips",
             role: "Chief Executive Officer",
-            bio: "Budi adalah seorang visioner dengan pengalaman lebih dari 15 tahun di industri teknologi, memimpin perusahaan menuju inovasi dan pertumbuhan yang berkelanjutan.",
+            bio: "Jean adalah seorang visioner dengan pengalaman lebih dari 15 tahun di industri teknologi, memimpin perusahaan menuju inovasi dan pertumbuhan yang berkelanjutan.",
         },
         en: {
-            name: "Budi Santoso",
+            name: "Jean Philips",
             role: "Chief Executive Officer",
-            bio: "Budi is a visionary with over 15 years of experience in the tech industry, leading the company towards sustainable innovation and growth.",
+            bio: "Jean is a visionary with over 15 years of experience in the tech industry, leading the company towards sustainable innovation and growth.",
         },
         imageUrl: "https://placehold.co/400x400.png",
         aiHint: "male portrait business",
@@ -300,7 +300,7 @@ export const teamMembers = [
             role: "Chief Technology Officer",
             bio: "Azwar is a seasoned technology leader with a passion for driving innovation and building high-performing engineering teams. He is an expert in cloud architecture and AI integration.",
         },
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "/images/azwar.jpg",
         aiHint: "male portrait tech",
         social: {
             linkedin: "https://www.linkedin.com/",
@@ -345,3 +345,4 @@ export const teamMembers = [
         }
     }
 ];
+
