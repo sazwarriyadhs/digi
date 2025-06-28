@@ -19,7 +19,7 @@ export const translations = {
                     description: "Membangun solusi web dan mobile yang tangguh yang disesuaikan dengan kebutuhan unik Anda.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "https://storage.googleapis.com/project-os-prod/images/8a3a3d5e-5b6c-4c7b-8d1e-2e9a3c4f5b1d.png",
+                    image: "/images/hero1.jpg",
                     aiHint: "code programming"
                 },
                 {
@@ -28,7 +28,7 @@ export const translations = {
                     description: "Mengoptimalkan infrastruktur Anda untuk skalabilitas, keandalan, dan efisiensi.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "https://storage.googleapis.com/project-os-prod/images/5a657c91-9e8c-4a3d-82d2-5a4e5f72e9a5.png",
+                    image: "/images/devops.jpg",
                     aiHint: "server room"
                 },
                 {
@@ -37,7 +37,7 @@ export const translations = {
                     description: "Melindungi aset digital Anda dengan audit keamanan dan strategi mitigasi risiko yang komprehensif.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "https://storage.googleapis.com/project-os-prod/images/425a86d2-7c30-4e09-8472-3518a221f7ed.png",
+                    image: "/images/cyber.jpg",
                     aiHint: "cyber security"
                 },
                 {

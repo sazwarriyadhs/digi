@@ -32,6 +32,7 @@ const prompt = ai.definePrompt({
   name: 'answerFAQPrompt',
   input: {schema: AnswerFAQInputSchema},
   output: {schema: AnswerFAQOutputSchema},
+  model: 'googleai/gemini-1.5-flash-latest',
   prompt: `You are an AI assistant that answers frequently asked questions about a company.  Use the provided company information to answer the question.
 
 Company Information: {{{companyInformation}}}
