@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useAppContext } from "@/context/AppContext";
 import { teamMembers } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, Instagram } from "lucide-react";
 import Link from "next/link";
 
 export default function TeamPage() {
@@ -54,6 +54,13 @@ export default function TeamPage() {
                         <Button asChild variant="ghost" size="icon">
                             <Link href={member.social.github} target="_blank" rel="noopener noreferrer">
                                 <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                            </Link>
+                        </Button>
+                    )}
+                    {member.social.instagram && (
+                        <Button asChild variant="ghost" size="icon">
+                            <Link href={member.social.instagram} target="_blank" rel="noopener noreferrer">
+                                <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary" />
                             </Link>
                         </Button>
                     )}

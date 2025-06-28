@@ -305,6 +305,7 @@ export const teamMembers = [
         social: {
             linkedin: "https://www.linkedin.com/",
             github: "https://github.com/sazwarriyadhs",
+            instagram: "https://www.instagram.com/azwarriyadhs"
         }
     },
     {
