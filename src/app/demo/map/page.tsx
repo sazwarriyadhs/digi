@@ -17,7 +17,7 @@ export default function MapPage() {
         <CardContent>
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <Image
-              src="https://placehold.co/1200x675.png"
+              src="https://storage.googleapis.com/project-os-prod/images/9c339f47-9759-402a-9f50-484d0800e882.png"
               alt="Map of Cimahpar Stoneyard"
               width={1200}
               height={675}

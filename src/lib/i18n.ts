@@ -18,7 +18,7 @@ export const translations = {
                     description: "Membangun solusi web dan mobile yang tangguh yang disesuaikan dengan kebutuhan unik Anda.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "/images/hero1.jpg",
+                    image: "https://storage.googleapis.com/project-os-prod/images/8a3a3d5e-5b6c-4c7b-8d1e-2e9a3c4f5b1d.png",
                     aiHint: "code programming"
                 },
                 {
@@ -27,7 +27,7 @@ export const translations = {
                     description: "Mengoptimalkan infrastruktur Anda untuk skalabilitas, keandalan, dan efisiensi.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "https://placehold.co/1920x1080.png",
+                    image: "https://storage.googleapis.com/project-os-prod/images/5a657c91-9e8c-4a3d-82d2-5a4e5f72e9a5.png",
                     aiHint: "server room"
                 },
                 {
@@ -45,7 +45,7 @@ export const translations = {
                     description: "Menyelaraskan teknologi dengan tujuan bisnis Anda untuk mendorong pertumbuhan dan inovasi.",
                     cta1: "Lihat Layanan",
                     cta2: "Hubungi Kami",
-                    image: "https://placehold.co/1920x1080.png",
+                    image: "https://storage.googleapis.com/project-os-prod/images/f3b8b6e6-1e6d-4c3e-9b5a-4e2a3c2d4a1b.png",
                     aiHint: "business strategy"
                 }
             ]
@@ -196,7 +196,7 @@ export const translations = {
                     description: "Building robust web and mobile solutions tailored to your unique needs.",
                     cta1: "View Services",
                     cta2: "Contact Us",
-                    image: "https://placehold.co/1920x1080.png",
+                    image: "https://storage.googleapis.com/project-os-prod/images/8a3a3d5e-5b6c-4c7b-8d1e-2e9a3c4f5b1d.png",
                     aiHint: "code programming"
                 },
                 {
@@ -205,7 +205,7 @@ export const translations = {
                     description: "Optimizing your infrastructure for scalability, reliability, and efficiency.",
                     cta1: "View Services",
                     cta2: "Contact Us",
-                    image: "https://placehold.co/1920x1080.png",
+                    image: "https://storage.googleapis.com/project-os-prod/images/5a657c91-9e8c-4a3d-82d2-5a4e5f72e9a5.png",
                     aiHint: "server room"
                 },
                 {
@@ -223,7 +223,7 @@ export const translations = {
                     description: "Aligning technology with your business objectives to drive growth and innovation.",
                     cta1: "View Services",
                     cta2: "Contact Us",
-                    image: "https://placehold.co/1920x1080.png",
+                    image: "https://storage.googleapis.com/project-os-prod/images/f3b8b6e6-1e6d-4c3e-9b5a-4e2a3c2d4a1b.png",
                     aiHint: "business strategy"
                 }
             ]

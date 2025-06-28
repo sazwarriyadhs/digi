@@ -17,7 +17,7 @@ export default function CrmDemoPage() {
         <CardContent>
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <Image
-              src="https://placehold.co/1200x675.png"
+              src="https://storage.googleapis.com/project-os-prod/images/c2351239-2445-42b7-a3f1-7f41555e56d8.png"
               alt="Demo CRM"
               width={1200}
               height={675}
