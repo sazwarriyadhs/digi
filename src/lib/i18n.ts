@@ -75,10 +75,10 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Portofolio Kami",
-            title: "Sekilas Karya Kami",
-            description: "Kami bangga dengan pekerjaan yang kami lakukan. Berikut adalah beberapa proyek favorit kami yang menunjukkan semangat dan keahlian kami.",
-            cta: "Lihat Portofolio Lengkap"
+            badge: "Galeri Demo",
+            title: "Galeri Demo Interaktif",
+            description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
+            cta: "Kunjungi Galeri Demo"
         },
         portfolioPage: {
             badge: "Portofolio",
@@ -253,10 +253,10 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Our Portfolio",
-            title: "A Glimpse of Our Work",
-            description: "We take pride in the work we do. Here are some of our favorite projects that showcase our passion and expertise.",
-            cta: "View Full Portfolio"
+            badge: "Demo Gallery",
+            title: "Interactive Demo Gallery",
+            description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
+            cta: "Go to Demo Gallery"
         },
         portfolioPage: {
             badge: "Portfolio",
