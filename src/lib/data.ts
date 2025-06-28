@@ -300,7 +300,7 @@ export const teamMembers = [
             role: "Chief Technology Officer",
             bio: "Azwar is a seasoned technology leader with a passion for driving innovation and building high-performing engineering teams. He is an expert in cloud architecture and AI integration.",
         },
-        imageUrl: "/images/Azwar.jpeg",
+        imageUrl: "/images/azwar.jpg",
         aiHint: "male portrait tech",
         social: {
             linkedin: "https://www.linkedin.com/",
