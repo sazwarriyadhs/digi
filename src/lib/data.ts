@@ -304,7 +304,7 @@ export const teamMembers = [
         aiHint: "male portrait tech",
         social: {
             linkedin: "https://www.linkedin.com/",
-            twitter: "https://twitter.com/",
+            github: "https://github.com/sazwarriyadhs",
         }
     },
     {
