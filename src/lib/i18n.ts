@@ -7,6 +7,7 @@ export const translations = {
             { href: "/#services", label: "Layanan" },
             { href: "/portfolio", label: "Portofolio" },
             { href: "/demo", label: "Demo" },
+            { href: "/team", label: "Tim Ahli" },
             { href: "/ai-help", label: "Bantuan AI" },
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Jadwalkan Temu" },
@@ -87,6 +88,11 @@ export const translations = {
             title: "Portofolio Proyek Kami",
             description: "Lihat beberapa proyek yang telah kami selesaikan dengan sukses untuk klien kami.",
             client: "Klien"
+        },
+        team: {
+            badge: "Tim Kami",
+            title: "Temui Para Ahli Kami",
+            description: "Tim kami terdiri dari para profesional yang bersemangat dan berdedikasi untuk memberikan hasil terbaik."
         },
         faq: {
             badge: "FAQ Cerdas",
@@ -203,6 +209,7 @@ export const translations = {
             { href: "/#services", label: "Services" },
             { href: "/portfolio", label: "Portfolio" },
             { href: "/demo", label: "Demo" },
+            { href: "/team", label: "Our Team" },
             { href: "/ai-help", label: "AI Help" },
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Appointment" },
@@ -283,6 +290,11 @@ export const translations = {
             title: "Our Project Portfolio",
             description: "Check out some of the projects we have successfully completed for our clients.",
             client: "Client"
+        },
+        team: {
+            badge: "Our Team",
+            title: "Meet Our Experts",
+            description: "Our team consists of passionate and dedicated professionals committed to delivering the best results."
         },
         faq: {
             badge: "Intelligent FAQ",

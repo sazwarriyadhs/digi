@@ -269,3 +269,78 @@ export const demoItems = [
         }
     }
 ];
+
+export const teamMembers = [
+    {
+        id: {
+            name: "Budi Santoso",
+            role: "Chief Executive Officer",
+            bio: "Budi adalah seorang visioner dengan pengalaman lebih dari 15 tahun di industri teknologi, memimpin perusahaan menuju inovasi dan pertumbuhan yang berkelanjutan.",
+        },
+        en: {
+            name: "Budi Santoso",
+            role: "Chief Executive Officer",
+            bio: "Budi is a visionary with over 15 years of experience in the tech industry, leading the company towards sustainable innovation and growth.",
+        },
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "male portrait business",
+        social: {
+            linkedin: "https://www.linkedin.com/",
+            twitter: "https://twitter.com/",
+        }
+    },
+    {
+        id: {
+            name: "Citra Lestari",
+            role: "Chief Technology Officer",
+            bio: "Citra adalah seorang arsitek teknologi yang ahli dalam membangun solusi skalabel dan aman. Dia memastikan perusahaan tetap di garis depan teknologi.",
+        },
+        en: {
+            name: "Citra Lestari",
+            role: "Chief Technology Officer",
+            bio: "Citra is a technology architect adept at building scalable and secure solutions. She ensures the company remains at the forefront of technology.",
+        },
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "female portrait business",
+        social: {
+            linkedin: "https://www.linkedin.com/",
+            twitter: "https://twitter.com/",
+        }
+    },
+    {
+        id: {
+            name: "Agus Wijaya",
+            role: "Head of Operations",
+            bio: "Agus bertanggung jawab atas kelancaran operasional sehari-hari, memastikan proyek berjalan tepat waktu dan sesuai anggaran dengan kualitas tertinggi.",
+        },
+        en: {
+            name: "Agus Wijaya",
+            role: "Head of Operations",
+            bio: "Agus is responsible for the smooth day-to-day operations, ensuring projects are delivered on time and within budget with the highest quality.",
+        },
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "male portrait professional",
+        social: {
+            linkedin: "https://www.linkedin.com/",
+            twitter: "https://twitter.com/",
+        }
+    },
+    {
+        id: {
+            name: "Dewi Anggraini",
+            role: "Lead UI/UX Designer",
+            bio: "Dewi adalah otak kreatif di balik antarmuka pengguna yang intuitif dan menarik. Dia mengubah ide-ide kompleks menjadi desain yang ramah pengguna.",
+        },
+        en: {
+            name: "Dewi Anggraini",
+            role: "Lead UI/UX Designer",
+            bio: "Dewi is the creative mind behind our intuitive and engaging user interfaces. She transforms complex ideas into user-friendly designs.",
+        },
+        imageUrl: "https://placehold.co/400x400.png",
+        aiHint: "female portrait creative",
+        social: {
+            linkedin: "https://www.linkedin.com/",
+            twitter: "https://twitter.com/",
+        }
+    }
+];
