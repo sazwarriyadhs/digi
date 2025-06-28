@@ -1,4 +1,4 @@
-import { Lightbulb, Codepen, ShieldCheck, CloudCog, DatabaseZap, Briefcase, LifeBuoy, Presentation, GanttChartSquare } from "lucide-react";
+import { Lightbulb, Codepen, ShieldCheck, CloudCog, DatabaseZap, Briefcase, LifeBuoy, Presentation, GanttChartSquare, Bot } from "lucide-react";
 import React from "react";
 
 export const companyInfo = {
@@ -13,7 +13,8 @@ export const companyInfo = {
       { title: "Layanan ERP/CRM", description: "Implementasi sistem ERP atau CRM untuk otomasi bisnis dan pelacakan pelanggan." },
       { title: "IT Support & Maintenance", description: "Pemeliharaan sistem dan dukungan teknis untuk aplikasi dan infrastruktur TI." },
       { title: "Pelatihan & Implementasi", description: "Workshop dan pelatihan staf untuk penggunaan sistem, software baru, atau platform cloud." },
-      { title: "IT Audit & Kepatuhan", description: "Audit menyeluruh terhadap infrastruktur TI dan kepatuhan terhadap standar industri." }
+      { title: "IT Audit & Kepatuhan", description: "Audit menyeluruh terhadap infrastruktur TI dan kepatuhan terhadap standar industri." },
+      { title: "Layanan Bantuan AI", description: "Implementasi chatbot cerdas, asisten virtual, atau sistem otomatisasi berbasis AI untuk meningkatkan layanan pelanggan dan efisiensi operasional." }
     ]
   },
   en: {
@@ -27,7 +28,8 @@ export const companyInfo = {
       { title: "ERP/CRM Services", description: "Implementation of ERP or CRM systems for business automation and customer tracking." },
       { title: "IT Support & Maintenance", description: "System maintenance and technical support for your IT applications and infrastructure." },
       { title: "Training & Implementation", description: "Workshops and staff training for using new systems, software, or cloud platforms." },
-      { title: "IT Audit & Compliance", description: "Comprehensive audits of IT infrastructure and compliance with industry standards." }
+      { title: "IT Audit & Compliance", description: "Comprehensive audits of IT infrastructure and compliance with industry standards." },
+      { title: "AI Assistant Services", description: "Implementation of intelligent chatbots, virtual assistants, or AI-based automation systems to enhance customer service and operational efficiency." }
     ]
   }
 };
@@ -124,6 +126,25 @@ export const services = [
         { idr: 5000000, id: { item: "Laporan Kepatuhan" }, en: { item: "Compliance Report" } }
       ],
       includes: { id: [], en: [] }
+    },
+    {
+      icon: React.createElement(Bot, { className: "w-8 h-8 text-primary" }),
+      id: { 
+        title: "Layanan Bantuan AI", 
+        description: "Implementasi chatbot cerdas, asisten virtual, atau sistem otomatisasi berbasis AI untuk meningkatkan layanan pelanggan dan efisiensi operasional." 
+      },
+      en: { 
+        title: "AI Assistant Services", 
+        description: "Implementation of intelligent chatbots, virtual assistants, or AI-based automation systems to enhance customer service and operational efficiency." 
+      },
+      prices: [
+        { idr: 15000000, prefix: "startsFrom", id: { item: "Setup Chatbot" }, en: { item: "Chatbot Setup" } },
+        { idr: 25000000, prefix: "startsFrom", id: { item: "Integrasi AI Kustom" }, en: { item: "Custom AI Integration" } }
+      ],
+      includes: { 
+        id: ["Analisis kebutuhan", "Desain alur percakapan", "Pelatihan model AI"], 
+        en: ["Needs analysis", "Conversation flow design", "AI model training"] 
+      }
     }
   ];
   
