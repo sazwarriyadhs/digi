@@ -5,7 +5,7 @@ export const translations = {
         navLinks: [
             { href: "/#about", label: "Tentang" },
             { href: "/#services", label: "Layanan" },
-            { href: "/#portfolio", label: "Portofolio" },
+            { href: "/portfolio", label: "Portofolio" },
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Jadwalkan Temu" },
             { href: "/#contact", label: "Kontak" },
@@ -75,10 +75,16 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Galeri Demo",
-            title: "Galeri Demo Interaktif",
-            description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
-            cta: "Kunjungi Galeri"
+            badge: "Portofolio Kami",
+            title: "Sekilas Karya Kami",
+            description: "Kami bangga dengan pekerjaan yang kami lakukan. Berikut adalah beberapa proyek favorit kami yang menunjukkan semangat dan keahlian kami.",
+            cta: "Lihat Portofolio Lengkap"
+        },
+        portfolioPage: {
+            badge: "Portofolio",
+            title: "Portofolio Proyek Kami",
+            description: "Lihat beberapa proyek yang telah kami selesaikan dengan sukses untuk klien kami.",
+            client: "Klien"
         },
         faq: {
             badge: "FAQ Cerdas",
@@ -177,7 +183,7 @@ export const translations = {
         navLinks: [
             { href: "/#about", label: "About" },
             { href: "/#services", label: "Services" },
-            { href: "/#portfolio", label: "Portfolio" },
+            { href: "/portfolio", label: "Portfolio" },
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Appointment" },
             { href: "/#contact", label: "Contact" },
@@ -247,10 +253,16 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Demo Gallery",
-            title: "Interactive Demo Gallery",
-            description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
-            cta: "Visit Gallery"
+            badge: "Our Portfolio",
+            title: "A Glimpse of Our Work",
+            description: "We take pride in the work we do. Here are some of our favorite projects that showcase our passion and expertise.",
+            cta: "View Full Portfolio"
+        },
+        portfolioPage: {
+            badge: "Portfolio",
+            title: "Our Project Portfolio",
+            description: "Check out some of the projects we have successfully completed for our clients.",
+            client: "Client"
         },
         faq: {
             badge: "Intelligent FAQ",

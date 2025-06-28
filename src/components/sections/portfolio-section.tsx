@@ -18,7 +18,7 @@ export function PortfolioSection() {
             {t('portfolio.description')}
           </p>
           <Button asChild size="lg" className="mt-6">
-            <Link href="/demo">
+            <Link href="/portfolio">
               {t('portfolio.cta')} <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>

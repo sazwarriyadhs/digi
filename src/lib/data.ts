@@ -182,7 +182,7 @@ export const portfolioItems = [
             details: "We built a custom CRM system integrated with the call center and live chat, and provided a real-time analytics dashboard for 100+ customer service agents, increasing service efficiency by 40%."
         },
         imageUrl: "https://placehold.co/600x400.png",
-        aiHint: "crm dashboard",
+        aiHint: "crm dashboard analytics",
     },
     {
         id: {
@@ -196,7 +196,7 @@ export const portfolioItems = [
             details: "We assisted in migrating 20+ microservices to AWS with a serverless architecture and automated monitoring (Grafana + Prometheus), reducing system downtime by up to 95%."
         },
         imageUrl: "https://placehold.co/600x400.png",
-        aiHint: "cloud infrastructure",
+        aiHint: "cloud infrastructure diagram",
     },
     {
         id: {
@@ -210,7 +210,7 @@ export const portfolioItems = [
             details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over 10,000 students."
         },
         imageUrl: "https://placehold.co/600x400.png",
-        aiHint: "university portal",
+        aiHint: "university student portal",
     },
     {
         id: {
@@ -224,7 +224,7 @@ export const portfolioItems = [
             details: "The audit was conducted on the hospital's information system and internal servers, including a technical report and incident handling SOPs, successfully identifying and closing 13 critical security vulnerabilities."
         },
         imageUrl: "https://placehold.co/600x400.png",
-        aiHint: "security audit",
+        aiHint: "security audit report",
     }
 ];
 
