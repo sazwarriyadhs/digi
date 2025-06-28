@@ -1,3 +1,4 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -68,6 +69,15 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold">{t('contact.emailTitle')}</h3>
                   <p className="text-muted-foreground">{t('contact.emailText')}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-muted rounded-full">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">{t('contact.financeEmailTitle')}</h3>
+                  <p className="text-muted-foreground">{t('contact.financeEmailText')}</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
