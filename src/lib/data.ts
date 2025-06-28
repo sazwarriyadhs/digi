@@ -337,7 +337,7 @@ export const teamMembers = [
             role: "Lead UI/UX Designer",
             bio: "Dewi is the creative mind behind our intuitive and engaging user interfaces. She transforms complex ideas into user-friendly designs.",
         },
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "/images/dewi.jpg",
         aiHint: "female portrait creative",
         social: {
             linkedin: "https://www.linkedin.com/",
