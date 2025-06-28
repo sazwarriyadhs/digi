@@ -104,8 +104,8 @@ export const translations = {
             emailText: "hello@digimediakom.com",
             addressTitle: "Alamat",
             addressText: "Cimahpar Stoneyard, Kota Bogor, Jawa Barat 16155",
-            mapTitle: "Peta Lokasi",
-            mapAlt: "Peta Lokasi Cimahpar Stoneyard",
+            mapTitle: "Kantor Profesional",
+            mapAlt: "Foto Kantor Profesional Digi Media Komunika",
             form: {
                 title: "Kirim Pesan",
                 description: "Isi formulir di bawah ini dan kami akan segera menghubungi Anda.",
@@ -276,8 +276,8 @@ export const translations = {
             emailText: "hello@digimediakom.com",
             addressTitle: "Address",
             addressText: "Cimahpar Stoneyard, Bogor City, West Java 16155",
-            mapTitle: "Location Map",
-            mapAlt: "Map of Cimahpar Stoneyard Location",
+            mapTitle: "Professional Office",
+            mapAlt: "Photo of Digi Media Komunika Professional Office",
             form: {
                 title: "Send a Message",
                 description: "Fill out the form below and we'll get back to you as soon as possible.",
