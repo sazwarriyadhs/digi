@@ -1,9 +1,5 @@
-import { config } from 'dotenv';
 import { Pool } from 'pg';
 import { faker } from '@faker-js/faker';
-
-// Load environment variables from .env file
-config({ path: './.env' });
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
