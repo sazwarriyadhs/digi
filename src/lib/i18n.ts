@@ -254,7 +254,7 @@ export const translations = {
             cardTitle: "Brosur PT Digi Media Komunika",
             cardDescription: "Klik tombol di bawah untuk mengunduh versi PDF dari katalog layanan lengkap kami.",
             downloadButton: "Unduh Brosur (PDF)",
-            imageAlt: "Sampul Brosur",
+            imageAlt: "/images/sampul.png",
             fileInfo: "File: PDF, Ukuran: ~2.5MB"
         },
     },
