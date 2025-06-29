@@ -250,7 +250,7 @@ export const translations = {
                     description: "Aligning technology with your business objectives to drive growth and innovation.",
                     cta1: "View Services",
                     cta2: "Contact Us",
-                    image: "https://storage.googleapis.com/project-os-prod/images/f3b8b6e6-1e6d-4c3e-9b5a-4e2a3c2d4a1b.png",
+                    image: "/images/hero2.jpg",
                     aiHint: "business strategy"
                 }
             ]
@@ -407,3 +407,5 @@ export const translations = {
 }
 
 export type Translation = typeof translations;
+
+    
