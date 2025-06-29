@@ -11,6 +11,7 @@ export const translations = {
             { href: "/ai-help", label: "Bantuan AI" },
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Jadwalkan Temu" },
+            { href: "/proposal", label: "Penawaran" },
             { href: "/#contact", label: "Kontak" },
         ],
         hero: {
@@ -127,7 +128,7 @@ export const translations = {
             title: "Mari Membangun Bersama",
             description: "Punya proyek dalam pikiran atau hanya ingin menyapa? Kami ingin sekali mendengar dari Anda.",
             phoneTitle: "Telepon",
-            phoneText: "+62 878 6453 0047",
+            phoneText: "+62 878 66453 0047",
             emailTitle: "Informasi",
             emailText: "info@digimediakomunika.cloud",
             financeEmailTitle: "Administrasi",
@@ -201,6 +202,50 @@ export const translations = {
                 time: "Waktu diperlukan.",
             }
         },
+        proposal: {
+            badge: "Formulir Penawaran",
+            title: "Dapatkan Penawaran Proyek Khusus",
+            description: "Isi formulir di bawah ini dengan detail proyek Anda, dan kami akan kembali kepada Anda dengan penawaran yang disesuaikan.",
+            form: {
+                title: "Detail Permintaan Penawaran",
+                description: "Semakin banyak detail yang Anda berikan, semakin akurat penawaran kami.",
+                name: "Nama Lengkap",
+                namePlaceholder: "Nama Anda",
+                company: "Nama Perusahaan",
+                companyPlaceholder: "Nama perusahaan Anda",
+                email: "Email",
+                emailPlaceholder: "email.anda@contoh.com",
+                phone: "Nomor Telepon",
+                phonePlaceholder: "+62 812 3456 7890",
+                services: "Layanan yang Diminati",
+                servicesDescription: "Pilih satu atau lebih layanan yang relevan dengan proyek Anda.",
+                projectDescription: "Deskripsi Proyek",
+                projectDescriptionPlaceholder: "Jelaskan proyek Anda secara detail...",
+                budget: "Perkiraan Anggaran",
+                budgetPlaceholder: "Pilih rentang anggaran",
+                budgets: [
+                    "Kurang dari Rp 25.000.000",
+                    "Rp 25.000.000 - Rp 100.000.000",
+                    "Rp 100.000.000 - Rp 500.000.000",
+                    "Lebih dari Rp 500.000.000",
+                    "Belum ditentukan"
+                ],
+                submit: "Kirim Permintaan",
+            },
+            toast: {
+                title: "Permintaan Terkirim!",
+                description: "Terima kasih! Kami akan meninjau permintaan Anda dan segera menghubungi Anda.",
+            },
+            validation: {
+                name: "Nama diperlukan.",
+                company: "Nama perusahaan diperlukan.",
+                email: "Email yang valid diperlukan.",
+                phone: "Nomor telepon yang valid diperlukan.",
+                services: "Pilih setidaknya satu layanan.",
+                projectDescription: "Deskripsi proyek harus minimal 30 karakter.",
+                budget: "Silakan pilih perkiraan anggaran.",
+            }
+        },
     },
     en: {
         companyName: "PT Digi Media Komunika",
@@ -213,6 +258,7 @@ export const translations = {
             { href: "/ai-help", label: "AI Help" },
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Appointment" },
+            { href: "/proposal", label: "Proposal" },
             { href: "/#contact", label: "Contact" },
         ],
         hero: {
@@ -403,9 +449,55 @@ export const translations = {
                 time: "A time is required.",
             }
         },
+        proposal: {
+            badge: "Proposal Request Form",
+            title: "Get a Custom Project Proposal",
+            description: "Fill out the form below with your project details, and we'll get back to you with a tailored proposal.",
+            form: {
+                title: "Proposal Request Details",
+                description: "The more details you provide, the more accurate our proposal will be.",
+                name: "Full Name",
+                namePlaceholder: "Your Name",
+                company: "Company Name",
+                companyPlaceholder: "Your company's name",
+                email: "Email",
+                emailPlaceholder: "your.email@example.com",
+                phone: "Phone Number",
+                phonePlaceholder: "+1 (555) 123-4567",
+                services: "Services of Interest",
+                servicesDescription: "Select one or more services relevant to your project.",
+                projectDescription: "Project Description",
+                projectDescriptionPlaceholder: "Describe your project in detail...",
+                budget: "Estimated Budget",
+                budgetPlaceholder: "Select a budget range",
+                budgets: [
+                    "Less than $1,500",
+                    "$1,500 - $6,000",
+                    "$6,000 - $30,000",
+                    "More than $30,000",
+                    "To be determined"
+                ],
+                submit: "Submit Request",
+            },
+            toast: {
+                title: "Request Submitted!",
+                description: "Thank you! We will review your request and get in touch with you shortly.",
+            },
+            validation: {
+                name: "Name is required.",
+                company: "Company name is required.",
+                email: "A valid email is required.",
+                phone: "A valid phone number is required.",
+                services: "Please select at least one service.",
+                projectDescription: "Project description must be at least 30 characters.",
+                budget: "Please select an estimated budget.",
+            }
+        },
     }
 }
 
 export type Translation = typeof translations;
+
+    
 
     
