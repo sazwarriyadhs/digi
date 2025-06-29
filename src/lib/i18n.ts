@@ -127,7 +127,7 @@ export const translations = {
             title: "Mari Membangun Bersama",
             description: "Punya proyek dalam pikiran atau hanya ingin menyapa? Kami ingin sekali mendengar dari Anda.",
             phoneTitle: "Telepon",
-            phoneText: "+62 878 66453 0047",
+            phoneText: "+62 878 6453 0047",
             emailTitle: "Informasi",
             emailText: "info@digimediakomunika.cloud",
             financeEmailTitle: "Administrasi",
