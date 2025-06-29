@@ -1,4 +1,4 @@
-import { Lightbulb, Codepen, ShieldCheck, CloudCog, DatabaseZap, Briefcase, LifeBuoy, Presentation, GanttChartSquare, Bot } from "lucide-react";
+import { Lightbulb, Codepen, ShieldCheck, CloudCog, DatabaseZap, Briefcase, LifeBuoy, Presentation, GanttChartSquare, Bot, Search } from "lucide-react";
 import React from "react";
 
 export const companyInfo = {
@@ -14,6 +14,7 @@ export const companyInfo = {
       { title: "IT Support & Maintenance", description: "Pemeliharaan sistem dan dukungan teknis untuk aplikasi dan infrastruktur TI." },
       { title: "Pelatihan & Implementasi", description: "Workshop dan pelatihan staf untuk penggunaan sistem, software baru, atau platform cloud." },
       { title: "IT Audit & Kepatuhan", description: "Audit menyeluruh terhadap infrastruktur TI dan kepatuhan terhadap standar industri." },
+      { title: "Konsultasi SEO Gratis", description: "Dapatkan analisis dasar gratis untuk website Anda. Kami akan memberikan laporan singkat tentang potensi peningkatan SEO, termasuk analisis kata kunci dan kecepatan situs, untuk membantu Anda memahami di mana harus memulai." },
       { title: "Layanan Bantuan AI", description: "Implementasi chatbot cerdas, asisten virtual, atau sistem otomatisasi berbasis AI untuk meningkatkan layanan pelanggan dan efisiensi operasional." }
     ]
   },
@@ -29,6 +30,7 @@ export const companyInfo = {
       { title: "IT Support & Maintenance", description: "System maintenance and technical support for your IT applications and infrastructure." },
       { title: "Training & Implementation", description: "Workshops and staff training for using new systems, software, or cloud platforms." },
       { title: "IT Audit & Compliance", description: "Comprehensive audits of IT infrastructure and compliance with industry standards." },
+      { title: "Free SEO Consultation", description: "Get a free basic analysis of your website. We'll provide a brief report on potential SEO improvements, including keyword and site speed analysis, to help you understand where to start." },
       { title: "AI Assistant Services", description: "Implementation of intelligent chatbots, virtual assistants, or AI-based automation systems to enhance customer service and operational efficiency." }
     ]
   }
@@ -126,6 +128,24 @@ export const services = [
         { idr: 5000000, id: { item: "Laporan Kepatuhan" }, en: { item: "Compliance Report" } }
       ],
       includes: { id: [], en: [] }
+    },
+    {
+      icon: React.createElement(Search, { className: "w-8 h-8 text-primary" }),
+      id: { 
+        title: "Konsultasi SEO Gratis", 
+        description: "Dapatkan analisis dasar gratis untuk website Anda. Kami akan memberikan laporan singkat tentang potensi peningkatan SEO, termasuk analisis kata kunci dan kecepatan situs, untuk membantu Anda memahami di mana harus memulai." 
+      },
+      en: { 
+        title: "Free SEO Consultation", 
+        description: "Get a free basic analysis of your website. We'll provide a brief report on potential SEO improvements, including keyword and site speed analysis, to help you understand where to start." 
+      },
+      prices: [
+        { idr: 0, id: { item: "Analisis & Laporan Awal" }, en: { item: "Initial Analysis & Report" } }
+      ],
+      includes: { 
+        id: ["Analisis kata kunci dasar", "Pemeriksaan kecepatan situs", "Laporan ringkas"], 
+        en: ["Basic keyword analysis", "Site speed check", "Summary report"] 
+      }
     },
     {
       icon: React.createElement(Bot, { className: "w-8 h-8 text-primary" }),
