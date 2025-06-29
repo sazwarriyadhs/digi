@@ -319,7 +319,7 @@ export const teamMembers = [
             role: "Head of Operations",
             bio: "Agus is responsible for the smooth day-to-day operations, ensuring projects are delivered on time and within budget with the highest quality.",
         },
-        imageUrl: "https://placehold.co/400x400.png",
+        imageUrl: "/images/agus.jpg",
         aiHint: "male portrait professional",
         social: {
             linkedin: "https://www.linkedin.com/",
