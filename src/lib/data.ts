@@ -337,7 +337,7 @@ export const teamMembers = [
             role: "Lead UI/UX Designer",
             bio: "Dewi is the creative mind behind our intuitive and engaging user interfaces. She transforms complex ideas into user-friendly designs.",
         },
-        imageUrl: "/images/dewi.jpg",
+        imageUrl: "/images/titi.png",
         aiHint: "female portrait creative",
         social: {
             linkedin: "https://www.linkedin.com/",
