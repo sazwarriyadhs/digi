@@ -197,7 +197,7 @@ export const translations = {
             },
             validation: {
                 name: "Nama diperlukan.",
-                email: "Email yang valid diperlukan.",
+                email: "A valid email is required.",
                 service: "Silakan pilih layanan.",
                 date: "Tanggal diperlukan.",
                 time: "Waktu diperlukan.",
@@ -523,3 +523,4 @@ export type Translation = typeof translations;
     
 
     
+
