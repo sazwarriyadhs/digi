@@ -7,6 +7,7 @@ This is a Next.js project for the PT Digi Media Komunika company profile, built 
 - **Next.js 15 & React 18:** Utilizes the latest features of Next.js with the App Router.
 - **ShadCN UI & Tailwind CSS:** For a modern, responsive, and customizable component library.
 - **Genkit (Google AI):** Powers the intelligent FAQ assistant.
+- **Nodemailer:** Handles email sending for the contact form.
 - **Multi-language & Multi-currency:** Supports Bahasa Indonesia (ID) and English (EN), with currency conversion between IDR and USD.
 - **TypeScript:** For robust, type-safe code.
 - **Fully Responsive:** Designed to work seamlessly across all devices.
@@ -42,7 +43,7 @@ yarn install
 
 ### 3. Set Up Environment Variables
 
-This project uses environment variables for configuration. You'll need to set them up for the AI features and database connection.
+This project uses environment variables for configuration. You'll need to set them up for the AI features, database connection, and email sending.
 
 1.  This repository includes a file named `.env.template`. Make a copy of this file and rename it to `.env.local`.
 
@@ -52,8 +53,13 @@ This project uses environment variables for configuration. You'll need to set th
 
 2.  Update the `.env.local` file with your credentials:
 
-    -   **`GOOGLE_API_KEY`**: Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey). This is required for the FAQ section to work.
-    -   **`DATABASE_URL`**: Set this to the connection string for your PostgreSQL database. The default format is `postgresql://[user]:[password]@[host]:[port]/[database]`.
+    -   **`GOOGLE_API_KEY`**: Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    -   **`DATABASE_URL`**: Your PostgreSQL database connection string.
+    -   **`SMTP_HOST`**: Hostname of your SMTP server (e.g., `smtp.example.com`).
+    -   **`SMTP_PORT`**: Port for your SMTP server (e.g., `587` or `465`).
+    -   **`SMTP_USER`**: Username for SMTP authentication.
+    -   **`SMTP_PASS`**: Password for SMTP authentication.
+    -   **`SMTP_FROM_EMAIL`**: The email address that will send the notifications (this will also be the recipient of the contact form submissions).
 
     Your `.env.local` file should look something like this:
 
@@ -65,6 +71,13 @@ This project uses environment variables for configuration. You'll need to set th
 
     # Database Connection URL
     DATABASE_URL="postgresql://postgres:postgres@localhost:5432/digimed"
+    
+    # SMTP Configuration for sending emails
+    SMTP_HOST=smtp.your-provider.com
+    SMTP_PORT=587
+    SMTP_USER=your-email@your-provider.com
+    SMTP_PASS=your-email-password
+    SMTP_FROM_EMAIL=your-email@your-provider.com
     ```
     **Note:** The `.env.local` file is included in `.gitignore` and should never be committed to your version control system.
 
@@ -104,12 +117,15 @@ You can deploy this Next.js application to any hosting provider that supports No
 
 On your hosting provider's dashboard, you must set the same environment variables that you defined in your `.env.local` file. Look for a section called "Environment Variables" or "Secrets" in your project's settings.
 
--   **Variable:** `GOOGLE_API_KEY`
--   **Value:** `your_google_api_key_here`
--   **Variable:** `DATABASE_URL`
--   **Value:** `your_production_database_url`
+-   `GOOGLE_API_KEY`
+-   `DATABASE_URL`
+-   `SMTP_HOST`
+-   `SMTP_PORT`
+-   `SMTP_USER`
+-   `SMTP_PASS`
+-   `SMTP_FROM_EMAIL`
 
-This is a critical step. The application will not be able to connect to the AI services or database without these keys.
+This is a critical step. The application will not be able to connect to the AI services, database, or send emails without these keys.
 
 ### 3. Build and Start the Application
 

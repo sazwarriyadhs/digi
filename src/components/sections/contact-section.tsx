@@ -10,13 +10,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Loader } from "lucide-react";
 import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
+import { useState } from "react";
+import { handleContactAction } from "@/app/actions";
 
 export function ContactSection() {
   const { t } = useAppContext();
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const formSchema = z.object({
     name: z.string().min(2, { message: t('contact.validation.name') }),
@@ -33,13 +36,24 @@ export function ContactSection() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: t('contact.toast.title'),
-      description: t('contact.toast.description'),
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    const result = await handleContactAction(values);
+    setIsSubmitting(false);
+
+    if (result.success) {
+      toast({
+        title: t('contact.toast.title'),
+        description: result.message,
+      });
+      form.reset();
+    } else {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: result.message,
+      });
+    }
   }
 
   return (
@@ -122,7 +136,7 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>{t('contact.form.name')}</FormLabel>
                         <FormControl>
-                          <Input placeholder={t('contact.form.namePlaceholder')} {...field} />
+                          <Input placeholder={t('contact.form.namePlaceholder')} {...field} disabled={isSubmitting} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -135,7 +149,7 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>{t('contact.form.email')}</FormLabel>
                         <FormControl>
-                          <Input placeholder={t('contact.form.emailPlaceholder')} {...field} />
+                          <Input placeholder={t('contact.form.emailPlaceholder')} {...field} disabled={isSubmitting} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -148,13 +162,15 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>{t('contact.form.message')}</FormLabel>
                         <FormControl>
-                          <Textarea placeholder={t('contact.form.messagePlaceholder')} {...field} rows={5} />
+                          <Textarea placeholder={t('contact.form.messagePlaceholder')} {...field} rows={5} disabled={isSubmitting} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full">{t('contact.form.submit')}</Button>
+                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? <><Loader className="mr-2 h-4 w-4 animate-spin" /> Sending...</> : t('contact.form.submit')}
+                  </Button>
                 </form>
               </Form>
             </CardContent>
