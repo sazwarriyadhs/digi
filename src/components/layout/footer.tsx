@@ -14,7 +14,7 @@ export function Footer() {
           <Logo />
         </div>
         <p className="text-sm text-muted-foreground text-center md:text-left">
-          © {new Date().getFullYear()} {t('companyName')}. {t('footer.rights')}
+ Azwar Riyadh © 2024 PT Digi Media Komunika. All rights reserved.
         </p>
         <div className="flex gap-4 mt-4 md:mt-0">
           <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
