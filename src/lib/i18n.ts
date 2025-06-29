@@ -12,6 +12,7 @@ export const translations = {
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Jadwalkan Temu" },
             { href: "/proposal", label: "Penawaran" },
+            { href: "/brochure", label: "Brosur" },
             { href: "/#contact", label: "Kontak" },
         ],
         hero: {
@@ -246,6 +247,16 @@ export const translations = {
                 budget: "Silakan pilih perkiraan anggaran.",
             }
         },
+        brochure: {
+            badge: "Unduh Brosur",
+            title: "Katalog Layanan Kami",
+            description: "Dapatkan informasi lengkap mengenai layanan, paket, dan studi kasus kami dalam satu dokumen praktis. Unduh brosur kami sekarang.",
+            cardTitle: "Brosur PT Digi Media Komunika",
+            cardDescription: "Klik tombol di bawah untuk mengunduh versi PDF dari katalog layanan lengkap kami.",
+            downloadButton: "Unduh Brosur (PDF)",
+            imageAlt: "Sampul Brosur",
+            fileInfo: "File: PDF, Ukuran: ~2.5MB"
+        },
     },
     en: {
         companyName: "PT Digi Media Komunika",
@@ -259,6 +270,7 @@ export const translations = {
             { href: "/#faq", label: "FAQ" },
             { href: "/appointment", label: "Appointment" },
             { href: "/proposal", label: "Proposal" },
+            { href: "/brochure", label: "Brochure" },
             { href: "/#contact", label: "Contact" },
         ],
         hero: {
@@ -492,6 +504,16 @@ export const translations = {
                 projectDescription: "Project description must be at least 30 characters.",
                 budget: "Please select an estimated budget.",
             }
+        },
+        brochure: {
+            badge: "Download Brochure",
+            title: "Our Service Catalog",
+            description: "Get complete information about our services, packages, and case studies in one convenient document. Download our brochure now.",
+            cardTitle: "PT Digi Media Komunika Brochure",
+            cardDescription: "Click the button below to download the PDF version of our complete service catalog.",
+            downloadButton: "Download Brochure (PDF)",
+            imageAlt: "Brochure Cover",
+            fileInfo: "File: PDF, Size: ~2.5MB"
         },
     }
 }
