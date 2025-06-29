@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -17,10 +18,10 @@ export function Footer() {
  Azwar Riyadh © 2024 PT Digi Media Komunika. All rights reserved.
         </p>
         <div className="flex gap-4 mt-4 md:mt-0">
-          <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+          <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground">
             {t('footer.privacy')}
           </Link>
-          <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+          <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground">
             {t('footer.terms')}
           </Link>
         </div>

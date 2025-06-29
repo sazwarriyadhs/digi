@@ -257,6 +257,76 @@ export const translations = {
             imageAlt: "/images/sampul.png",
             fileInfo: "File: PDF, Ukuran: ~2.5MB"
         },
+        privacyPolicy: {
+            title: "Kebijakan Privasi",
+            lastUpdated: "Terakhir diperbarui: 29 Juni 2024",
+            intro: "Kebijakan Privasi ini menjelaskan bagaimana informasi Anda dikumpulkan, digunakan, dan dibagikan saat Anda mengunjungi atau melakukan pembelian dari situs web kami.",
+            sections: [
+                {
+                    title: "Informasi Pribadi yang Kami Kumpulkan",
+                    content: [
+                        "Saat Anda mengunjungi Situs, kami secara otomatis mengumpulkan informasi tertentu tentang perangkat Anda, termasuk informasi tentang browser web Anda, alamat IP, zona waktu, dan beberapa cookie yang terpasang di perangkat Anda.",
+                        "Selain itu, saat Anda melakukan pembelian atau mencoba melakukan pembelian melalui Situs, kami mengumpulkan informasi tertentu dari Anda, termasuk nama, alamat penagihan, alamat pengiriman, informasi pembayaran, alamat email, dan nomor telepon. Kami menyebut informasi ini sebagai 'Informasi Pesanan'."
+                    ]
+                },
+                {
+                    title: "Bagaimana Kami Menggunakan Informasi Pribadi Anda?",
+                    content: [
+                        "Kami menggunakan Informasi Pesanan yang kami kumpulkan secara umum untuk memenuhi setiap pesanan yang dilakukan melalui Situs (termasuk memproses informasi pembayaran Anda, mengatur pengiriman, dan memberikan Anda faktur dan/atau konfirmasi pesanan).",
+                        "Kami menggunakan Informasi Perangkat yang kami kumpulkan untuk membantu kami menyaring potensi risiko dan penipuan (khususnya, alamat IP Anda), dan secara lebih umum untuk meningkatkan dan mengoptimalkan Situs kami."
+                    ]
+                },
+                {
+                    title: "Perubahan",
+                    content: [
+                        "Kami dapat memperbarui kebijakan privasi ini dari waktu ke waktu untuk mencerminkan, misalnya, perubahan pada praktik kami atau karena alasan operasional, hukum, atau peraturan lainnya."
+                    ]
+                },
+                {
+                    title: "Hubungi Kami",
+                    content: [
+                        "Untuk informasi lebih lanjut tentang praktik privasi kami, jika Anda memiliki pertanyaan, atau jika Anda ingin mengajukan keluhan, silakan hubungi kami melalui email di info@digimediakomunika.cloud atau melalui surat menggunakan detail yang disediakan di halaman kontak kami."
+                    ]
+                }
+            ]
+        },
+        termsOfService: {
+            title: "Ketentuan Layanan",
+            lastUpdated: "Terakhir diperbarui: 29 Juni 2024",
+            intro: "Harap baca Ketentuan Layanan ini dengan cermat sebelum menggunakan situs web kami.",
+            sections: [
+                {
+                    title: "Persetujuan terhadap Ketentuan",
+                    content: [
+                        "Dengan mengakses atau menggunakan Situs, Anda setuju untuk terikat oleh Ketentuan Layanan ini. Jika Anda tidak setuju dengan bagian mana pun dari ketentuan ini, maka Anda tidak boleh mengakses Situs."
+                    ]
+                },
+                {
+                    title: "Kekayaan Intelektual",
+                    content: [
+                        "Situs dan konten asli, fitur, dan fungsionalitasnya adalah dan akan tetap menjadi milik eksklusif PT Digi Media Komunika dan pemberi lisensinya."
+                    ]
+                },
+                {
+                    title: "Tautan ke Situs Web Lain",
+                    content: [
+                        "Situs kami mungkin berisi tautan ke situs web atau layanan pihak ketiga yang tidak dimiliki atau dikendalikan oleh PT Digi Media Komunika. Kami tidak memiliki kendali atas, dan tidak bertanggung jawab atas, konten, kebijakan privasi, atau praktik situs web atau layanan pihak ketiga mana pun."
+                    ]
+                },
+                {
+                    title: "Penghentian",
+                    content: [
+                        "Kami dapat menghentikan atau menangguhkan akses Anda ke Situs kami segera, tanpa pemberitahuan atau kewajiban sebelumnya, dengan alasan apa pun, termasuk tanpa batasan jika Anda melanggar Ketentuan."
+                    ]
+                },
+                 {
+                    title: "Hubungi Kami",
+                    content: [
+                        "Jika Anda memiliki pertanyaan tentang Ketentuan ini, silakan hubungi kami."
+                    ]
+                }
+            ]
+        },
     },
     en: {
         companyName: "PT Digi Media Komunika",
@@ -515,6 +585,76 @@ export const translations = {
             imageAlt: "Brochure Cover",
             fileInfo: "File: PDF, Size: ~2.5MB"
         },
+        privacyPolicy: {
+            title: "Privacy Policy",
+            lastUpdated: "Last updated: June 29, 2024",
+            intro: "This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from our website.",
+            sections: [
+                {
+                    title: "Personal Information We Collect",
+                    content: [
+                        "When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device.",
+                        "Additionally, when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information, email address, and phone number. We refer to this information as 'Order Information'."
+                    ]
+                },
+                {
+                    title: "How Do We Use Your Personal Information?",
+                    content: [
+                        "We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations).",
+                        "We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site."
+                    ]
+                },
+                {
+                    title: "Changes",
+                    content: [
+                        "We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons."
+                    ]
+                },
+                {
+                    title: "Contact Us",
+                    content: [
+                        "For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at info@digimediakomunika.cloud or by mail using the details provided on our contact page."
+                    ]
+                }
+            ]
+        },
+        termsOfService: {
+            title: "Terms of Service",
+            lastUpdated: "Last updated: June 29, 2024",
+            intro: "Please read these Terms of Service carefully before using our website.",
+            sections: [
+                {
+                    title: "Agreement to Terms",
+                    content: [
+                        "By accessing or using the Site, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, then you may not access the Site."
+                    ]
+                },
+                {
+                    title: "Intellectual Property",
+                    content: [
+                        "The Site and its original content, features, and functionality are and will remain the exclusive property of PT Digi Media Komunika and its licensors."
+                    ]
+                },
+                {
+                    title: "Links To Other Web Sites",
+                    content: [
+                        "Our Site may contain links to third-party web sites or services that are not owned or controlled by PT Digi Media Komunika. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third party web sites or services."
+                    ]
+                },
+                {
+                    title: "Termination",
+                    content: [
+                        "We may terminate or suspend access to our Site immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms."
+                    ]
+                },
+                {
+                    title: "Contact Us",
+                    content: [
+                        "If you have any questions about these Terms, please contact us."
+                    ]
+                }
+            ]
+        },
     }
 }
 
@@ -523,4 +663,5 @@ export type Translation = typeof translations;
     
 
     
+
 
