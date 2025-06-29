@@ -24,7 +24,7 @@ export default function BrochurePage() {
           <Card className="overflow-hidden">
             <CardHeader className="p-0">
               <Image 
-                src="https://storage.googleapis.com/project-os-prod/images/429188d3-5799-44e2-807d-3080c6552a42.png" 
+                src="https://storage.googleapis.com/project-os-prod/images/c0a8b7d6-e5f4-3210-9876-fedcba987654.png" 
                 alt={t('brochure.imageAlt')}
                 width={600}
                 height={850}
