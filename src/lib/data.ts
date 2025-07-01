@@ -289,9 +289,9 @@ export const demoItems = [
         }
     },
     {
-        href: "https://serenity-bi.vercel.app/",
+        href: "/demo/bi",
         aiHint: "business intelligence dashboard",
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/c2351239-2445-42b7-a3f1-7f41555e56d8.png",
+        imageUrl: "/images/powerbi.png",
         id: {
             name: "Serenity BI",
             description: "Demo dashboard Business Intelligence untuk analisis data dan visualisasi."
@@ -378,5 +378,6 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
