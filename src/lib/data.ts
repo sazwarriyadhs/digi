@@ -291,7 +291,7 @@ export const demoItems = [
     {
         href: "/demo/bi",
         aiHint: "business intelligence dashboard",
-        imageUrl: "/images/powerbi.png",
+        imageUrl: "https://storage.googleapis.com/project-os-prod/images/c2351239-2445-42b7-a3f1-7f41555e56d8.png",
         id: {
             name: "Serenity BI",
             description: "Demo dashboard Business Intelligence untuk analisis data dan visualisasi."
@@ -299,6 +299,19 @@ export const demoItems = [
         en: {
             name: "Serenity BI",
             description: "A Business Intelligence dashboard demo for data analysis and visualization."
+        }
+    },
+    {
+        href: "/demo/serenity-parkease",
+        aiHint: "parking management dashboard",
+        imageUrl: "https://storage.googleapis.com/project-os-prod/images/0d7b233a-86a0-4352-872f-5d6c8f85f818.png",
+        id: {
+            name: "Serenity Parkease",
+            description: "Demo aplikasi manajemen parkir untuk pemantauan slot dan reservasi."
+        },
+        en: {
+            name: "Serenity Parkease",
+            description: "Demo of a parking management application for slot monitoring and reservations."
         }
     }
 ];
@@ -378,6 +391,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
