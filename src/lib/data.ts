@@ -304,7 +304,7 @@ export const demoItems = [
     {
         href: "/demo/serenity-parkease",
         aiHint: "parking management dashboard",
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/0d7b233a-86a0-4352-872f-5d6c8f85f818.png",
+            imageUrl: "/images/parkease.png",
         id: {
             name: "Serenity Parkease",
             description: "Demo aplikasi manajemen parkir untuk pemantauan slot dan reservasi."
