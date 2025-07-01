@@ -287,6 +287,19 @@ export const demoItems = [
             name: "Serenity Watcher",
             description: "Demo of a real-time dashboard for monitoring cloud servers and CI/CD pipelines."
         }
+    },
+    {
+        href: "https://serenity-bi.vercel.app/",
+        aiHint: "business intelligence dashboard",
+        imageUrl: "https://storage.googleapis.com/project-os-prod/images/c2351239-2445-42b7-a3f1-7f41555e56d8.png",
+        id: {
+            name: "Serenity BI",
+            description: "Demo dashboard Business Intelligence untuk analisis data dan visualisasi."
+        },
+        en: {
+            name: "Serenity BI",
+            description: "A Business Intelligence dashboard demo for data analysis and visualization."
+        }
     }
 ];
 
@@ -365,3 +378,4 @@ export const teamMembers = [
         }
     }
 ];
+
