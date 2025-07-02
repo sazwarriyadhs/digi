@@ -50,6 +50,9 @@ const answerFAQFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
-    return output!;
+    if (!output) {
+      throw new Error('The AI model did not return a valid answer.');
+    }
+    return output;
   }
 );

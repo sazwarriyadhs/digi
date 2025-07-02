@@ -10,7 +10,7 @@ import { Bot, Loader, User } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 import { useAppContext } from "@/context/AppContext";
 
-export function FaqSection({ baseKey = 'faq' }: { baseKey?: string }) {
+export function FaqSection({ baseKey = 'faq' }: { baseKey?: 'faq' | 'aiHelp' }) {
   const { t, language } = useAppContext();
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -25,7 +25,7 @@ export function FaqSection({ baseKey = 'faq' }: { baseKey?: string }) {
     setAnswer("");
     setError(null);
 
-    const result = await handleFaq(question, language);
+    const result = await handleFaq(question, language, baseKey);
 
     if (result.error) {
       setError(result.answer);

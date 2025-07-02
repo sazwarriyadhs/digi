@@ -1,11 +1,12 @@
 "use server";
 
 import { answerFAQ } from "@/ai/flows/answer-faq";
+import { answerGeneralQuestion } from "@/ai/flows/general-question";
 import { companyInfo } from "@/lib/data";
 import { sendEmail } from "@/lib/email";
 import * as z from "zod";
 
-export async function handleFaq(question: string, language: 'id' | 'en') {
+export async function handleFaq(question: string, language: 'id' | 'en', source: 'faq' | 'aiHelp') {
   if (!question) {
     return { answer: "Please ask a question.", error: null };
   }
@@ -15,10 +16,17 @@ export async function handleFaq(question: string, language: 'id' | 'en') {
     const servicesText = langCompanyInfo.services.map(s => `${s.title}: ${s.description}`).join('\n');
     const fullCompanyInfo = `About Us: ${langCompanyInfo.about}\n\nOur Services:\n${servicesText}`;
     
-    const result = await answerFAQ({
+    let result;
+    const input = {
       question: question,
       companyInformation: fullCompanyInfo,
-    });
+    };
+
+    if (source === 'aiHelp') {
+      result = await answerGeneralQuestion(input);
+    } else {
+      result = await answerFAQ(input);
+    }
 
     return { answer: result.answer, error: null };
   } catch (e) {
