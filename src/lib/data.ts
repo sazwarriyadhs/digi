@@ -291,7 +291,7 @@ export const demoItems = [
     {
         href: "/demo/bi",
         aiHint: "business intelligence dashboard",
-        imageUrl: "/images/powerbi.png",
+        imageUrl: "/images/serenitybi.png",
         id: {
             name: "Serenity BI",
             description: "Demo dashboard Business Intelligence untuk analisis data dan visualisasi."
@@ -400,14 +400,14 @@ export const teamMembers = [
     },
     {
         id: {
-            name: "Dewi Anggraini",
+            name: "Titi Ariwati",
             role: "Lead UI/UX Designer",
-            bio: "Dewi adalah otak kreatif di balik antarmuka pengguna yang intuitif dan menarik. Dia mengubah ide-ide kompleks menjadi desain yang ramah pengguna.",
+            bio: "Titi adalah otak kreatif di balik antarmuka pengguna yang intuitif dan menarik. Dia mengubah ide-ide kompleks menjadi desain yang ramah pengguna.",
         },
         en: {
-            name: "Dewi Anggraini",
+            name: "Titi Ariwati",
             role: "Lead UI/UX Designer",
-            bio: "Dewi is the creative mind behind our intuitive and engaging user interfaces. She transforms complex ideas into user-friendly designs.",
+            bio: "Titi is the creative mind behind our intuitive and engaging user interfaces. She transforms complex ideas into user-friendly designs.",
         },
         imageUrl: "/images/titi.png",
         aiHint: "female portrait creative",
@@ -417,6 +417,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
