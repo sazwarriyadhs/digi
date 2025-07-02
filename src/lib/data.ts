@@ -330,7 +330,7 @@ export const demoItems = [
     {
         href: "/demo/serenity-ews",
         aiHint: "landslide warning",
-        imageUrl: "/images/serenity-ews.png",
+        imageUrl: "/images/serenityews.png",
         id: {
             name: "Serenity EWS Bogor",
             description: "Demo Sistem Peringatan Dini Bahaya Bencana Alam Terdekat. Status keamanan real-time Anda berdasarkan lokasi."
