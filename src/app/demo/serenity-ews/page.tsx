@@ -5,20 +5,20 @@ export default function SerenityEwsDemoPage() {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
       <div className="text-center space-y-4 mb-12">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: Serenity EWS - Tanah Longsor</h1>
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: Serenity EWS Bogor</h1>
         <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
           Ini adalah demonstrasi sistem peringatan dini untuk bencana tanah longsor, menampilkan data sensor dan prediksi. Di bawah ini adalah pratinjau langsung dari situs tersebut.
         </p>
       </div>
       <Card className="w-full max-w-6xl mx-auto">
         <CardHeader>
-          <CardTitle>Live Preview: Serenity EWS - Landslide</CardTitle>
+          <CardTitle>Live Preview: Serenity EWS Bogor</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <iframe
               src="https://serenity-ews.vercel.app/landslide"
-              title="Serenity EWS - Landslide Demo"
+              title="Serenity EWS Bogor Demo"
               className="w-full h-full border-0"
             />
           </div>

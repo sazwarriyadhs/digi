@@ -332,11 +332,11 @@ export const demoItems = [
         aiHint: "landslide warning",
         imageUrl: "/images/serenity-ews.png",
         id: {
-            name: "Serenity EWS - Tanah Longsor",
+            name: "Serenity EWS Bogor",
             description: "Demo sistem peringatan dini untuk bencana tanah longsor, menampilkan data sensor dan prediksi."
         },
         en: {
-            name: "Serenity EWS - Landslide",
+            name: "Serenity EWS Bogor",
             description: "Demo of an early warning system for landslides, displaying sensor data and predictions."
         }
     }
@@ -417,6 +417,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
