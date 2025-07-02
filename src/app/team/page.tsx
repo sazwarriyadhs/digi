@@ -44,7 +44,6 @@ export default function TeamPage() {
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-between">
                 <div className="flex-grow flex items-center justify-center">
-                    {member.en.name === "Azwar Riyadh" ? (
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button variant="secondary">{t('team.viewProfile')}</Button>
@@ -67,9 +66,6 @@ export default function TeamPage() {
                         </div>
                       </DialogContent>
                     </Dialog>
-                  ) : (
-                    <p className="text-sm text-muted-foreground">{member[language].bio}</p>
-                  )}
                 </div>
                 <div className="flex justify-center gap-4 mt-auto pt-4">
                     {member.social.linkedin && (
