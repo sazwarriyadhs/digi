@@ -313,6 +313,19 @@ export const demoItems = [
             name: "Serenity Parkease",
             description: "Demo of a parking management application for slot monitoring and reservations."
         }
+    },
+    {
+        href: "/demo/serenity-tarot",
+        aiHint: "tarot cards mystical",
+        imageUrl: "/images/serenitytarot.png",
+        id: {
+            name: "Serenity Tarot",
+            description: "Demo aplikasi pembacaan kartu tarot interaktif yang didukung oleh AI untuk wawasan dan refleksi diri."
+        },
+        en: {
+            name: "Serenity Tarot",
+            description: "Demo of an interactive AI-powered tarot card reading application for insight and self-reflection."
+        }
     }
 ];
 
@@ -391,6 +404,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
