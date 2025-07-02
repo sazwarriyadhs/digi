@@ -326,6 +326,19 @@ export const demoItems = [
             name: "Serenity Tarot",
             description: "Demo of an interactive AI-powered tarot card reading application for insight and self-reflection."
         }
+    },
+    {
+        href: "/demo/serenity-ews",
+        aiHint: "landslide warning",
+        imageUrl: "/images/serenity-ews.png",
+        id: {
+            name: "Serenity EWS - Tanah Longsor",
+            description: "Demo sistem peringatan dini untuk bencana tanah longsor, menampilkan data sensor dan prediksi."
+        },
+        en: {
+            name: "Serenity EWS - Landslide",
+            description: "Demo of an early warning system for landslides, displaying sensor data and predictions."
+        }
     }
 ];
 
@@ -404,6 +417,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
