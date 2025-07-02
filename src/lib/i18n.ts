@@ -130,7 +130,7 @@ export const translations = {
             title: "Mari Membangun Bersama",
             description: "Punya proyek dalam pikiran atau hanya ingin menyapa? Kami ingin sekali mendengar dari Anda.",
             phoneTitle: "Telepon",
-            phoneText: "+62 878 66453 0047",
+            phoneText: "+62 878 6453 0047",
             emailTitle: "Informasi",
             emailText: "info@digimediakomunika.cloud",
             financeEmailTitle: "Administrasi",
@@ -459,7 +459,7 @@ export const translations = {
             title: "Let's Build Together",
             description: "Have a project in mind or just want to say hello? We'd love to hear from you.",
             phoneTitle: "Phone",
-            phoneText: "+62 878 66453 0047",
+            phoneText: "+62 878 6453 0047",
             emailTitle: "Information",
             emailText: "info@digimediakomunika.cloud",
             financeEmailTitle: "Administration",
@@ -665,6 +665,7 @@ export type Translation = typeof translations;
     
 
     
+
 
 
 
