@@ -333,11 +333,11 @@ export const demoItems = [
         imageUrl: "/images/serenity-ews.png",
         id: {
             name: "Serenity EWS Bogor",
-            description: "Demo sistem peringatan dini untuk bencana tanah longsor, menampilkan data sensor dan prediksi."
+            description: "Demo Sistem Peringatan Dini Bahaya Bencana Alam Terdekat. Status keamanan real-time Anda berdasarkan lokasi."
         },
         en: {
             name: "Serenity EWS Bogor",
-            description: "Demo of an early warning system for landslides, displaying sensor data and predictions."
+            description: "Demo of an Early Warning System for Nearby Natural Disasters. Real-time security status based on your location."
         }
     }
 ];
@@ -417,6 +417,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 

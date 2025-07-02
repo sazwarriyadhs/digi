@@ -7,7 +7,7 @@ export default function SerenityEwsDemoPage() {
       <div className="text-center space-y-4 mb-12">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: Serenity EWS Bogor</h1>
         <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
-          Ini adalah demonstrasi sistem peringatan dini untuk bencana tanah longsor, menampilkan data sensor dan prediksi. Di bawah ini adalah pratinjau langsung dari situs tersebut.
+          Ini adalah demo Sistem Peringatan Dini untuk Bahaya Bencana Alam Terdekat. Lihat status keamanan real-time berdasarkan lokasi Anda. Di bawah ini adalah pratinjau langsung dari situs tersebut.
         </p>
       </div>
       <Card className="w-full max-w-6xl mx-auto">
