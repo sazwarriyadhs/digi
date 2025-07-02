@@ -94,7 +94,8 @@ export const translations = {
         team: {
             badge: "Tim Kami",
             title: "Temui Para Ahli Kami",
-            description: "Tim kami terdiri dari para profesional yang bersemangat dan berdedikasi untuk memberikan hasil terbaik."
+            description: "Tim kami terdiri dari para profesional yang bersemangat dan berdedikasi untuk memberikan hasil terbaik.",
+            viewProfile: "Lihat Profil"
         },
         faq: {
             badge: "FAQ Cerdas",
@@ -422,7 +423,8 @@ export const translations = {
         team: {
             badge: "Our Team",
             title: "Meet Our Experts",
-            description: "Our team consists of passionate and dedicated professionals committed to delivering the best results."
+            description: "Our team consists of passionate and dedicated professionals committed to delivering the best results.",
+            viewProfile: "View Profile"
         },
         faq: {
             badge: "Intelligent FAQ",
@@ -663,5 +665,6 @@ export type Translation = typeof translations;
     
 
     
+
 
 

@@ -8,6 +8,15 @@ import { teamMembers } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Twitter, Github, Instagram } from "lucide-react";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 
 export default function TeamPage() {
   const { language, t } = useAppContext();
@@ -34,8 +43,35 @@ export default function TeamPage() {
                 <CardDescription>{member[language].role}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-between">
-                <p className="text-sm text-muted-foreground mb-4">{member[language].bio}</p>
-                <div className="flex justify-center gap-4 mt-auto">
+                <div className="flex-grow flex items-center justify-center">
+                    {member.en.name === "Azwar Riyadh" ? (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="secondary">{t('team.viewProfile')}</Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[425px]">
+                        <DialogHeader>
+                          <div className="flex flex-col items-center text-center">
+                            <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
+                              <AvatarImage src={member.imageUrl} alt={member[language].name} />
+                              <AvatarFallback>{member[language].name.charAt(0)}</AvatarFallback>
+                            </Avatar>
+                            <DialogTitle className="text-2xl">{member[language].name}</DialogTitle>
+                            <DialogDescription>{member[language].role}</DialogDescription>
+                          </div>
+                        </DialogHeader>
+                        <div className="py-4 text-center">
+                          <p className="text-sm text-muted-foreground">
+                            {member[language].bio}
+                          </p>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  ) : (
+                    <p className="text-sm text-muted-foreground">{member[language].bio}</p>
+                  )}
+                </div>
+                <div className="flex justify-center gap-4 mt-auto pt-4">
                     {member.social.linkedin && (
                         <Button asChild variant="ghost" size="icon">
                             <Link href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
