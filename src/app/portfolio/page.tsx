@@ -2,15 +2,17 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAppContext } from "@/context/AppContext";
-import { portfolioItems } from "@/lib/data";
+import { demoItems } from "@/lib/data";
 import Image from "next/image";
-import { CardDescription } from "@/components/ui/card";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function PortfolioPage() {
   const { language, t } = useAppContext();
 
   return (
-    <div className="bg-background">
+    <div className="bg-card">
         <div className="container mx-auto py-12 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
             <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">{t('portfolioPage.badge')}</div>
@@ -19,24 +21,34 @@ export default function PortfolioPage() {
                 {t('portfolioPage.description')}
             </p>
             </div>
-            <div className="mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2">
-            {portfolioItems.map((item, index) => (
-                <Card key={index} className="overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 flex flex-col bg-card">
-                    <Image
-                        src={item.imageUrl}
-                        alt={item[language].project}
-                        width={600}
-                        height={400}
-                        className="w-full h-56 object-cover"
-                        data-ai-hint={item.aiHint}
-                    />
-                    <CardHeader>
-                        <CardTitle>{item[language].project}</CardTitle>
-                        <CardDescription>{t('portfolioPage.client')}: {item[language].client}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                        <p className="text-sm text-muted-foreground">{item[language].details}</p>
-                    </CardContent>
+            <div className="mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {demoItems.map((item, index) => (
+                <Card key={index} className="overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 flex flex-col bg-background">
+                <Image
+                    src={item.imageUrl}
+                    alt={item[language].name}
+                    width={600}
+                    height={400}
+                    className="w-full h-48 object-cover"
+                    data-ai-hint={item.aiHint}
+                />
+                <CardHeader>
+                    <CardTitle>{item[language].name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow flex flex-col justify-between">
+                    <p className="text-sm text-muted-foreground mb-4">{item[language].description}</p>
+                    <Button asChild className="mt-auto w-full">
+                    {item.href.startsWith('http') ? (
+                        <a href={item.href} target="_blank" rel="noopener noreferrer">
+                            {t('portfolioPage.viewDemo')} <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                    ) : (
+                        <Link href={item.href}>
+                            {t('portfolioPage.viewDemo')} <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    )}
+                    </Button>
+                </CardContent>
                 </Card>
             ))}
             </div>
