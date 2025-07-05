@@ -352,6 +352,19 @@ export const demoItems = [
             name: "Your Website's SEO and SMO Optimization",
             description: "Demo tool for SEO and Social Media analysis and optimization to improve rankings and online visibility."
         }
+    },
+    {
+        href: "/demo/pantau-csy",
+        aiHint: "cybersecurity dashboard",
+        imageUrl: "/images/pantaucsy.png",
+        id: {
+            name: "Pantau CSY - Monitoring Keamanan Siber",
+            description: "Demo dashboard untuk memantau ancaman keamanan siber secara real-time."
+        },
+        en: {
+            name: "Pantau CSY - Cyber Security Monitoring",
+            description: "A dashboard demo for monitoring cybersecurity threats in real-time."
+        }
     }
 ];
 
@@ -430,6 +443,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
