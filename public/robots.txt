@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://digimediakomunika.cloud
+
+# Sitemaps
+Sitemap: https://digimediakomunika.cloud/sitemap.xml
