@@ -339,6 +339,19 @@ export const demoItems = [
             name: "Serenity EWS Bogor",
             description: "Demo of an Early Warning System for Nearby Natural Disasters. Real-time security status based on your location."
         }
+    },
+    {
+        href: "/demo/seo",
+        aiHint: "youtube seo analysis",
+        imageUrl: "/images/theseo.png",
+        id: {
+            name: "Optimasi SEO YouTube",
+            description: "Demo alat untuk analisis dan optimasi SEO video YouTube untuk meningkatkan peringkat."
+        },
+        en: {
+            name: "YouTube SEO Optimization",
+            description: "Demo of a tool for analyzing and optimizing YouTube video SEO to improve rankings."
+        }
     }
 ];
 
@@ -417,6 +430,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
