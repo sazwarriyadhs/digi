@@ -357,7 +357,7 @@ export const demoItems = [
     {
         href: "/demo/pantau-csy",
         aiHint: "community security dashboard",
-        imageUrl: "/images/pantaucsy.png",
+        imageUrl: "/images/logopantau.png",
         id: {
             name: "Aplikasi Monitoring Warga Cimahpar",
             description: "Demo aplikasi untuk memantau keamanan dan aktivitas warga di Perumahan Cimahpar Stoneyard secara real-time."
