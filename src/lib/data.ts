@@ -258,6 +258,23 @@ export const portfolioItems = [
         projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/cyber.jpg",
         aiHint: "security audit report",
+    },
+    {
+        href: "/demo/banjir-online",
+        id: {
+            client: "BPBD Kota Bogor",
+            project: "Aplikasi Mobile BanjirOnline (Android & iOS)",
+            details: "Mengembangkan aplikasi mobile untuk memantau ketinggian air secara real-time dan memberikan peringatan dini banjir kepada warga. Dilengkapi dengan peta interaktif dan notifikasi push."
+        },
+        en: {
+            client: "Bogor City Disaster Management Agency",
+            project: "BanjirOnline Mobile App (Android & iOS)",
+            details: "Developed a mobile application to monitor water levels in real-time and provide early flood warnings to residents. Equipped with an interactive map and push notifications."
+        },
+        duration: { id: "5 Bulan", en: "5 Months" },
+        projectOfficer: "Azwar Riyadh",
+        imageUrl: "/images/banjir-online.jpg",
+        aiHint: "flood warning app",
     }
 ];
 
