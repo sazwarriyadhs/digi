@@ -275,6 +275,23 @@ export const portfolioItems = [
         projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/banjir-online.jpg",
         aiHint: "flood warning app",
+    },
+    {
+        href: "/demo/takobo",
+        id: {
+            client: "Pemerintah Kota Bogor",
+            project: "Aplikasi Mobile Takobo (Tanggap Bencana Kota Bogor)",
+            details: "Mengembangkan aplikasi mobile lintas platform untuk sistem peringatan dini bencana alam di Kota Bogor, menyediakan informasi real-time dan notifikasi darurat."
+        },
+        en: {
+            client: "Bogor City Government",
+            project: "Takobo Mobile App (Bogor City Disaster Response)",
+            details: "Developed a cross-platform mobile app for a natural disaster early warning system in Bogor City, providing real-time information and emergency notifications."
+        },
+        duration: { id: "5 Bulan", en: "5 Months" },
+        projectOfficer: "Azwar Riyadh",
+        imageUrl: "/images/takobo-mobile.jpg",
+        aiHint: "disaster warning app",
     }
 ];
 
