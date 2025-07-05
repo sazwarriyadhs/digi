@@ -1,3 +1,4 @@
+
 import { Lightbulb, Codepen, ShieldCheck, CloudCog, DatabaseZap, Briefcase, LifeBuoy, Presentation, GanttChartSquare, Bot, Search } from "lucide-react";
 import React from "react";
 
@@ -443,17 +444,3 @@ export const teamMembers = [
         }
     }
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
