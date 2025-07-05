@@ -7,7 +7,7 @@ export default function SeoDemoPage() {
       <div className="text-center space-y-4 mb-12">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: The SEO - Optimasi YouTube</h1>
         <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
-          Ini adalah demonstrasi alat untuk optimasi SEO YouTube, menampilkan analisis dan rekomendasi untuk meningkatkan visibilitas video. Di bawah ini adalah pratinjau langsung dari situs tersebut.
+          Demo alat untuk analisis dan optimasi SEO video YouTube untuk meningkatkan peringkat.
         </p>
       </div>
       <Card className="w-full max-w-6xl mx-auto">
