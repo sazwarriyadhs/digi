@@ -3,13 +3,12 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { useAppContext } from "@/context/AppContext";
-import { portfolioItems, demoItems } from "@/lib/data";
+import { portfolioItems } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, User } from "lucide-react";
+import { Clock, User } from "lucide-react";
 
 export default function PortfolioPage() {
   const { language, t } = useAppContext();
@@ -26,7 +25,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Client Projects Section */}
-            <div className="mb-16">
+            <div>
                 <h2 className="text-3xl font-bold tracking-tighter text-center mb-8 font-headline">{t('portfolioPage.clientProjectsTitle')}</h2>
                 <div className="mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2">
                     {portfolioItems.map((item, index) => (
@@ -67,47 +66,7 @@ export default function PortfolioPage() {
                     ))}
                 </div>
             </div>
-
-            <Separator className="my-16" />
-
-            {/* Interactive Demos Section */}
-            <div>
-                <h2 className="text-3xl font-bold tracking-tighter text-center mb-8 font-headline">{t('portfolioPage.interactiveDemosTitle')}</h2>
-                <div className="mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    {demoItems.map((item, index) => (
-                        <Card key={index} className="overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 flex flex-col bg-card">
-                        <Image
-                            src={item.imageUrl}
-                            alt={item[language].name}
-                            width={600}
-                            height={400}
-                            className="w-full h-48 object-cover"
-                            data-ai-hint={item.aiHint}
-                        />
-                        <CardHeader>
-                            <CardTitle>{item[language].name}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="flex-grow flex flex-col justify-between">
-                            <p className="text-sm text-muted-foreground mb-4">{item[language].description}</p>
-                            <Button asChild className="mt-auto w-full">
-                            {item.href.startsWith('http') ? (
-                                <a href={item.href} target="_blank" rel="noopener noreferrer">
-                                    {t('portfolioPage.viewDemo')} <ArrowRight className="ml-2 h-4 w-4" />
-                                </a>
-                            ) : (
-                                <Link href={item.href}>
-                                    {t('portfolioPage.viewDemo')} <ArrowRight className="ml-2 h-4 w-4" />
-                                </Link>
-                            )}
-                            </Button>
-                        </CardContent>
-                        </Card>
-                    ))}
-                </div>
-            </div>
         </div>
     </div>
   );
 }
-
-    
