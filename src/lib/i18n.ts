@@ -87,8 +87,13 @@ export const translations = {
         },
         portfolioPage: {
             badge: "Portofolio",
-            title: "Portofolio & Demo Kami",
-            description: "Jelajahi portofolio proyek dan demo interaktif dari solusi unggulan kami.",
+            title: "Karya & Demo Kami",
+            description: "Jelajahi contoh proyek yang telah kami kerjakan untuk klien dan lihat demo interaktif dari solusi kami.",
+            clientProjectsTitle: "Proyek Klien",
+            interactiveDemosTitle: "Demo Interaktif",
+            duration: "Durasi",
+            projectOfficer: "Project Officer",
+            viewDetails: "Lihat Detail Proyek",
             viewDemo: "Lihat Demo"
         },
         team: {
@@ -416,8 +421,13 @@ export const translations = {
         },
         portfolioPage: {
             badge: "Portfolio",
-            title: "Our Portfolio & Demos",
-            description: "Explore our project portfolio and interactive demos of our flagship solutions.",
+            title: "Our Work & Demos",
+            description: "Explore examples of projects we have delivered for our clients and check out interactive demos of our solutions.",
+            clientProjectsTitle: "Client Projects",
+            interactiveDemosTitle: "Interactive Demos",
+            duration: "Duration",
+            projectOfficer: "Project Officer",
+            viewDetails: "View Project Details",
             viewDemo: "View Demo"
         },
         team: {
@@ -663,10 +673,3 @@ export const translations = {
 export type Translation = typeof translations;
 
     
-
-    
-
-
-
-
-

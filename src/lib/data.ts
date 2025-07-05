@@ -192,6 +192,7 @@ export const packages = [
 
 export const portfolioItems = [
     {
+        href: "/demo/crm",
         id: {
             client: "Bank Nusantara",
             project: "Implementasi Sistem CRM berbasis Web",
@@ -202,10 +203,13 @@ export const portfolioItems = [
             project: "Web-based CRM System Implementation",
             details: "We built a custom CRM system integrated with the call center and live chat, and provided a real-time analytics dashboard for 100+ customer service agents, increasing service efficiency by 40%."
         },
+        duration: { id: "3 Bulan", en: "3 Months" },
+        projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/crm.jpg",
         aiHint: "crm dashboard analytics",
     },
     {
+        href: "/demo/devops",
         id: {
             client: "PT Astra Tech",
             project: "Migrasi Infrastruktur ke AWS Cloud",
@@ -216,10 +220,13 @@ export const portfolioItems = [
             project: "Infrastructure Migration to AWS Cloud",
             details: "We assisted in migrating 20+ microservices to AWS with a serverless architecture and automated monitoring (Grafana + Prometheus), reducing system downtime by up to 95%."
         },
+        duration: { id: "4 Bulan", en: "4 Months" },
+        projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/aws.jpg",
         aiHint: "cloud infrastructure diagram",
     },
     {
+        href: "/demo/akademik",
         id: {
             client: "Universitas Digital Indonesia",
             project: "Pengembangan Sistem Akademik Online",
@@ -230,10 +237,13 @@ export const portfolioItems = [
             project: "Online Academic System Development",
             details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over 10,000 students."
         },
+        duration: { id: "6 Bulan", en: "6 Months" },
+        projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/akademik.jpg",
         aiHint: "university student portal",
     },
     {
+        href: "#",
         id: {
             client: "RS Sehat Sentosa",
             project: "Audit Keamanan Sistem Informasi",
@@ -244,6 +254,8 @@ export const portfolioItems = [
             project: "Information System Security Audit",
             details: "The audit was conducted on the hospital's information system and internal servers, including a technical report and incident handling SOPs, successfully identifying and closing 13 critical security vulnerabilities."
         },
+        duration: { id: "2 Bulan", en: "2 Months" },
+        projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/cyber.jpg",
         aiHint: "security audit report",
     }
@@ -444,3 +456,5 @@ export const teamMembers = [
         }
     }
 ];
+
+    
