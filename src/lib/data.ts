@@ -359,12 +359,12 @@ export const demoItems = [
         aiHint: "cybersecurity dashboard",
         imageUrl: "/images/pantaucsy.png",
         id: {
-            name: "Pantau CSY - Monitoring Keamanan Siber",
-            description: "Demo dashboard untuk memantau ancaman keamanan siber secara real-time."
+            name: "Dasbor Keamanan Siber",
+            description: "Demo dashboard interaktif untuk memantau ancaman keamanan siber secara real-time, menganalisis log, dan melacak status sistem."
         },
         en: {
-            name: "Pantau CSY - Cyber Security Monitoring",
-            description: "A dashboard demo for monitoring cybersecurity threats in real-time."
+            name: "Cyber Security Dashboard",
+            description: "An interactive dashboard demo for monitoring cybersecurity threats in real-time, analyzing logs, and tracking system status."
         }
     }
 ];

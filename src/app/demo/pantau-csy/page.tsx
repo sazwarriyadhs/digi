@@ -6,20 +6,20 @@ export default function PantauCsyDemoPage() {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
       <div className="text-center space-y-4 mb-12">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: Pantau CSY - Monitoring Keamanan Siber</h1>
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: Dasbor Keamanan Siber</h1>
         <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
-          Ini adalah demonstrasi dashboard untuk memantau keamanan siber secara real-time. Di bawah ini adalah pratinjau langsung dari situs tersebut.
+          Ini adalah demonstrasi dashboard interaktif untuk memantau ancaman keamanan siber, menganalisis log, dan melacak status sistem secara real-time.
         </p>
       </div>
       <Card className="w-full max-w-6xl mx-auto">
         <CardHeader>
-          <CardTitle>Live Preview: Pantau CSY</CardTitle>
+          <CardTitle>Live Preview: Dasbor Keamanan Siber</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <iframe
               src="https://pantaucsy.vercel.app/"
-              title="Pantau CSY Demo"
+              title="Dasbor Keamanan Siber Demo"
               className="w-full h-full border-0"
             />
           </div>
