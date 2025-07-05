@@ -356,15 +356,15 @@ export const demoItems = [
     },
     {
         href: "/demo/pantau-csy",
-        aiHint: "cybersecurity dashboard",
+        aiHint: "community security dashboard",
         imageUrl: "/images/pantaucsy.png",
         id: {
-            name: "Dasbor Keamanan Siber",
-            description: "Demo dashboard interaktif untuk memantau ancaman keamanan siber secara real-time, menganalisis log, dan melacak status sistem."
+            name: "Aplikasi Monitoring Warga Cimahpar",
+            description: "Demo aplikasi untuk memantau keamanan dan aktivitas warga di Perumahan Cimahpar Stoneyard secara real-time."
         },
         en: {
-            name: "Cyber Security Dashboard",
-            description: "An interactive dashboard demo for monitoring cybersecurity threats in real-time, analyzing logs, and tracking system status."
+            name: "Cimahpar Residential Monitoring App",
+            description: "Demo application for real-time monitoring of security and resident activity at Cimahpar Stoneyard housing."
         }
     }
 ];
