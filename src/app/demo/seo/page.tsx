@@ -5,14 +5,14 @@ export default function SeoDemoPage() {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
       <div className="text-center space-y-4 mb-12">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: The SEO - Optimasi YouTube</h1>
+        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl font-headline">Demo: Optimasi SEO dan SMO Website Anda</h1>
         <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed">
-          Demo alat untuk analisis dan optimasi SEO video YouTube untuk meningkatkan peringkat.
+          Demo alat untuk analisis dan optimasi SEO dan Media Sosial untuk meningkatkan peringkat dan visibilitas online.
         </p>
       </div>
       <Card className="w-full max-w-6xl mx-auto">
         <CardHeader>
-          <CardTitle>Live Preview: The SEO - YouTube Optimization</CardTitle>
+          <CardTitle>Live Preview: The SEO - Website Optimization</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="aspect-video w-full rounded-lg overflow-hidden border">

@@ -342,15 +342,15 @@ export const demoItems = [
     },
     {
         href: "/demo/seo",
-        aiHint: "youtube seo analysis",
+        aiHint: "seo analysis dashboard",
         imageUrl: "/images/theseo.png",
         id: {
-            name: "Optimasi SEO YouTube",
-            description: "Demo alat untuk analisis dan optimasi SEO video YouTube untuk meningkatkan peringkat."
+            name: "Optimasi SEO dan SMO Website Anda",
+            description: "Demo alat untuk analisis dan optimasi SEO dan Media Sosial untuk meningkatkan peringkat dan visibilitas online."
         },
         en: {
-            name: "YouTube SEO Optimization",
-            description: "Demo of a tool for analyzing and optimizing YouTube video SEO to improve rankings."
+            name: "Your Website's SEO and SMO Optimization",
+            description: "Demo tool for SEO and Social Media analysis and optimization to improve rankings and online visibility."
         }
     }
 ];
@@ -430,6 +430,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
