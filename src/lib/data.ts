@@ -291,7 +291,7 @@ export const demoItems = [
     {
         href: "/demo/bi",
         aiHint: "business intelligence dashboard",
-        imageUrl: "/images/serenitybi.png",
+        imageUrl: "/images/thebi.png",
         id: {
             name: "Serenity BI",
             description: "Demo dashboard Business Intelligence untuk analisis data dan visualisasi."
@@ -430,6 +430,7 @@ export const teamMembers = [
         }
     }
 ];
+
 
 
 
