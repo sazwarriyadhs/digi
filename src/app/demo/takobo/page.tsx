@@ -17,7 +17,7 @@ export default function TakoboDemoPage() {
         <CardContent>
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <Image
-              src="/images/takobo-mobile.jpg"
+              src="/images/Takobo.jpg"
               alt="Demo Aplikasi Takobo Mobile"
               width={1200}
               height={675}

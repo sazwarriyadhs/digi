@@ -290,7 +290,7 @@ export const portfolioItems = [
         },
         duration: { id: "5 Bulan", en: "5 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "/images/takobo-mobile.jpg",
+        imageUrl: "/images/Takobo.jpg",
         aiHint: "disaster warning app",
     }
 ];
@@ -411,6 +411,19 @@ export const demoItems = [
         en: {
             name: "Cimahpar Residential Monitoring App",
             description: "Demo application for real-time monitoring of security and resident activity at Cimahpar Stoneyard housing."
+        }
+    },
+    {
+        href: "/demo/takobo",
+        aiHint: "disaster warning app",
+        imageUrl: "/images/Takobo.jpg",
+        id: {
+            name: "Aplikasi Mobile Takobo (Tanggap Bencana Kota Bogor)",
+            description: "Mengembangkan aplikasi mobile lintas platform untuk sistem peringatan dini bencana alam di Kota Bogor, menyediakan informasi real-time dan notifikasi darurat."
+        },
+        en: {
+            name: "Takobo Mobile App (Bogor City Disaster Response)",
+            description: "Developed a cross-platform mobile app for a natural disaster early warning system in Bogor City, providing real-time information and emergency notifications."
         }
     }
 ];
