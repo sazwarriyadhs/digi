@@ -263,12 +263,12 @@ export const portfolioItems = [
         href: "/demo/banjir-online",
         id: {
             client: "PU Air DKI Jakarta",
-            project: "Aplikasi Mobile BanjirOnline (Android & iOS)",
+            project: "Aplikasi Mobile: BanjirOnline (Android dan iOS)",
             details: "Mengembangkan aplikasi mobile untuk memantau ketinggian air secara real-time dan memberikan peringatan dini banjir kepada warga. Dilengkapi dengan peta interaktif dan notifikasi push."
         },
         en: {
             client: "Jakarta Water Resources Agency",
-            project: "BanjirOnline Mobile App (Android & iOS)",
+            project: "Mobile App: BanjirOnline (Android and iOS)",
             details: "Developed a mobile application to monitor water levels in real-time and provide early flood warnings to residents. Equipped with an interactive map and push notifications."
         },
         duration: { id: "5 Bulan", en: "5 Months" },
