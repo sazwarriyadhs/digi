@@ -299,7 +299,7 @@ export const demoItems = [
     {
         href: "/demo/spademo",
         aiHint: "spa wellness website",
-        imageUrl: "/images/Serenity Spa & Wellness.png",
+        imageUrl: "/images/Serenity%20Spa%20&%20Wellness.png",
         id: {
             name: "Serenity Spa & Wellness",
             description: "Demo website untuk Spa & Wellness, menampilkan layanan dan pemesanan online."
