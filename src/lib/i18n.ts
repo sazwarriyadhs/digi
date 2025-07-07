@@ -24,7 +24,7 @@ export const translations = {
                 ]
             },
             { href: "/ai-help", label: "Bantuan AI" },
-            { href: "https://serenitytrade.vercel.app/", label: "Trading", isExternal: true },
+            { href: "https://serenitytrade.vercel.app/", label: "Aplikasi Unggulan", isExternal: true },
         ],
         hero: {
             slides: [
@@ -367,7 +367,7 @@ export const translations = {
                 ]
             },
             { href: "/ai-help", label: "AI Help" },
-            { href: "https://serenitytrade.vercel.app/", label: "Trading", isExternal: true },
+            { href: "https://serenitytrade.vercel.app/", label: "Featured App", isExternal: true },
         ],
         hero: {
             slides: [
@@ -689,3 +689,5 @@ export const translations = {
 }
 
 export type Translation = typeof translations;
+
+    
