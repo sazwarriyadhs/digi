@@ -6,15 +6,25 @@ export const translations = {
             { href: "/#about", label: "Tentang" },
             { href: "/#services", label: "Layanan" },
             { href: "/portfolio", label: "Portofolio" },
-            { href: "/demo", label: "Demo" },
-            { href: "https://serenitytrade.vercel.app/", label: "Trading with Serenity" },
-            { href: "/team", label: "Tim Ahli" },
+            { 
+                label: "Klien Kami",
+                children: [
+                    { href: "/demo", label: "Demo & Studi Kasus" },
+                    { href: "/appointment", label: "Jadwalkan Temu" },
+                    { href: "/proposal", label: "Minta Penawaran" },
+                ]
+            },
+            { 
+                label: "Perusahaan",
+                children: [
+                    { href: "/team", label: "Tim Kami" },
+                    { href: "/#faq", label: "FAQ" },
+                    { href: "/brochure", label: "Brosur" },
+                    { href: "/#contact", label: "Kontak" },
+                ]
+            },
             { href: "/ai-help", label: "Bantuan AI" },
-            { href: "/#faq", label: "FAQ" },
-            { href: "/appointment", label: "Jadwalkan Temu" },
-            { href: "/proposal", label: "Penawaran" },
-            { href: "/brochure", label: "Brosur" },
-            { href: "/#contact", label: "Kontak" },
+            { href: "https://serenitytrade.vercel.app/", label: "Trading", isExternal: true },
         ],
         hero: {
             slides: [
@@ -339,15 +349,25 @@ export const translations = {
             { href: "/#about", label: "About" },
             { href: "/#services", label: "Services" },
             { href: "/portfolio", label: "Portfolio" },
-            { href: "/demo", label: "Demo" },
-            { href: "https://serenitytrade.vercel.app/", label: "Trading with Serenity" },
-            { href: "/team", label: "Our Team" },
+            { 
+                label: "Our Clients",
+                children: [
+                    { href: "/demo", label: "Demos & Case Studies" },
+                    { href: "/appointment", label: "Schedule Appointment" },
+                    { href: "/proposal", label: "Request Proposal" },
+                ]
+            },
+            { 
+                label: "Company",
+                children: [
+                    { href: "/team", label: "Our Team" },
+                    { href: "/#faq", label: "FAQ" },
+                    { href: "/brochure", label: "Brochure" },
+                    { href: "/#contact", label: "Contact" },
+                ]
+            },
             { href: "/ai-help", label: "AI Help" },
-            { href: "/#faq", label: "FAQ" },
-            { href: "/appointment", label: "Appointment" },
-            { href: "/proposal", label: "Proposal" },
-            { href: "/brochure", label: "Brochure" },
-            { href: "/#contact", label: "Contact" },
+            { href: "https://serenitytrade.vercel.app/", label: "Trading", isExternal: true },
         ],
         hero: {
             slides: [
