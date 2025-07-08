@@ -292,6 +292,23 @@ export const portfolioItems = [
         projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/Takobo.jpg",
         aiHint: "disaster warning app",
+    },
+    {
+        href: "/demo/serenity-trade",
+        id: {
+            client: "Serenity Group",
+            project: "Platform Ekspor Agri-Komoditas",
+            details: "Membangun platform trading digital untuk komoditas agrikultur, menghubungkan petani lokal dengan pasar global. Fitur termasuk analitik harga real-time, logistik terintegrasi, dan pembayaran aman."
+        },
+        en: {
+            client: "Serenity Group",
+            project: "Agri-Commodity Export Platform",
+            details: "Built a digital trading platform for agricultural commodities, connecting local farmers with the global market. Features include real-time price analytics, integrated logistics, and secure payments."
+        },
+        duration: { id: "7 Bulan", en: "7 Months" },
+        projectOfficer: "Azwar Riyadh",
+        imageUrl: "https://storage.googleapis.com/project-os-prod/images/dd1136d8-11f8-4560-93a8-4e899d4582f3.png",
+        aiHint: "agriculture trading platform",
     }
 ];
 
@@ -424,6 +441,19 @@ export const demoItems = [
         en: {
             name: "Takobo Mobile App (Bogor City Disaster Response)",
             description: "Developed a cross-platform mobile app for a natural disaster early warning system in Bogor City, providing real-time information and emergency notifications."
+        }
+    },
+    {
+        href: "https://serenitytrade.vercel.app/",
+        aiHint: "agriculture trading",
+        imageUrl: "https://storage.googleapis.com/project-os-prod/images/dd1136d8-11f8-4560-93a8-4e899d4582f3.png",
+        id: {
+            name: "Serenity Trade Hub",
+            description: "Demo platform trading komoditas agrikultur yang menghubungkan pasar global."
+        },
+        en: {
+            name: "Serenity Trade Hub",
+            description: "Demo of an agricultural commodity trading platform connecting global markets."
         }
     }
 ];
