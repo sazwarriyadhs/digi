@@ -273,7 +273,7 @@ export const portfolioItems = [
         },
         duration: { id: "5 Bulan", en: "5 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "/images/banjir-online.jpg",
+        imageUrl: "/images/banjirmobile.png",
         aiHint: "flood warning app",
     },
     {
@@ -446,7 +446,7 @@ export const demoItems = [
     {
         href: "https://serenitytrade.vercel.app/",
         aiHint: "agriculture trading",
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/dd1136d8-11f8-4560-93a8-4e899d4582f3.png",
+        imageUrl: "/images/thetrade.png",
         id: {
             name: "Serenity Trade Hub",
             description: "Demo platform trading komoditas agrikultur yang menghubungkan pasar global."
