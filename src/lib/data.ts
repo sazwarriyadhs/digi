@@ -290,7 +290,7 @@ export const portfolioItems = [
         },
         duration: { id: "5 Bulan", en: "5 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "/images/Takobo.jpg",
+        imageUrl: "/images/takobo.jpg",
         aiHint: "disaster warning app",
     },
     {
@@ -307,7 +307,7 @@ export const portfolioItems = [
         },
         duration: { id: "7 Bulan", en: "7 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "https://storage.googleapis.com/project-os-prod/images/dd1136d8-11f8-4560-93a8-4e899d4582f3.png",
+        imageUrl: "/images/thetrade.png",
         aiHint: "agriculture trading platform",
     }
 ];
@@ -433,7 +433,7 @@ export const demoItems = [
     {
         href: "/demo/takobo",
         aiHint: "disaster warning app",
-        imageUrl: "/images/Takobo.jpg",
+        imageUrl: "/images/takobo.jpg",
         id: {
             name: "Aplikasi Mobile Takobo (Tanggap Bencana Kota Bogor)",
             description: "Mengembangkan aplikasi mobile lintas platform untuk sistem peringatan dini bencana alam di Kota Bogor, menyediakan informasi real-time dan notifikasi darurat."
