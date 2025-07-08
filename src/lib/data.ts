@@ -461,17 +461,17 @@ export const demoItems = [
 export const teamMembers = [
     {
         id: {
-            name: "Jean Philips",
+            name: "Titi Ariwati",
             role: "Chief Executive Officer",
-            bio: "Jean adalah seorang visioner dengan pengalaman lebih dari 15 tahun di industri teknologi, memimpin perusahaan menuju inovasi dan pertumbuhan yang berkelanjutan.",
+            bio: "Titi memimpin perusahaan dengan visi strategis, menggabungkan keahlian desainnya dengan kepemimpinan bisnis untuk mendorong inovasi dan pertumbuhan.",
         },
         en: {
-            name: "Jean Philips",
+            name: "Titi Ariwati",
             role: "Chief Executive Officer",
-            bio: "Jean is a visionary with over 15 years of experience in the tech industry, leading the company towards sustainable innovation and growth.",
+            bio: "Titi leads the company with strategic vision, combining her design expertise with business leadership to drive innovation and growth.",
         },
-        imageUrl: "/images/jean.jpeg",
-        aiHint: "male portrait business",
+        imageUrl: "/images/titi.png",
+        aiHint: "female portrait creative",
         social: {
             linkedin: "https://www.linkedin.com/",
             twitter: "https://twitter.com/",
@@ -494,42 +494,6 @@ export const teamMembers = [
             linkedin: "https://www.linkedin.com/",
             github: "https://github.com/sazwarriyadhs",
             instagram: "https://www.instagram.com/azwarriyadhs"
-        }
-    },
-    {
-        id: {
-            name: "Agus Wijaya",
-            role: "Head of Operations",
-            bio: "Agus bertanggung jawab atas kelancaran operasional sehari-hari, memastikan proyek berjalan tepat waktu dan sesuai anggaran dengan kualitas tertinggi.",
-        },
-        en: {
-            name: "Agus Wijaya",
-            role: "Head of Operations",
-            bio: "Agus is responsible for the smooth day-to-day operations, ensuring projects are delivered on time and within budget with the highest quality.",
-        },
-        imageUrl: "/images/agus.jpg",
-        aiHint: "male portrait professional",
-        social: {
-            linkedin: "https://www.linkedin.com/",
-            twitter: "https://twitter.com/",
-        }
-    },
-    {
-        id: {
-            name: "Titi Ariwati",
-            role: "Lead UI/UX Designer",
-            bio: "Titi adalah otak kreatif di balik antarmuka pengguna yang intuitif dan menarik. Dia mengubah ide-ide kompleks menjadi desain yang ramah pengguna.",
-        },
-        en: {
-            name: "Titi Ariwati",
-            role: "Lead UI/UX Designer",
-            bio: "Titi is the creative mind behind our intuitive and engaging user interfaces. She transforms complex ideas into user-friendly designs.",
-        },
-        imageUrl: "/images/titi.png",
-        aiHint: "female portrait creative",
-        social: {
-            linkedin: "https://www.linkedin.com/",
-            twitter: "https://twitter.com/",
         }
     }
 ];
