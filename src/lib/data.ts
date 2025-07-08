@@ -455,6 +455,19 @@ export const demoItems = [
             name: "Serenity Trade Hub",
             description: "Demo of an agricultural commodity trading platform connecting global markets."
         }
+    },
+    {
+        href: "/demo/banjir-online",
+        aiHint: "flood warning app",
+        imageUrl: "/images/banjirmobile.png",
+        id: {
+            name: "Aplikasi BanjirOnline",
+            description: "Demo aplikasi mobile untuk pemantauan banjir dengan peta interaktif dan notifikasi."
+        },
+        en: {
+            name: "BanjirOnline App",
+            description: "Demo of a mobile application for flood monitoring with interactive maps and notifications."
+        }
     }
 ];
 
