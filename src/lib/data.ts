@@ -306,9 +306,26 @@ export const portfolioItems = [
             details: "Built a digital trading platform for agricultural commodities, connecting local farmers with the global market. Features include real-time price analytics, integrated logistics, and secure payments."
         },
         duration: { id: "7 Bulan", en: "7 Months" },
-        projectOfficer: "Azwar Riyadh",
+        projectOfficer: "Azwar Riyadh, Titi Ariwati",
         imageUrl: "/images/thetrade.png",
         aiHint: "agriculture trading platform",
+    },
+    {
+        href: "/demo/ai-henna",
+        id: {
+            client: "Serenity Group",
+            project: "AI Henna Designer",
+            details: "Aplikasi berbasis AI untuk menghasilkan desain henna yang indah dan unik. Pengguna dapat mencari inspirasi atau menghasilkan pola kustom berdasarkan preferensi mereka."
+        },
+        en: {
+            client: "Serenity Group",
+            project: "AI Henna Designer",
+            details: "An AI-powered application to generate beautiful and unique henna designs. Users can get inspiration or generate custom patterns based on their preferences."
+        },
+        duration: { id: "2 Bulan", en: "2 Months" },
+        projectOfficer: "Azwar Riyadh, Titi Ariwati",
+        imageUrl: "/images/ai-henna.jpg",
+        aiHint: "henna design art",
     }
 ];
 
@@ -467,6 +484,19 @@ export const demoItems = [
         en: {
             name: "BanjirOnline App",
             description: "Demo of a mobile application for flood monitoring with interactive maps and notifications."
+        }
+    },
+    {
+        href: "/demo/ai-henna",
+        aiHint: "henna design art",
+        imageUrl: "/images/ai-henna.jpg",
+        id: {
+            name: "AI Henna Designer",
+            description: "Demo aplikasi berbasis AI untuk menghasilkan desain henna yang unik."
+        },
+        en: {
+            name: "AI Henna Designer",
+            description: "Demo of an AI-powered application to generate unique henna designs."
         }
     }
 ];
