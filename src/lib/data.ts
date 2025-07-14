@@ -235,7 +235,7 @@ export const portfolioItems = [
         en: {
             client: "Digital University of Indonesia",
             project: "Online Academic System Development",
-            details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over 10,000 students."
+            details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over over 10,000 students."
         },
         duration: { id: "6 Bulan", en: "6 Months" },
         projectOfficer: "Azwar Riyadh",
@@ -315,17 +315,17 @@ export const portfolioItems = [
         id: {
             client: "Serenity Group",
             project: "DigiAI",
-            details: "Aplikasi berbasis AI untuk menghasilkan desain henna yang indah dan unik. Pengguna dapat mencari inspirasi atau menghasilkan pola kustom berdasarkan preferensi mereka."
+            details: "Aplikasi AI canggih untuk mengubah teks menjadi gambar, gambar menjadi video, dan teks menjadi video, membuka kemungkinan kreatif tanpa batas."
         },
         en: {
             client: "Serenity Group",
             project: "DigiAI",
-            details: "An AI-powered application to generate beautiful and unique henna designs. Users can get inspiration or generate custom patterns based on their preferences."
+            details: "An advanced AI application to convert text to image, image to video, and text to video, unlocking endless creative possibilities."
         },
         duration: { id: "2 Bulan", en: "2 Months" },
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
         imageUrl: "/images/ai-henna.jpg",
-        aiHint: "henna design art",
+        aiHint: "ai generated art",
     }
 ];
 
@@ -488,15 +488,15 @@ export const demoItems = [
     },
     {
         href: "/demo/digiai",
-        aiHint: "henna design art",
+        aiHint: "ai generated art",
         imageUrl: "/images/ai-henna.jpg",
         id: {
             name: "DigiAI",
-            description: "Demo aplikasi berbasis AI untuk menghasilkan desain henna yang unik."
+            description: "Demo aplikasi AI untuk konversi teks ke gambar, gambar ke video, dan teks ke video."
         },
         en: {
             name: "DigiAI",
-            description: "Demo of an AI-powered application to generate unique henna designs."
+            description: "Demo of an AI application for text-to-image, image-to-video, and text-to-video conversion."
         }
     }
 ];
