@@ -290,7 +290,7 @@ export const portfolioItems = [
         },
         duration: { id: "5 Bulan", en: "5 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "/images/takobo.jpg",
+        imageUrl: "/images/Takobo.jpg",
         aiHint: "disaster warning app",
     },
     {
@@ -311,15 +311,15 @@ export const portfolioItems = [
         aiHint: "agriculture trading platform",
     },
     {
-        href: "/demo/ai-henna",
+        href: "/demo/digiai",
         id: {
             client: "Serenity Group",
-            project: "AI Henna Designer",
+            project: "DigiAI",
             details: "Aplikasi berbasis AI untuk menghasilkan desain henna yang indah dan unik. Pengguna dapat mencari inspirasi atau menghasilkan pola kustom berdasarkan preferensi mereka."
         },
         en: {
             client: "Serenity Group",
-            project: "AI Henna Designer",
+            project: "DigiAI",
             details: "An AI-powered application to generate beautiful and unique henna designs. Users can get inspiration or generate custom patterns based on their preferences."
         },
         duration: { id: "2 Bulan", en: "2 Months" },
@@ -487,15 +487,15 @@ export const demoItems = [
         }
     },
     {
-        href: "/demo/ai-henna",
+        href: "/demo/digiai",
         aiHint: "henna design art",
         imageUrl: "/images/ai-henna.jpg",
         id: {
-            name: "AI Henna Designer",
+            name: "DigiAI",
             description: "Demo aplikasi berbasis AI untuk menghasilkan desain henna yang unik."
         },
         en: {
-            name: "AI Henna Designer",
+            name: "DigiAI",
             description: "Demo of an AI-powered application to generate unique henna designs."
         }
     }
