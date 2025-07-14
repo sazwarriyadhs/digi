@@ -18,6 +18,7 @@ export const translations = {
                 label: "Perusahaan",
                 children: [
                     { href: "/team", label: "Tim Kami" },
+                    { href: "/investor", label: "Investasi & Kemitraan" },
                     { href: "/#faq", label: "FAQ" },
                     { href: "/brochure", label: "Brosur" },
                     { href: "/#contact", label: "Kontak" },
@@ -272,6 +273,30 @@ export const translations = {
             imageAlt: "/images/sampul.png",
             fileInfo: "File: PDF, Ukuran: ~2.5MB"
         },
+        investor: {
+            badge: "Investasi & Kemitraan",
+            title: "Peluang Investasi & Kemitraan",
+            description: "Kami mencari mitra strategis untuk bergabung dengan kami dalam perjalanan kami untuk merevolusi lanskap digital. Temukan potensi pertumbuhan bersama Digi Media Komunika.",
+            contactEmail: "admin@digimediakomunika.cloud",
+            whyInvest: {
+                title: "Mengapa Bermitra dengan Kami?",
+                points: [
+                    "Model bisnis yang terbukti dengan rekam jejak proyek yang sukses.",
+                    "Tim ahli dengan keahlian mendalam di bidang teknologi dan strategi bisnis.",
+                    "Pasar yang berkembang pesat dengan potensi pertumbuhan yang signifikan.",
+                    "Komitmen terhadap inovasi dan pengembangan solusi mutakhir.",
+                    "Struktur kemitraan yang transparan dan saling menguntungkan."
+                ]
+            },
+            getInTouch: {
+                title: "Hubungi Kami",
+                description: "Mari kita diskusikan bagaimana kita bisa sukses bersama.",
+                cta: "Tertarik untuk berdiskusi lebih lanjut?",
+                invitation: "Kami mengundang Anda untuk menghubungi tim pengembangan bisnis kami untuk presentasi terperinci.",
+                confidentiality: "Semua pertanyaan akan diperlakukan dengan kerahasiaan tertinggi.",
+            },
+            downloadBrochure: "Unduh Profil Perusahaan"
+        },
         privacyPolicy: {
             title: "Kebijakan Privasi",
             lastUpdated: "Terakhir diperbarui: 29 Juni 2024",
@@ -361,6 +386,7 @@ export const translations = {
                 label: "Company",
                 children: [
                     { href: "/team", label: "Our Team" },
+                    { href: "/investor", label: "Investment & Partnership" },
                     { href: "/#faq", label: "FAQ" },
                     { href: "/brochure", label: "Brochure" },
                     { href: "/#contact", label: "Contact" },
@@ -614,6 +640,30 @@ export const translations = {
             downloadButton: "Download Brochure (PDF)",
             imageAlt: "Brochure Cover",
             fileInfo: "File: PDF, Size: ~2.5MB"
+        },
+        investor: {
+            badge: "Investment & Partnership",
+            title: "Investment & Partnership Opportunities",
+            description: "We are seeking strategic partners to join us on our journey to revolutionize the digital landscape. Discover the potential for growth with Digi Media Komunika.",
+            contactEmail: "admin@digimediakomunika.cloud",
+            whyInvest: {
+                title: "Why Partner with Us?",
+                points: [
+                    "Proven business model with a track record of successful projects.",
+                    "Expert team with deep expertise in technology and business strategy.",
+                    "Rapidly growing market with significant growth potential.",
+                    "Commitment to innovation and developing cutting-edge solutions.",
+                    "Transparent and mutually beneficial partnership structure."
+                ]
+            },
+            getInTouch: {
+                title: "Get in Touch",
+                description: "Let's discuss how we can achieve success together.",
+                cta: "Interested in discussing further?",
+                invitation: "We invite you to contact our business development team for a detailed presentation.",
+                confidentiality: "All inquiries will be treated with the utmost confidentiality.",
+            },
+            downloadBrochure: "Download Company Profile"
         },
         privacyPolicy: {
             title: "Privacy Policy",
