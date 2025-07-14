@@ -235,7 +235,7 @@ export const portfolioItems = [
         en: {
             client: "Digital University of Indonesia",
             project: "Online Academic System Development",
-            details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over over 10,000 students."
+            details: "This platform, integrated with SSO, features automatic scheduling, PDF export, and notifications via email/SMS, automating the study plan and grading process for over 10,000 students."
         },
         duration: { id: "6 Bulan", en: "6 Months" },
         projectOfficer: "Azwar Riyadh",
@@ -324,7 +324,7 @@ export const portfolioItems = [
         },
         duration: { id: "2 Bulan", en: "2 Months" },
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
-        imageUrl: "/images/ai-henna.jpg",
+        imageUrl: "/images/DigiAI.jpg",
         aiHint: "ai generated art",
     }
 ];
@@ -489,7 +489,7 @@ export const demoItems = [
     {
         href: "/demo/digiai",
         aiHint: "ai generated art",
-        imageUrl: "/images/ai-henna.jpg",
+        imageUrl: "/images/DigiAI.jpg",
         id: {
             name: "DigiAI",
             description: "Demo aplikasi AI untuk konversi teks ke gambar, gambar ke video, dan teks ke video."
