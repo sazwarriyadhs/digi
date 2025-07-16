@@ -37,7 +37,7 @@ export default function BrochurePage() {
                 <CardDescription className="mb-6">{t('brochure.cardDescription')}</CardDescription>
                 <Button asChild size="lg" className="w-full">
                     {/* The href should point to the actual PDF file in the /public directory */}
-                    <a href="/DMK-Company-Profile.pdf" download>
+                    <a href="/Digital Transformation Solutions.pdf" download>
                         <Download className="mr-2 h-5 w-5" />
                         {t('brochure.downloadButton')}
                     </a>

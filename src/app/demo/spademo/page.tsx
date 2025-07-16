@@ -38,7 +38,7 @@ export default function SpaDemoPage() {
               </Link>.
             </p>
             <Button asChild size="lg">
-                <a href="/DMK-Company-Profile.pdf" download>
+                <a href="/Digital Transformation Solutions.pdf" download>
                     <Download className="mr-2 h-5 w-5" />
                     {t('brochure.downloadButton')}
                 </a>
