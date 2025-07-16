@@ -25,7 +25,7 @@ export default function SerenityTradeDemoPage() {
         <CardContent>
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <iframe
-              src="https://serenitytrade.vercel.app/"
+              src="https://agribid-khaki.vercel.app/"
               title="Serenity Trade Hub Demo"
               className="w-full h-full border-0"
             />
@@ -33,7 +33,7 @@ export default function SerenityTradeDemoPage() {
           <div className="mt-6 text-center">
             <p className="text-sm text-muted-foreground mb-4">
               Pratinjau interaktif dimuat di atas. Untuk pengalaman penuh,{" "}
-              <Link href="https://serenitytrade.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
+              <Link href="https://agribid-khaki.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
                 kunjungi situs live
               </Link>.
             </p>

@@ -461,7 +461,7 @@ export const demoItems = [
         }
     },
     {
-        href: "https://serenitytrade.vercel.app/",
+        href: "/demo/serenity-trade",
         aiHint: "agriculture trading",
         imageUrl: "/images/thetrade.png",
         id: {
@@ -542,3 +542,4 @@ export const teamMembers = [
 ];
 
     
+
