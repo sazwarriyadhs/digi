@@ -289,7 +289,7 @@ export const portfolioItems = [
         },
         duration: { id: "5 Bulan", en: "5 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "/images/Takobo.jpg",
+        imageUrl: "/images/takobo.png",
         aiHint: "disaster warning app",
     },
     {

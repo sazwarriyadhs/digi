@@ -290,7 +290,7 @@ export const portfolioItems = [
         },
         duration: { id: "5 Bulan", en: "5 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "/images/Takobo.jpg",
+        imageUrl: "/images/takobo.png",
         aiHint: "disaster warning app",
     },
     {
@@ -450,7 +450,7 @@ export const demoItems = [
     {
         href: "/demo/takobo",
         aiHint: "disaster warning app",
-        imageUrl: "/images/takobo.jpg",
+        imageUrl: "/images/takobo.png",
         id: {
             name: "Aplikasi Mobile Takobo (Tanggap Bencana Kota Bogor)",
             description: "Mengembangkan aplikasi mobile lintas platform untuk sistem peringatan dini bencana alam di Kota Bogor, menyediakan informasi real-time dan notifikasi darurat."
@@ -542,4 +542,3 @@ export const teamMembers = [
 ];
 
     
-
