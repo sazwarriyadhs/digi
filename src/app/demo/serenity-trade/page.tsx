@@ -38,7 +38,7 @@ export default function SerenityTradeDemoPage() {
               </Link>.
             </p>
             <Button asChild size="lg">
-                <a href="/images/PITCH DECK - SERENITYTRADE.pdf" download>
+                <a href="/AgriBid Presentation.pdf" download>
                     <Download className="mr-2 h-5 w-5" />
                     Unduh Pitch Deck
                 </a>
