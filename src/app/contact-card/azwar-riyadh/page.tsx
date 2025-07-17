@@ -59,61 +59,61 @@ export default function AzwarRiyadhContactCardPage() {
         <div className="md:col-span-2">
             <h2 className="text-2xl font-bold tracking-tighter text-center mb-6 font-headline">Digital vCard Preview</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {/* Front Side */}
-                <Card className="w-full max-w-md mx-auto aspect-[85.6/54] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col justify-between p-6">
-                    <div className="flex justify-between items-start">
-                        <Image src="/images/logo.png" alt="Company Logo" width={80} height={40} className="h-10 w-auto" />
-                        <div className="text-right">
-                             <h2 className="text-xl font-bold">{member.en.name}</h2>
-                             <p className="text-primary font-medium">{member.en.role}</p>
+                {/* Front Side - Portrait */}
+                <Card className="w-full max-w-[280px] mx-auto aspect-[9/16] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col items-center p-6">
+                    <div className="w-full text-center">
+                        <Avatar className="w-32 h-32 mb-4 border-4 border-primary/20 mx-auto">
+                            <AvatarImage src={member.imageUrl} alt={member.en.name} data-ai-hint={member.aiHint} />
+                            <AvatarFallback>{member.id.name.charAt(0)}</AvatarFallback>
+                        </Avatar>
+                        <h2 className="text-2xl font-bold font-headline">{member.en.name}</h2>
+                        <p className="text-primary font-medium">{member.en.role}</p>
+                    </div>
+                    <div className="mt-8 space-y-3 text-sm w-full">
+                        <div className="flex items-center gap-3">
+                            <Phone className="w-4 h-4 text-primary" />
+                            <span>{member.social.phone}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Mail className="w-4 h-4 text-primary" />
+                            <span className="truncate">{member.social.email}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Globe className="w-4 h-4 text-primary" />
+                            <span>digimediakomunika.cloud</span>
                         </div>
                     </div>
-                    <div className="flex items-end justify-between">
-                         <div className="space-y-1 text-xs">
-                            <div className="flex items-center gap-2">
-                                <Phone className="w-3 h-3 text-primary" />
-                                <span>{member.social.phone}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Mail className="w-3 h-3 text-primary" />
-                                <span>{member.social.email}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Globe className="w-3 h-3 text-primary" />
-                                <span>digimediakomunika.cloud</span>
-                            </div>
-                         </div>
-                         <div className="flex items-center gap-2">
-                            <Image src="https://placehold.co/100x100.png" alt="QR Code for Company Profile" width={50} height={50} className="rounded-md" data-ai-hint="qr code" />
-                            <div className="flex flex-col gap-1">
-                                <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" /></a>
-                                <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" /></a>
-                                <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" /></a>
-                            </div>
-                         </div>
+                     <div className="mt-auto flex flex-col items-center gap-4 w-full">
+                        <Image src="https://placehold.co/150x150.png" alt="QR Code for Company Profile" width={80} height={80} className="rounded-md" data-ai-hint="qr code" />
+                        <div className="flex justify-center gap-4">
+                            <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
+                            <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
+                            <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
+                        </div>
                     </div>
                 </Card>
 
-                {/* Back Side */}
-                 <Card className="w-full max-w-md mx-auto aspect-[85.6/54] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col justify-center items-center p-6 text-center">
+                {/* Back Side - Portrait */}
+                <Card className="w-full max-w-[280px] mx-auto aspect-[9/16] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col justify-center items-center p-6 text-center">
                     <div className="absolute top-0 left-0 w-full h-full bg-primary/5"></div>
-                    <div className="relative z-10 grid grid-cols-2 gap-4 text-xs">
+                     <Image src="/images/logo.png" alt="Company Logo" width={120} height={60} className="h-20 w-auto absolute top-8" />
+                    <div className="relative z-10 grid grid-cols-1 gap-8 text-sm">
                         <div className="flex flex-col items-center gap-2">
-                            <div className="p-2 bg-primary/10 rounded-full inline-block">
-                                <Building className="w-5 h-5 text-primary" />
+                            <div className="p-3 bg-primary/10 rounded-full inline-block">
+                                <Building className="w-6 h-6 text-primary" />
                             </div>
-                            <h3 className="font-bold font-headline">Layanan Kami</h3>
-                            <p className="text-muted-foreground">Web & Mobile, Cloud & DevOps, Keamanan Siber, Konsultasi AI.</p>
+                            <h3 className="font-bold font-headline text-lg">Layanan Kami</h3>
+                            <p className="text-muted-foreground px-4">Web & Mobile, Cloud & DevOps, Keamanan Siber, Konsultasi AI.</p>
                         </div>
                         <div className="flex flex-col items-center gap-2">
-                             <div className="p-2 bg-primary/10 rounded-full inline-block">
-                                <Handshake className="w-5 h-5 text-primary" />
+                             <div className="p-3 bg-primary/10 rounded-full inline-block">
+                                <Handshake className="w-6 h-6 text-primary" />
                             </div>
-                            <h3 className="font-bold font-headline">Info Kemitraan</h3>
-                            <p className="text-muted-foreground">Terbuka untuk kemitraan strategis & investasi. Hubungi untuk diskusi.</p>
+                            <h3 className="font-bold font-headline text-lg">Info Kemitraan</h3>
+                            <p className="text-muted-foreground px-4">Terbuka untuk kemitraan strategis & investasi. Hubungi untuk diskusi.</p>
                         </div>
                     </div>
-                     <div className="absolute bottom-4 text-xs text-muted-foreground">
+                     <div className="absolute bottom-6 text-xs text-muted-foreground px-4">
                         Gunakan <a href="/ai-help" className="underline hover:text-primary">Bantuan AI</a> kami untuk jawaban instan.
                      </div>
                 </Card>
@@ -169,3 +169,4 @@ export default function AzwarRiyadhContactCardPage() {
     </div>
   );
 }
+
