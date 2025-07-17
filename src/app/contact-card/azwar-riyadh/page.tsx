@@ -60,7 +60,8 @@ export default function AzwarRiyadhContactCardPage() {
             <Card className="w-full max-w-sm aspect-[9/16] flex flex-col items-center justify-between p-6 bg-gradient-to-br from-gray-900 to-gray-800 text-white shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 backdrop-blur-sm"></div>
                 <div className="relative z-10 flex flex-col items-center text-center w-full">
-                    <Avatar className="w-28 h-28 mb-4 border-4 border-primary">
+                    <Image src="/images/logo.png" alt="Company Logo" width={100} height={50} className="mb-4 h-12 w-auto invert brightness-0" />
+                    <Avatar className="w-24 h-24 mb-4 border-4 border-primary">
                         <AvatarImage src={member.imageUrl} alt={member.en.name} />
                         <AvatarFallback>{member.en.name.charAt(0)}</AvatarFallback>
                     </Avatar>
@@ -85,7 +86,9 @@ export default function AzwarRiyadhContactCardPage() {
                     </div>
                 </div>
                 <div className="relative z-10 text-center w-full mt-4">
-                   <div className="border-t border-primary/30 w-full mb-4"></div>
+                    <Image src="https://placehold.co/100x100.png" alt="QR Code" width={80} height={80} className="mx-auto rounded-md" data-ai-hint="qr code" />
+                    <p className="text-xs text-white/70 mt-2">Pindai untuk menyimpan kontak</p>
+                   <div className="border-t border-primary/30 w-full my-4"></div>
                     <p className="text-xs text-white/70">Tersedia untuk diskusi layanan & peluang kerja sama strategis.</p>
                      <div className="flex justify-center gap-5 mt-4">
                         <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 hover:text-primary transition-colors" /></a>
