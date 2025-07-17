@@ -11,7 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import Image from "next/image";
 import { handleContactCardRequest } from "@/app/actions";
-import { Loader, Mail, Linkedin, Github, Instagram, Globe } from "lucide-react";
+import { Loader, Mail, Linkedin, Github, Instagram, Globe, Phone } from "lucide-react";
 import { teamMembers } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -57,33 +57,40 @@ export default function AzwarRiyadhContactCardPage() {
         {/* Contact Card Preview */}
         <div className="flex flex-col items-center justify-center">
             <h2 className="text-2xl font-bold tracking-tighter text-center mb-6 font-headline">Digital vCard Preview</h2>
-            <Card className="w-full max-w-sm aspect-[9/16] flex flex-col items-center justify-center p-8 bg-gradient-to-br from-gray-900 to-gray-800 text-white shadow-2xl relative overflow-hidden">
+            <Card className="w-full max-w-sm aspect-[9/16] flex flex-col items-center justify-between p-6 bg-gradient-to-br from-gray-900 to-gray-800 text-white shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-black/30 backdrop-blur-sm"></div>
                 <div className="relative z-10 flex flex-col items-center text-center w-full">
-                    <Avatar className="w-32 h-32 mb-4 border-4 border-primary">
+                    <Avatar className="w-28 h-28 mb-4 border-4 border-primary">
                         <AvatarImage src={member.imageUrl} alt={member.en.name} />
                         <AvatarFallback>{member.en.name.charAt(0)}</AvatarFallback>
                     </Avatar>
-                    <CardTitle className="text-3xl font-bold">{member.en.name}</CardTitle>
+                    <CardTitle className="text-2xl font-bold">{member.en.name}</CardTitle>
                     <CardDescription className="text-primary font-medium text-lg mt-1">{member.en.role}</CardDescription>
                     
-                    <div className="border-t border-primary/30 w-full my-6"></div>
+                    <div className="border-t border-primary/30 w-full my-4"></div>
 
-                    <div className="space-y-4 text-left w-full">
+                    <div className="space-y-3 text-left w-full text-sm">
                         <div className="flex items-center gap-3">
-                            <Mail className="w-5 h-5 text-primary" />
+                            <Phone className="w-4 h-4 text-primary" />
+                            <span>{member.social.phone}</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Mail className="w-4 h-4 text-primary" />
                             <span>{member.social.email}</span>
                         </div>
                         <div className="flex items-center gap-3">
-                            <Globe className="w-5 h-5 text-primary" />
+                            <Globe className="w-4 h-4 text-primary" />
                             <span>digimediakomunika.cloud</span>
                         </div>
                     </div>
-                    
-                    <div className="flex justify-center gap-6 mt-8">
-                        <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-6 h-6 hover:text-primary transition-colors" /></a>
-                        <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-6 h-6 hover:text-primary transition-colors" /></a>
-                        <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-6 h-6 hover:text-primary transition-colors" /></a>
+                </div>
+                <div className="relative z-10 text-center w-full mt-4">
+                   <div className="border-t border-primary/30 w-full mb-4"></div>
+                    <p className="text-xs text-white/70">Tersedia untuk diskusi layanan & peluang kerja sama strategis.</p>
+                     <div className="flex justify-center gap-5 mt-4">
+                        <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 hover:text-primary transition-colors" /></a>
+                        <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-5 h-5 hover:text-primary transition-colors" /></a>
+                        <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-5 h-5 hover:text-primary transition-colors" /></a>
                     </div>
                 </div>
             </Card>

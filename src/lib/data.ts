@@ -534,6 +534,7 @@ export const teamMembers = [
         imageUrl: "/images/azwar.jpg",
         aiHint: "male portrait tech",
         social: {
+            phone: "087864530047",
             email: "azwarriyadh@digimediakomunika.cloud",
             linkedin: "https://www.linkedin.com/",
             github: "https://github.com/sazwarriyadhs",
@@ -543,3 +544,4 @@ export const teamMembers = [
 ];
 
     
+
