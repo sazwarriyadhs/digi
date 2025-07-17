@@ -61,6 +61,7 @@ export default function AzwarRiyadhContactCardPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {/* Front Side - Portrait */}
                 <Card className="w-full max-w-[280px] mx-auto aspect-[9/16] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col items-center p-6">
+                    <Image src="/images/logo.png" alt="Company Logo" width={100} height={50} className="h-16 w-auto mb-6" />
                     <div className="w-full text-center">
                         <Avatar className="w-32 h-32 mb-4 border-4 border-primary/20 mx-auto">
                             <AvatarImage src={member.imageUrl} alt={member.en.name} data-ai-hint={member.aiHint} />
@@ -169,4 +170,3 @@ export default function AzwarRiyadhContactCardPage() {
     </div>
   );
 }
-
