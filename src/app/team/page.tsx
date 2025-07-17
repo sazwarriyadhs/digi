@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useAppContext } from "@/context/AppContext";
 import { teamMembers } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Twitter, Github, Instagram } from "lucide-react";
+import { Linkedin, Twitter, Github, Instagram, Mail } from "lucide-react";
 import Link from "next/link";
 import {
   Dialog,
@@ -68,6 +68,13 @@ export default function TeamPage() {
                     </Dialog>
                 </div>
                 <div className="flex justify-center gap-4 mt-auto pt-4">
+                    {member.social.email && (
+                        <Button asChild variant="ghost" size="icon">
+                            <a href={`mailto:${member.social.email}`}>
+                                <Mail className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                            </a>
+                        </Button>
+                    )}
                     {member.social.linkedin && (
                         <Button asChild variant="ghost" size="icon">
                             <Link href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
