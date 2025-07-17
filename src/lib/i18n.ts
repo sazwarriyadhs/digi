@@ -110,7 +110,8 @@ export const translations = {
             badge: "Tim Kami",
             title: "Temui Para Ahli Kami",
             description: "Tim kami terdiri dari para profesional yang bersemangat dan berdedikasi untuk memberikan hasil terbaik.",
-            viewProfile: "Lihat Profil"
+            viewProfile: "Lihat Profil",
+            downloadCard: "Unduh Kartu Nama"
         },
         faq: {
             badge: "FAQ Cerdas",
@@ -478,7 +479,8 @@ export const translations = {
             badge: "Our Team",
             title: "Meet Our Experts",
             description: "Our team consists of passionate and dedicated professionals committed to delivering the best results.",
-            viewProfile: "View Profile"
+            viewProfile: "View Profile",
+            downloadCard: "Download vCard"
         },
         faq: {
             badge: "Intelligent FAQ",

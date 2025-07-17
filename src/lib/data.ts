@@ -461,7 +461,7 @@ export const demoItems = [
         }
     },
     {
-        href: "/demo/serenity-trade",
+        href: "https://agribid-khaki.vercel.app/",
         aiHint: "agriculture trading",
         imageUrl: "/images/thetrade.png",
         id: {
@@ -522,12 +522,12 @@ export const teamMembers = [
     },
     {
         id: {
-            name: "Azwar Riyadh",
+            name: "Azwar Riyadh Subarkah",
             role: "Chief Technology Officer dan Founder",
             bio: "Azwar adalah seorang pemimpin teknologi berpengalaman dengan hasrat untuk mendorong inovasi dan membangun tim rekayasa berkinerja tinggi. Ia ahli dalam arsitektur cloud dan integrasi AI.",
         },
         en: {
-            name: "Azwar Riyadh",
+            name: "Azwar Riyadh Subarkah",
             role: "Chief Technology Officer and Founder",
             bio: "Azwar is a seasoned technology leader with a passion for driving innovation and building high-performing engineering teams. He is an expert in cloud architecture and AI integration.",
         },

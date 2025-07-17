@@ -82,3 +82,39 @@ export async function handleContactAction(formData: { name: string; email: strin
         return { success: false, message: 'There was an error sending your message. Please try again later.' };
     }
 }
+
+
+const emailSchema = z.string().email();
+
+export async function handleContactCardRequest(email: string) {
+    const parsed = emailSchema.safeParse(email);
+
+    if (!parsed.success) {
+        return { success: false, message: 'Please enter a valid email address.' };
+    }
+
+    const downloadUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://digimediakomunika.cloud'}/contact-cards/azwar-riyadh-card.pdf`;
+
+    const emailHtml = `
+        <h1>Your Requested Contact Card</h1>
+        <p>Thank you for your interest in connecting with Azwar Riyadh Subarkah.</p>
+        <p>You can download his digital contact card by clicking the link below:</p>
+        <p><a href="${downloadUrl}" download>Download Contact Card</a></p>
+        <p>If you have any issues, please copy and paste this URL into your browser:</p>
+        <p>${downloadUrl}</p>
+        <hr>
+        <p>Best regards,<br>PT Digi Media Komunika</p>
+    `;
+
+    try {
+        await sendEmail({
+            to: parsed.data,
+            subject: "Your Digital Contact Card for Azwar Riyadh Subarkah",
+            html: emailHtml
+        });
+        return { success: true, message: 'The download link has been sent to your email!' };
+    } catch (error) {
+        console.error(error);
+        return { success: false, message: 'There was an error sending the email. Please try again later.' };
+    }
+}

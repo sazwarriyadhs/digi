@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { useAppContext } from "@/context/AppContext";
 import { teamMembers } from "@/lib/data";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Twitter, Github, Instagram, Mail } from "lucide-react";
+import { Linkedin, Twitter, Github, Instagram, Mail, Download } from "lucide-react";
 import Link from "next/link";
 import {
   Dialog,
@@ -63,6 +63,14 @@ export default function TeamPage() {
                           <p className="text-sm text-muted-foreground">
                             {member[language].bio}
                           </p>
+                          {member.id.name.includes("Azwar Riyadh") && (
+                            <Button asChild className="mt-4">
+                              <Link href="/contact-card/azwar-riyadh">
+                                <Download className="mr-2 h-4 w-4" />
+                                {t('team.downloadCard')}
+                              </Link>
+                            </Button>
+                          )}
                         </div>
                       </DialogContent>
                     </Dialog>
