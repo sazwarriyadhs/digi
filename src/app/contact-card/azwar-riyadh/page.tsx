@@ -60,37 +60,39 @@ export default function AzwarRiyadhContactCardPage() {
             <h2 className="text-2xl font-bold tracking-tighter text-center mb-6 font-headline">Digital vCard Preview</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {/* Front Side - Portrait */}
-                <Card className="w-full max-w-[280px] mx-auto aspect-[9/16] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col items-center p-6">
-                    <Image src="/images/logo.png" alt="Company Logo" width={100} height={50} className="h-16 w-auto mb-6" />
-                    <div className="w-full text-center">
-                        <Avatar className="w-32 h-32 mb-4 border-4 border-primary/20 mx-auto">
+                <Card className="w-full max-w-[280px] mx-auto aspect-[9/16] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col items-center p-4">
+                    <div className="flex-shrink-0 pt-2">
+                        <Image src="/images/logo.png" alt="Company Logo" width={100} height={50} className="h-12 w-auto" />
+                    </div>
+                    <div className="w-full text-center my-4">
+                        <Avatar className="w-28 h-28 mb-3 border-4 border-primary/20 mx-auto">
                             <AvatarImage src={member.imageUrl} alt={member.en.name} data-ai-hint={member.aiHint} />
                             <AvatarFallback>{member.id.name.charAt(0)}</AvatarFallback>
                         </Avatar>
-                        <h2 className="text-2xl font-bold font-headline">{member.en.name}</h2>
-                        <p className="text-primary font-medium">{member.en.role}</p>
+                        <h2 className="text-xl font-bold font-headline">{member.en.name}</h2>
+                        <p className="text-primary font-medium text-sm">{member.en.role}</p>
                     </div>
-                    <div className="mt-8 space-y-3 text-sm w-full">
-                        <div className="flex items-center gap-3">
-                            <Phone className="w-4 h-4 text-primary" />
+                    <div className="space-y-2 text-xs w-full mb-4">
+                        <div className="flex items-center gap-2">
+                            <Phone className="w-3.5 h-3.5 text-primary" />
                             <span>{member.social.phone}</span>
                         </div>
-                        <div className="flex items-center gap-3">
-                            <Mail className="w-4 h-4 text-primary" />
+                        <div className="flex items-center gap-2">
+                            <Mail className="w-3.5 h-3.5 text-primary" />
                             <span className="truncate">{member.social.email}</span>
                         </div>
-                        <div className="flex items-center gap-3">
-                            <Globe className="w-4 h-4 text-primary" />
+                        <div className="flex items-center gap-2">
+                            <Globe className="w-3.5 h-3.5 text-primary" />
                             <span>digimediakomunika.cloud</span>
                         </div>
                     </div>
-                     <div className="mt-auto flex flex-col items-center gap-4 w-full">
-                        <Image src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.digimediakomunika.cloud/proposal" alt="QR Code to request a proposal" width={80} height={80} className="rounded-md" data-ai-hint="qr code" />
-                        <p className="text-xs text-muted-foreground text-center">Pindai untuk meminta proposal</p>
-                        <div className="flex justify-center gap-4">
-                            <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
-                            <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
-                            <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
+                     <div className="mt-auto flex flex-col items-center gap-2 w-full pb-2">
+                        <Image src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.digimediakomunika.cloud/proposal" alt="QR Code to request a proposal" width={70} height={70} className="rounded-md" data-ai-hint="qr code" />
+                        <p className="text-[10px] text-muted-foreground text-center">Pindai untuk meminta proposal</p>
+                        <div className="flex justify-center gap-3">
+                            <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" /></a>
+                            <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" /></a>
+                            <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-4 h-4 text-muted-foreground hover:text-primary transition-colors" /></a>
                         </div>
                     </div>
                 </Card>
