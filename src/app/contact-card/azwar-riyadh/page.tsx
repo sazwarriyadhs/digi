@@ -85,7 +85,8 @@ export default function AzwarRiyadhContactCardPage() {
                         </div>
                     </div>
                      <div className="mt-auto flex flex-col items-center gap-4 w-full">
-                        <Image src="https://placehold.co/150x150.png" alt="QR Code for Company Profile" width={80} height={80} className="rounded-md" data-ai-hint="qr code" />
+                        <Image src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.digimediakomunika.cloud/proposal" alt="QR Code to request a proposal" width={80} height={80} className="rounded-md" data-ai-hint="qr code" />
+                        <p className="text-xs text-muted-foreground text-center">Pindai untuk meminta proposal</p>
                         <div className="flex justify-center gap-4">
                             <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
                             <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
