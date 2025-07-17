@@ -12,7 +12,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import Image from "next/image";
 import { handleContactCardRequest } from "@/app/actions";
-import { Loader, Mail, Linkedin, Github, Instagram, Globe, Phone } from "lucide-react";
+import { Loader, Mail, Linkedin, Github, Instagram, Globe, Phone, Download } from "lucide-react";
 import { teamMembers } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -122,7 +122,7 @@ export default function AzwarRiyadhContactCardPage() {
                 </CardHeader>
                 <CardContent>
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                     <FormField
                         control={form.control}
                         name="email"
@@ -152,6 +152,13 @@ export default function AzwarRiyadhContactCardPage() {
                     </Button>
                     </form>
                 </Form>
+                 <div className="mt-4 text-center">
+                    <Button asChild variant="secondary" className="w-full">
+                        <a href="/contact-cards/azwar-riyadh-card.pdf" download>
+                           <Download className="mr-2 h-4 w-4" /> Download Contoh Kartu
+                        </a>
+                    </Button>
+                </div>
                 </CardContent>
                 <CardFooter>
                     <p className="text-xs text-muted-foreground text-center w-full">We respect your privacy. Your email will only be used to send the download link.</p>
