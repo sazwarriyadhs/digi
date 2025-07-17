@@ -58,27 +58,28 @@ export default function AzwarRiyadhContactCardPage() {
         {/* Contact Card Preview */}
         <div className="flex flex-col items-center justify-center">
             <h2 className="text-2xl font-bold tracking-tighter text-center mb-6 font-headline">Digital vCard Preview</h2>
-             <Card className="w-full max-w-sm aspect-[9/16] bg-white text-gray-800 shadow-2xl relative overflow-hidden flex flex-col justify-between">
-                {/* Abstract purple background */}
-                <div className="absolute -top-1/4 -left-1/4 w-full h-1/2 bg-primary rounded-br-full" style={{ transform: 'rotate(-15deg)' }}></div>
-                <div className="absolute top-0 left-0 w-full h-full p-6 flex flex-col justify-between z-10">
+             <Card className="w-full max-w-sm aspect-[9/16] bg-card text-card-foreground shadow-2xl relative overflow-hidden flex flex-col justify-between">
+                <div className="absolute top-0 left-0 w-full h-1/3 bg-primary/10"></div>
+                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-primary/10"></div>
+                
+                <div className="relative z-10 p-6 flex flex-col h-full">
                     {/* Header with Logo */}
-                    <header className="flex justify-start">
-                        <Image src="/images/logo.png" alt="Company Logo" width={80} height={40} className="h-10 w-auto" />
+                    <header className="flex justify-start mb-6">
+                        <Image src="/images/logo.png" alt="Company Logo" width={100} height={50} className="h-12 w-auto" />
                     </header>
 
                     {/* Main Content */}
-                    <main className="flex flex-col items-center text-center -mt-8">
-                        <Avatar className="w-28 h-28 mb-4 border-4 border-white shadow-lg">
+                    <main className="flex flex-col items-center text-center flex-grow justify-center">
+                        <Avatar className="w-28 h-28 mb-4 border-4 border-background shadow-lg">
                             <AvatarImage src={member.imageUrl} alt={member.en.name} />
                             <AvatarFallback>{member.en.name.charAt(0)}</AvatarFallback>
                         </Avatar>
-                        <h2 className="text-2xl font-bold text-gray-900">{member.en.name}</h2>
+                        <h2 className="text-2xl font-bold">{member.en.name}</h2>
                         <p className="text-primary font-medium">{member.en.role}</p>
 
-                        <div className="border-t border-gray-200 w-full my-6"></div>
+                        <div className="border-t border-border w-full my-6"></div>
 
-                        <div className="space-y-3 text-left w-full text-sm text-gray-600">
+                        <div className="space-y-3 text-left w-full text-sm">
                              <div className="flex items-center gap-3">
                                 <Phone className="w-4 h-4 text-primary" />
                                 <span>{member.social.phone}</span>
@@ -95,22 +96,20 @@ export default function AzwarRiyadhContactCardPage() {
                     </main>
                     
                     {/* Footer with QR and Socials */}
-                    <footer className="text-center">
+                    <footer className="text-center mt-6">
                         <div className="flex justify-center items-center gap-4">
-                            <Image src="https://placehold.co/100x100.png" alt="QR Code" width={70} height={70} className="rounded-md" data-ai-hint="qr code" />
+                            <Image src="https://placehold.co/100x100.png" alt="QR Code for Company Profile" width={70} height={70} className="rounded-md" data-ai-hint="qr code" />
                             <div className="text-left">
-                                <p className="text-xs text-gray-500">Pindai untuk menyimpan kontak.</p>
+                                <p className="text-xs text-muted-foreground">Pindai untuk profil perusahaan. Bagian belakang berisi info layanan & kemitraan.</p>
                                 <div className="flex justify-start gap-3 mt-2">
-                                    <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 text-gray-500 hover:text-primary transition-colors" /></a>
-                                    <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-5 h-5 text-gray-500 hover:text-primary transition-colors" /></a>
-                                    <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-5 h-5 text-gray-500 hover:text-primary transition-colors" /></a>
+                                    <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
+                                    <a href={member.social.github} target="_blank" rel="noopener noreferrer"><Github className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
+                                    <a href={member.social.instagram} target="_blank" rel="noopener noreferrer"><Instagram className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" /></a>
                                 </div>
                             </div>
                         </div>
                     </footer>
                 </div>
-                 {/* Bottom purple wave */}
-                <div className="absolute -bottom-1/4 -right-1/4 w-full h-1/2 bg-primary/10 rounded-tl-full" style={{ transform: 'rotate(-15deg)' }}></div>
             </Card>
         </div>
 
