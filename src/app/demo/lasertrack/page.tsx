@@ -2,6 +2,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 export default function LaserTrackDemoPage() {
   return (
@@ -27,13 +29,19 @@ export default function LaserTrackDemoPage() {
                 data-ai-hint="asset tracking dashboard"
             />
           </div>
-          <div className="mt-4 text-center text-sm text-muted-foreground">
-            <p>
+          <div className="mt-6 text-center">
+            <p className="text-sm text-muted-foreground mb-4">
               Gambar di atas adalah pratinjau antarmuka. Untuk pengalaman penuh,{" "}
               <Link href="https://lasertrack-flsj-azwar-riyadhs-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
                 kunjungi situs live
               </Link>.
             </p>
+            <Button asChild size="lg">
+                <a href="/images/Pitch Deck_ SERENITY LaserTrack.pdf" download>
+                    <Download className="mr-2 h-5 w-5" />
+                    Unduh Pitch Deck
+                </a>
+            </Button>
           </div>
         </CardContent>
       </Card>
