@@ -341,7 +341,7 @@ export const portfolioItems = [
         },
         duration: { id: "4 Bulan", en: "4 Months" },
         projectOfficer: "Azwar Riyadh",
-        imageUrl: "https://placehold.co/600x400.png",
+        imageUrl: "/images/laser.png",
         aiHint: "asset tracking dashboard",
     }
 ];
@@ -519,7 +519,7 @@ export const demoItems = [
     {
         href: "/demo/lasertrack",
         aiHint: "asset tracking interface",
-        imageUrl: "https://placehold.co/600x400.png",
+        imageUrl: "/images/laser.png",
         id: {
             name: "LaserTrack",
             description: "Demo platform pelacakan aset berbasis web dengan visualisasi data real-time."
@@ -572,5 +572,7 @@ export const teamMembers = [
         }
     }
 ];
+
+    
 
     
