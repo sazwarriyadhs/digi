@@ -326,6 +326,23 @@ export const portfolioItems = [
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
         imageUrl: "/images/DigiAI.jpg",
         aiHint: "ai generated art",
+    },
+    {
+        href: "/demo/lasertrack",
+        id: {
+            client: "LaserTrack Inc.",
+            project: "Sistem Pelacakan Laser Berbasis Web",
+            details: "Mengembangkan platform pelacakan real-time untuk aset yang dilengkapi laser, meningkatkan keamanan dan efisiensi operasional."
+        },
+        en: {
+            client: "LaserTrack Inc.",
+            project: "Web-based Laser Tracking System",
+            details: "Developed a real-time tracking platform for laser-equipped assets, enhancing security and operational efficiency."
+        },
+        duration: { id: "4 Bulan", en: "4 Months" },
+        projectOfficer: "Azwar Riyadh",
+        imageUrl: "https://placehold.co/600x400.png",
+        aiHint: "asset tracking dashboard",
     }
 ];
 
@@ -498,6 +515,19 @@ export const demoItems = [
             name: "DigiAI",
             description: "Demo of an AI application for text-to-image, image-to-video, and text-to-video conversion."
         }
+    },
+    {
+        href: "/demo/lasertrack",
+        aiHint: "asset tracking interface",
+        imageUrl: "https://placehold.co/600x400.png",
+        id: {
+            name: "LaserTrack",
+            description: "Demo platform pelacakan aset berbasis web dengan visualisasi data real-time."
+        },
+        en: {
+            name: "LaserTrack",
+            description: "Demo of a web-based asset tracking platform with real-time data visualization."
+        }
     }
 ];
 
@@ -544,4 +574,3 @@ export const teamMembers = [
 ];
 
     
-

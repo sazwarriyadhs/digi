@@ -25,7 +25,7 @@ export const translations = {
                 ]
             },
             { href: "/ai-help", label: "Bantuan AI" },
-            { href: "/demo/serenity-trade", label: "Aplikasi Unggulan", isExternal: false },
+            { href: "/demo/lasertrack", label: "Aplikasi Unggulan", isExternal: false },
         ],
         hero: {
             slides: [
@@ -394,7 +394,7 @@ export const translations = {
                 ]
             },
             { href: "/ai-help", label: "AI Help" },
-            { href: "/demo/serenity-trade", label: "Featured App", isExternal: false },
+            { href: "/demo/lasertrack", label: "Featured App", isExternal: false },
         ],
         hero: {
             slides: [
@@ -745,3 +745,4 @@ export type Translation = typeof translations;
     
 
     
+
