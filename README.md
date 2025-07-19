@@ -2,6 +2,14 @@
 
 This is a Next.js project for the PT Digi Media Komunika company profile, built with Firebase Studio. It features a modern, responsive design, multi-language support (Bahasa Indonesia & English), multi-currency display (IDR & USD), and an AI-powered FAQ section.
 
+## Project Documentation
+
+For detailed information about the project, please refer to the following documents:
+
+- **[Features](./feature.md):** A comprehensive list of the application's features and functionalities.
+- **[Proposal](./PROPOSAL.md):** The official project proposal, outlining the scope, objectives, and deliverables.
+- **[Pitch Deck](./pitchdeck.md):** A presentation of the project's value proposition and business case.
+
 ## Features
 
 - **Next.js 15 & React 18:** Utilizes the latest features of Next.js with the App Router.
