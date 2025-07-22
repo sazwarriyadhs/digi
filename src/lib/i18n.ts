@@ -25,7 +25,13 @@ export const translations = {
                 ]
             },
             { href: "/ai-help", label: "Bantuan AI" },
-            { href: "/demo/lasertrack", label: "Aplikasi Unggulan", isExternal: false },
+            { 
+                label: "Aplikasi Unggulan",
+                children: [
+                    { href: "/demo/lasertrack", label: "LaserTrack" },
+                    { href: "/demo/cintakita", label: "Cinta Kita" },
+                ]
+            },
         ],
         hero: {
             slides: [
@@ -394,7 +400,13 @@ export const translations = {
                 ]
             },
             { href: "/ai-help", label: "AI Help" },
-            { href: "/demo/lasertrack", label: "Featured App", isExternal: false },
+            { 
+                label: "Featured Apps",
+                children: [
+                    { href: "/demo/lasertrack", label: "LaserTrack" },
+                    { href: "/demo/cintakita", label: "Cinta Kita" },
+                ]
+            },
         ],
         hero: {
             slides: [
@@ -741,8 +753,3 @@ export const translations = {
 }
 
 export type Translation = typeof translations;
-
-    
-
-    
-

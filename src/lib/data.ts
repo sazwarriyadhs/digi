@@ -343,6 +343,23 @@ export const portfolioItems = [
         projectOfficer: "Azwar Riyadh",
         imageUrl: "/images/laser.png",
         aiHint: "asset tracking dashboard",
+    },
+    {
+        href: "/demo/cintakita",
+        id: {
+            client: "Komunitas Cinta Kita",
+            project: "Platform Komunitas & Donasi Online",
+            details: "Membangun platform sosial untuk komunitas, lengkap dengan fitur donasi, acara, dan forum diskusi untuk meningkatkan interaksi dan dukungan anggota."
+        },
+        en: {
+            client: "Cinta Kita Community",
+            project: "Online Community & Donation Platform",
+            details: "Built a social platform for a community, complete with donation features, events, and discussion forums to increase member interaction and support."
+        },
+        duration: { id: "3 Bulan", en: "3 Months" },
+        projectOfficer: "Titi Ariwati",
+        imageUrl: "/images/cintakita.jpg",
+        aiHint: "community social platform",
     }
 ];
 
@@ -528,6 +545,19 @@ export const demoItems = [
             name: "LaserTrack",
             description: "Demo of a web-based asset tracking platform with real-time data visualization."
         }
+    },
+    {
+        href: "/demo/cintakita",
+        aiHint: "community social platform",
+        imageUrl: "/images/cintakita.jpg",
+        id: {
+            name: "Cinta Kita",
+            description: "Demo platform komunitas dengan donasi, acara, dan forum diskusi."
+        },
+        en: {
+            name: "Cinta Kita",
+            description: "Demo of a community platform with donations, events, and discussion forums."
+        }
     }
 ];
 
@@ -572,7 +602,3 @@ export const teamMembers = [
         }
     }
 ];
-
-    
-
-    
