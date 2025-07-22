@@ -358,7 +358,7 @@ export const portfolioItems = [
         },
         duration: { id: "3 Bulan", en: "3 Months" },
         projectOfficer: "Titi Ariwati",
-        imageUrl: "/images/cintakita.jpg",
+        imageUrl: "/images/cintakita.jpeg",
         aiHint: "community social platform",
     }
 ];
@@ -549,7 +549,7 @@ export const demoItems = [
     {
         href: "/demo/cintakita",
         aiHint: "community social platform",
-        imageUrl: "/images/cintakita.jpg",
+        imageUrl: "/images/cintakita.jpeg",
         id: {
             name: "Cinta Kita",
             description: "Demo platform komunitas dengan donasi, acara, dan forum diskusi."
@@ -602,3 +602,5 @@ export const teamMembers = [
         }
     }
 ];
+
+    
