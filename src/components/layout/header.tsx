@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Logo } from '../logo';
 import { useAppContext } from '@/context/AppContext';
@@ -25,6 +25,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Separator } from '../ui/separator';
+import { cn } from '@/lib/utils';
 
 function NavLinks({
   navLinks,
@@ -94,10 +95,48 @@ function NavLinks({
 export function Header() {
   const { language, setLanguage, currency, setCurrency, t } = useAppContext();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  
   const navLinks = t('navLinks') || [];
 
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY;
+        
+        // Show/hide navbar
+        if (currentScrollY > lastScrollY && currentScrollY > 140) {
+          setIsHidden(true);
+        } else {
+          setIsHidden(false);
+        }
+
+        // Add background on scroll
+        if (currentScrollY > 50) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+        
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener('scroll', controlNavbar);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className={cn(
+        "fixed top-0 z-50 w-full transition-all duration-300 ease-in-out",
+        isScrolled ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md" : "bg-transparent",
+        isHidden ? "-translate-y-full" : "translate-y-0"
+    )}>
       <div className="container mx-auto px-4 md:px-6 flex h-[140px] items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="mr-6">
