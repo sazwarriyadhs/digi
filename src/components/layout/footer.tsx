@@ -16,7 +16,7 @@ export function Footer() {
                 <Logo />
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4 text-center">
-                 <p>&copy; {new Date().getFullYear()} PT Digi Media Komunika. All rights reserved.</p>
+                 <div>&copy; {new Date().getFullYear()} PT Digi Media Komunika. All rights reserved.</div>
             </div>
             <div className="flex gap-4 mt-4 md:mt-0">
                 <Link href="/privacy" className="hover:text-foreground">
