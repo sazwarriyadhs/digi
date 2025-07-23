@@ -32,7 +32,7 @@ export default function LaserTrackDemoPage() {
           <div className="mt-6 text-center">
             <p className="text-sm text-muted-foreground mb-4">
               Gambar di atas adalah pratinjau antarmuka. Untuk pengalaman penuh,{" "}
-              <Link href="https://lasertrack-flsj-azwar-riyadhs-projects.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
+              <Link href="https://lasertrack-7uid.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
                 kunjungi situs live
               </Link>.
             </p>
