@@ -37,6 +37,8 @@ export default function RootLayout({
             `,
           }}
         />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279227107562302"
+     crossOrigin="anonymous"></script>
       </head>
       <body className="font-body antialiased">
         <AppProvider>
