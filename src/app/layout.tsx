@@ -6,38 +6,35 @@ import { Toaster } from "@/components/ui/toaster";
 import { AppProvider } from "@/context/AppContext";
 import { SplashScreen } from "@/components/layout/splash-screen";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digimediakomunika.cloud';
-const siteTitle = "PT Digi Media Komunika - Solusi Transformasi Digital";
-const siteDescription = "Mitra transformasi digital Anda. Kami menyediakan layanan pengembangan web & aplikasi, cloud, DevOps, keamanan siber, dan solusi AI untuk bisnis Anda.";
-
 export const metadata: Metadata = {
-  title: siteTitle,
-  description: siteDescription,
-  metadataBase: new URL(siteUrl),
+  title: 'PT Digi Media Komunika - Solusi Transformasi Digital',
+  description: 'PT Digi Media Komunika adalah mitra terpercaya dalam transformasi digital. Kami menyediakan layanan web, cloud, DevOps, keamanan siber, dan AI.',
+  metadataBase: new URL('https://digimediakomunika.cloud'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    type: 'website',
-    url: siteUrl,
-    title: siteTitle,
-    description: siteDescription,
+    title: 'PT Digi Media Komunika',
+    description: 'Solusi digital dari web, cloud, DevOps hingga AI.',
+    url: 'https://digimediakomunika.cloud',
     images: [
       {
-        url: `${siteUrl}/images/hero1.jpg`,
+        url: 'https://digimediakomunika.cloud/images/og.jpg',
         width: 1200,
         height: 630,
         alt: 'PT Digi Media Komunika',
       },
     ],
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteTitle,
-    description: siteDescription,
-    images: [`${siteUrl}/images/hero1.jpg`],
+    title: 'PT Digi Media Komunika',
+    description: 'Solusi digital dari web, cloud, DevOps hingga AI.',
+    images: ['https://digimediakomunika.cloud/images/og.jpg'],
   },
 };
+
 
 export default function RootLayout({
   children,
