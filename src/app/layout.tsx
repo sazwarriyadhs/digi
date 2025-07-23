@@ -8,11 +8,15 @@ import { SplashScreen } from "@/components/layout/splash-screen";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digimediakomunika.cloud';
 const siteTitle = "PT Digi Media Komunika - Solusi Transformasi Digital";
-const siteDescription = "PT Digi Media Komunika menyediakan solusi transformasi digital inovatif. Dari pengembangan web dan aplikasi, layanan cloud & DevOps, hingga keamanan siber dan konsultasi AI.";
+const siteDescription = "PT Digi Media Komunika adalah mitra terpercaya untuk transformasi digital Anda. Kami menghadirkan layanan pengembangan web & aplikasi, cloud & DevOps, keamanan siber, dan solusi AI.";
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     url: siteUrl,
