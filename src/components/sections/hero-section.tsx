@@ -49,9 +49,9 @@ export function HeroSection() {
                     <Badge variant="secondary" className="text-sm">
                       {slide.badge}
                     </Badge>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter font-headline">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter font-headline">
                       {slide.title}
-                    </h1>
+                    </h2>
                     <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-200">
                       {slide.description}
                     </p>

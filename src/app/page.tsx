@@ -9,6 +9,7 @@ import { PortfolioSection } from "@/components/sections/portfolio-section";
 export default function Home() {
   return (
     <>
+      <h1 className="sr-only">PT Digi Media Komunika - Solusi Transformasi Digital</h1>
       <HeroSection />
       <AboutSection />
       <Separator className="my-16" />

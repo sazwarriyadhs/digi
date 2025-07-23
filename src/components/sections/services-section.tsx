@@ -78,7 +78,7 @@ export function ServicesSection() {
                 <Card key={index} className={pkg.highlight ? "border-primary border-2 shadow-lg" : ""}>
                     <CardHeader>
                         {pkg.highlight && <Badge className="w-fit self-start bg-primary">{t('services.packages.popular')}</Badge>}
-                        <CardTitle className="mt-2 text-2xl">{pkg.title}</CardTitle>
+                        <CardTitle as="h3">{pkg.title}</CardTitle>
                         <CardDescription>
                             <span className="text-3xl font-bold text-foreground">{formatCurrency(pkg.priceIdr)}</span>
                         </CardDescription>

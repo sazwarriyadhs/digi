@@ -1,4 +1,3 @@
-
 export const translations = {
     id: {
         companyName: "PT Digi Media Komunika",
@@ -81,7 +80,7 @@ export const translations = {
         services: {
             badge: "Layanan Kami",
             title: "Solusi Teknologi Untuk Transformasi Digital Anda",
-            description: "Kami menyediakan serangkaian layanan konsultasi TI dan pengembangan untuk membantu bisnis Anda bertumbuh di era digital.",
+            description: "Kami menyediakan solusi transformasi digital terintegrasi untuk membantu bisnis Anda bertumbuh. Jelajahi serangkaian layanan konsultasi TI dan pengembangan kami.",
             pricingDetails: "Rincian Harga",
             includes: "Termasuk",
             packages: {
@@ -457,7 +456,7 @@ export const translations = {
         services: {
             badge: "Our Services",
             title: "Technology Solutions for Your Digital Transformation",
-            description: "We provide a series of IT consulting and development services to help your business grow in the digital era.",
+            description: "We provide integrated digital transformation solutions to help your business thrive. Explore our range of IT consulting and development services.",
             pricingDetails: "Pricing Details",
             includes: "Includes",
             packages: {
