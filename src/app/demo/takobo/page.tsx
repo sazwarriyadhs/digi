@@ -18,7 +18,7 @@ export default function TakoboDemoPage() {
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <Image
  src="/images/takobo.png"
-              alt="Demo Aplikasi Takobo Mobile"
+              alt="Antarmuka aplikasi mobile Takobo untuk peringatan dini bencana"
               width={1200}
               height={675}
               className="w-full h-full object-cover"

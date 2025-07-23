@@ -22,7 +22,7 @@ export default function LaserTrackDemoPage() {
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <Image
                 src="/images/laser.png"
-                alt="LaserTrack Demo"
+                alt="Antarmuka dashboard aplikasi LaserTrack menampilkan peta dan data aset"
                 width={1200}
                 height={675}
                 className="w-full h-full object-cover"
