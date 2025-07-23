@@ -18,7 +18,7 @@ export default function CrmDemoPage() {
           <div className="aspect-video w-full rounded-lg overflow-hidden border">
             <Image
               src="https://storage.googleapis.com/project-os-prod/images/c2351239-2445-42b7-a3f1-7f41555e56d8.png"
-              alt="Dashboard analitik untuk sistem CRM Bank Nusantara"
+              alt="Dashboard analitik untuk sistem CRM Bank Nusantara, menampilkan metrik keterlibatan pelanggan."
               width={1200}
               height={675}
               className="w-full h-full object-cover"

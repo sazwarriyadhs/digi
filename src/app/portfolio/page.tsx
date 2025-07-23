@@ -40,7 +40,7 @@ export default function PortfolioPage() {
                             />
                             <CardHeader>
                                 <Badge className="w-fit mb-2">{item[language].client}</Badge>
-                                <CardTitle>{item[language].project}</CardTitle>
+                                <CardTitle as="h3">{item[language].project}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow">
                                 <p className="text-sm text-muted-foreground mb-4">{item[language].details}</p>
