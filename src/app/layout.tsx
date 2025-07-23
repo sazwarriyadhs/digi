@@ -8,7 +8,7 @@ import { SplashScreen } from "@/components/layout/splash-screen";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digimediakomunika.cloud';
 const siteTitle = "PT Digi Media Komunika - Solusi Transformasi Digital";
-const siteDescription = "PT Digi Media Komunika adalah mitra terpercaya untuk transformasi digital Anda. Kami menghadirkan layanan pengembangan web & aplikasi, cloud & DevOps, keamanan siber, dan solusi AI.";
+const siteDescription = "Mitra transformasi digital Anda. Kami menyediakan layanan pengembangan web & aplikasi, cloud, DevOps, keamanan siber, dan solusi AI untuk bisnis Anda.";
 
 export const metadata: Metadata = {
   title: siteTitle,
