@@ -1,94 +1,94 @@
 # Pitch Deck: PT Digi Media Komunika
 
-## Slide 1: Title
+## Slide 1: Judul
 
 - **PT Digi Media Komunika**
-- **Tagline:** Your Partner in Digital Transformation.
-- **Contact:** Azwar Riyadh Subarkah, CTO | admin@digimediakomunika.cloud
+- **Tagline:** Mitra Anda dalam Transformasi Digital.
+- **Kontak:** Azwar Riyadh Subarkah, CTO | admin@digimediakomunika.cloud
 
 ---
 
-## Slide 2: The Problem
+## Slide 2: Masalah
 
-- **The Digital Landscape is Complex:** Businesses struggle to navigate technology, from building an online presence to securing their data.
-- **Inefficiency Kills Growth:** Outdated systems, manual processes, and poor digital strategy prevent companies from reaching their full potential.
-- **One-Size-Fits-All Fails:** Generic solutions don't address the unique challenges and goals of individual businesses.
-
----
-
-## Slide 3: The Solution
-
-- **A Full-Service Digital Agency:** We are a one-stop-shop for digital transformation, offering everything from IT strategy to custom application development and cybersecurity.
-- **Our Mission:** To empower businesses with tailored technology solutions that drive growth, efficiency, and innovation.
+- **Lanskap Digital itu Kompleks:** Bisnis kesulitan menavigasi teknologi, mulai dari membangun kehadiran online hingga mengamankan data mereka.
+- **Inefisiensi Membunuh Pertumbuhan:** Sistem yang ketinggalan zaman, proses manual, dan strategi digital yang buruk menghalangi perusahaan mencapai potensi penuh mereka.
+- **Satu Ukuran untuk Semua Gagal:** Solusi generik tidak menjawab tantangan dan tujuan unik dari masing-masing bisnis.
 
 ---
 
-## Slide 4: Our Services
+## Slide 3: Solusi
 
-- **IT Strategy & Consulting:** Roadmap, cost analysis, digital transformation.
-- **Application & System Development:** Web, mobile, ERP/CRM systems.
-- **Cybersecurity:** Audits, penetration testing, risk management.
-- **Cloud & DevOps:** Cloud migration, automation, CI/CD pipelines.
-- **AI Assistant Services:** Intelligent chatbots, automation, and virtual assistants.
-- **Data & Business Intelligence:** Data warehousing, analytics dashboards.
+- **Agensi Digital Layanan Penuh:** Kami adalah toko serba ada untuk transformasi digital, menawarkan segalanya mulai dari strategi TI hingga pengembangan aplikasi kustom dan keamanan siber.
+- **Misi Kami:** Memberdayakan bisnis dengan solusi teknologi yang disesuaikan yang mendorong pertumbuhan, efisiensi, dan inovasi.
 
 ---
 
-## Slide 5: Why Us? The Digi Media Komunika Advantage
+## Slide 4: Layanan Kami
 
-- **Expert Team:** Seasoned professionals with deep technical and business expertise.
-- **Client-Centric Approach:** We collaborate closely with clients to understand their vision and deliver results.
-- **Proven Track Record:** A portfolio of successful projects across various industries (Banking, Government, Tech).
-- **Innovation-Driven:** We leverage cutting-edge technologies like AI (Google Genkit) to build future-proof solutions.
-
----
-
-## Slide 6: Market Opportunity
-
-- **Growing Digital Economy:** The demand for digital services in Indonesia and Southeast Asia is rapidly expanding.
-- **Target Market:** Small to medium-sized enterprises (SMEs) and large corporations looking to innovate and digitize their operations.
-- **Competitive Landscape:** We differentiate ourselves by offering integrated, end-to-end solutions rather than siloed services.
+- **Strategi & Konsultasi TI:** Peta jalan, analisis biaya, transformasi digital.
+- **Pengembangan Aplikasi & Sistem:** Web, seluler, sistem ERP/CRM.
+- **Keamanan Siber:** Audit, pengujian penetrasi, manajemen risiko.
+- **Cloud & DevOps:** Migrasi cloud, otomatisasi, pipeline CI/CD.
+- **Layanan Asisten AI:** Chatbot cerdas, otomatisasi, dan asisten virtual.
+- **Data & Intelijen Bisnis:** Gudang data, dasbor analitik.
 
 ---
 
-## Slide 7: Business Model
+## Slide 5: Mengapa Kami? Keunggulan Digi Media Komunika
 
-- **Project-Based Fees:** For development, consulting, and audits.
-- **Retainer-Based Services:** For ongoing IT support, maintenance, and managed cloud services.
-- **Packaged Solutions:** Bundled services like the "Digi Starter Pack" and "Digi Enterprise Suite" for clear, value-driven pricing.
-
----
-
-## Slide 8: Our Work (Portfolio Highlights)
-
-- **Bank Nusantara:** Custom CRM implementation, increasing customer service efficiency by 40%.
-- **PT Astra Tech:** Cloud migration to AWS, reducing system downtime by 95%.
-- **Jakarta Water Resources Agency:** "BanjirOnline" mobile app for real-time flood monitoring.
-- **LaserTrack Inc.:** Web-based real-time asset tracking platform.
+- **Tim Ahli:** Profesional berpengalaman dengan keahlian teknis dan bisnis yang mendalam.
+- **Pendekatan Berpusat pada Klien:** Kami berkolaborasi erat dengan klien untuk memahami visi mereka dan memberikan hasil.
+- **Rekam Jejak Terbukti:** Portofolio proyek yang sukses di berbagai industri (Perbankan, Pemerintah, Teknologi).
+- **Didorong oleh Inovasi:** Kami memanfaatkan teknologi mutakhir seperti AI (Google Genkit) untuk membangun solusi yang siap menghadapi masa depan.
 
 ---
 
-## Slide 9: The Team
+## Slide 6: Peluang Pasar
 
-- **Titi Ariwati, CEO:** Visionary leader with a background in design and business strategy.
-- **Azwar Riyadh Subarkah, CTO & Founder:** Technology expert specializing in cloud architecture, AI integration, and high-performance engineering.
-
----
-
-## Slide 10: The Ask
-
-- **Seeking Strategic Partners & Investors:** We are looking for partners to help us scale our operations, expand our service offerings, and reach new markets.
-- **Use of Funds:**
-  - Talent Acquisition
-  - Research & Development (especially in AI)
-  - Sales & Marketing Efforts
+- **Ekonomi Digital yang Berkembang:** Permintaan akan layanan digital di Indonesia dan Asia Tenggara berkembang pesat.
+- **Target Pasar:** Usaha kecil hingga menengah (UKM) dan perusahaan besar yang ingin berinovasi dan mendigitalkan operasi mereka.
+- **Lanskap Kompetitif:** Kami membedakan diri dengan menawarkan solusi terintegrasi dari ujung ke ujung daripada layanan yang terkotak-kotak.
 
 ---
 
-## Slide 11: Contact & Next Steps
+## Slide 7: Model Bisnis
 
-- **Let's Build the Future, Together.**
+- **Biaya Berbasis Proyek:** Untuk pengembangan, konsultasi, dan audit.
+- **Layanan Berbasis Retainer:** Untuk dukungan TI berkelanjutan, pemeliharaan, dan layanan cloud terkelola.
+- **Solusi Paket:** Layanan yang dibundel seperti "Paket Digi Starter" dan "Suite Digi Enterprise" untuk harga yang jelas dan berbasis nilai.
+
+---
+
+## Slide 8: Pekerjaan Kami (Sorotan Portofolio)
+
+- **Bank Nusantara:** Implementasi CRM kustom, meningkatkan efisiensi layanan pelanggan sebesar 40%.
+- **PT Astra Tech:** Migrasi cloud ke AWS, mengurangi waktu henti sistem sebesar 95%.
+- **Dinas Sumber Daya Air Jakarta:** Aplikasi seluler "BanjirOnline" untuk pemantauan banjir waktu-nyata.
+- **LaserTrack Inc.:** Platform pelacakan aset waktu-nyata berbasis web.
+
+---
+
+## Slide 9: Tim
+
+- **Titi Ariwati, CEO:** Pemimpin visioner dengan latar belakang desain dan strategi bisnis.
+- **Azwar Riyadh Subarkah, CTO & Pendiri:** Ahli teknologi yang mengkhususkan diri dalam arsitektur cloud, integrasi AI, dan rekayasa berkinerja tinggi.
+
+---
+
+## Slide 10: Permintaan
+
+- **Mencari Mitra & Investor Strategis:** Kami mencari mitra untuk membantu kami meningkatkan skala operasi, memperluas penawaran layanan, dan menjangkau pasar baru.
+- **Penggunaan Dana:**
+  - Akuisisi Bakat
+  - Penelitian & Pengembangan (terutama di bidang AI)
+  - Upaya Penjualan & Pemasaran
+
+---
+
+## Slide 11: Kontak & Langkah Selanjutnya
+
+- **Mari Bangun Masa Depan, Bersama.**
 - **Azwar Riyadh Subarkah**
-- **CTO & Founder**
+- **CTO & Pendiri**
 - **admin@digimediakomunika.cloud**
 - **digimediakomunika.cloud/proposal**

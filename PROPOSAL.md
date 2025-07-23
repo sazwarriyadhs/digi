@@ -1,56 +1,56 @@
-# Project Proposal: PT Digi Media Komunika Company Profile Website
+# Proposal Proyek: Website Profil Perusahaan PT Digi Media Komunika
 
-## 1. Introduction
+## 1. Pendahuluan
 
-This document outlines the proposal for the development of a modern, professional company profile website for PT Digi Media Komunika. The new website will serve as a primary digital touchpoint for clients, partners, and potential investors, showcasing the company's services, portfolio, and expertise. The project will be built using Next.js, ShadCN UI, Tailwind CSS, and will incorporate AI-powered features using Google's Genkit.
+Dokumen ini menguraikan proposal untuk pengembangan website profil perusahaan yang modern dan profesional untuk PT Digi Media Komunika. Website baru ini akan berfungsi sebagai titik sentuh digital utama bagi klien, mitra, dan calon investor, dengan menampilkan layanan, portofolio, dan keahlian perusahaan. Proyek ini akan dibangun menggunakan Next.js, ShadCN UI, Tailwind CSS, dan akan menggabungkan fitur-fitur berbasis AI menggunakan Genkit dari Google.
 
-## 2. Project Objectives
+## 2. Tujuan Proyek
 
-- **Enhance Online Presence:** Create a visually appealing and professional website that reflects the brand identity of PT Digi Media Komunika.
-- **Showcase Expertise:** Effectively display the company's services, successful projects (portfolio), and team expertise.
-- **Improve User Engagement:** Provide an intuitive user experience with features like an AI-powered FAQ, multi-language support, and interactive demos.
-- **Generate Leads:** Include clear calls-to-action, a contact form, an appointment scheduling system, and a proposal request form to capture potential client interest.
-- **Support International Clients:** Implement multi-language (Bahasa Indonesia & English) and multi-currency (IDR & USD) support.
+- **Meningkatkan Kehadiran Online:** Menciptakan website yang menarik secara visual dan profesional yang mencerminkan identitas merek PT Digi Media Komunika.
+- **Menampilkan Keahlian:** Secara efektif menampilkan layanan perusahaan, proyek-proyek yang sukses (portofolio), dan keahlian tim.
+- **Meningkatkan Keterlibatan Pengguna:** Memberikan pengalaman pengguna yang intuitif dengan fitur-fitur seperti FAQ yang didukung AI, dukungan multi-bahasa, dan demo interaktif.
+- **Menghasilkan Prospek:** Menyertakan ajakan bertindak yang jelas, formulir kontak, sistem penjadwalan janji temu, dan formulir permintaan proposal untuk menangkap minat klien potensial.
+- **Mendukung Klien Internasional:** Menerapkan dukungan multi-bahasa (Bahasa Indonesia & Inggris) dan multi-mata uang (IDR & USD).
 
-## 3. Scope of Work
+## 3. Ruang Lingkup Pekerjaan
 
-### 3.1. Key Features
+### 3.1. Fitur Utama
 
-- **Homepage:** A compelling hero section, overview of services, and call-to-action buttons.
-- **About Us Page:** Detailed information about the company's history, mission, and vision.
-- **Services Page:** A comprehensive list of services offered, with detailed descriptions and pricing information.
-- **Portfolio Page:** A gallery of past projects and client case studies.
-- **Team Page:** Profiles of key team members.
-- **Contact Page:** Contact form, address, map, and other contact details.
-- **AI-Powered FAQ:** An intelligent assistant to answer user questions about the company.
-- **Multi-language/Multi-currency:** Toggles to switch between languages and currencies.
-- **Appointment & Proposal Forms:** Dedicated pages for clients to schedule meetings and request proposals.
-- **Brochure & vCard Download:** Functionality for users to download company materials.
+- **Halaman Utama:** Bagian hero yang menarik dengan carousel, gambaran umum layanan, dan tombol ajakan bertindak.
+- **Halaman Tentang Kami:** Informasi terperinci tentang sejarah, misi, dan visi perusahaan.
+- **Halaman Layanan:** Daftar komprehensif layanan yang ditawarkan, dengan deskripsi terperinci dan informasi harga.
+- **Halaman Portofolio:** Galeri proyek-proyek sebelumnya dan studi kasus klien.
+- **Halaman Tim:** Profil anggota tim kunci dengan biografi terperinci.
+- **Halaman Kontak:** Formulir kontak, alamat, peta, dan detail kontak lainnya.
+- **FAQ Berbasis AI:** Asisten cerdas untuk menjawab pertanyaan pengguna tentang perusahaan.
+- **Multi-bahasa/Multi-mata uang:** Tombol untuk beralih antara bahasa dan mata uang.
+- **Formulir Janji Temu & Proposal:** Halaman khusus bagi klien untuk menjadwalkan pertemuan dan meminta proposal.
+- **Unduhan Brosur & vCard:** Fungsionalitas bagi pengguna untuk mengunduh materi perusahaan.
 
-### 3.2. Technology Stack
+### 3.2. Teknologi yang Digunakan
 
 - **Frontend:** Next.js 15, React 18
 - **UI:** ShadCN UI, Tailwind CSS
-- **AI:** Google Genkit
-- **Backend/Server Actions:** Next.js Server Actions, Nodemailer for email.
+- **AI:** Google Genkit (Gemini)
+- **Backend/Server Actions:** Next.js Server Actions, Nodemailer untuk email.
 
-## 4. Project Timeline & Milestones
+## 4. Jadwal & Tonggak Proyek
 
-| Phase | Description | Estimated Duration |
+| Fase | Deskripsi | Estimasi Durasi |
 | :--- | :--- | :--- |
-| **1: Discovery & Planning** | Finalize requirements, sitemap, and design mockups. | 1 Week |
-| **2: Development** | Build out all pages and components. | 4 Weeks |
-| **3: AI & Backend Integration** | Implement Genkit flows and backend logic for forms. | 2 Weeks |
-| **4: Testing & QA** | Perform comprehensive testing and bug fixing. | 1 Week |
-| **5: Deployment & Launch** | Deploy the website to the production server. | 1 Week |
-| **Total** | | **9 Weeks** |
+| **1: Penemuan & Perencanaan** | Finalisasi persyaratan, peta situs, dan mockup desain. | 1 Minggu |
+| **2: Pengembangan** | Membangun semua halaman dan komponen. | 4 Minggu |
+| **3: Integrasi AI & Backend** | Menerapkan alur Genkit dan logika backend untuk formulir. | 2 Minggu |
+| **4: Pengujian & QA** | Melakukan pengujian komprehensif dan perbaikan bug. | 1 Minggu |
+| **5: Penyebaran & Peluncuran** | Menyebarkan website ke server produksi. | 1 Minggu |
+| **Total** | | **9 Minggu** |
 
-## 5. Budget and Pricing
+## 5. Anggaran dan Harga
 
-A detailed budget will be provided based on the final scope of work. Pricing will be broken down by project phase and deliverables. Optional ongoing maintenance and support packages will also be offered.
+Anggaran terperinci akan diberikan berdasarkan ruang lingkup kerja akhir. Harga akan dipecah berdasarkan fase proyek dan hasil kerja. Paket pemeliharaan dan dukungan berkelanjutan opsional juga akan ditawarkan.
 
-## 6. Next Steps
+## 6. Langkah Selanjutnya
 
-- Review and approve the proposal.
-- Kick-off meeting to finalize design direction and project details.
-- Sign the project agreement and process the initial deposit.
+- Tinjau dan setujui proposal.
+- Pertemuan awal untuk finalisasi arah desain dan detail proyek.
+- Menandatangani perjanjian proyek dan memproses deposit awal.

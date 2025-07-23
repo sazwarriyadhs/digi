@@ -1,63 +1,63 @@
-# Application Features
+# Fitur Aplikasi
 
-This document details the key features of the PT Digi Media Komunika company profile website.
+Dokumen ini merinci fitur-fitur utama dari website profil perusahaan PT Digi Media Komunika.
 
-## 1. Core Features
+## 1. Fitur Inti
 
-- **Responsive Design:** Fully adaptive layout for optimal viewing on desktops, tablets, and mobile devices.
-- **Multi-Language Support:** Content is available in both Bahasa Indonesia (ID) and English (EN), easily switchable via a header control.
-- **Multi-Currency Support:** Service pricing can be displayed in Indonesian Rupiah (IDR) and US Dollars (USD), with real-time conversion.
+- **Desain Responsif:** Tata letak yang sepenuhnya adaptif untuk tampilan optimal di desktop, tablet, dan perangkat seluler.
+- **Dukungan Multi-Bahasa:** Konten tersedia dalam Bahasa Indonesia (ID) dan Inggris (EN), mudah dialihkan melalui kontrol di header.
+- **Dukungan Multi-Mata Uang:** Harga layanan dapat ditampilkan dalam Rupiah Indonesia (IDR) dan Dolar AS (USD), dengan konversi waktu nyata.
 
-## 2. Main Pages & Sections
+## 2. Halaman & Bagian Utama
 
-- **Homepage:**
-  - Autoplaying carousel hero section with dynamic content.
-  - Sections for About, Services, Portfolio, FAQ, and Contact.
-- **About Section:**
-  - Company overview and mission.
-  - High-quality image representing the team/company.
-- **Services Section:**
-  - Accordion-style list of all services with detailed descriptions.
-  - Clear pricing information for each service.
-  - Packaged deals for bundled services.
-- **Portfolio & Demo Gallery:**
-  - Dedicated page showcasing client projects and case studies.
-  - Embedded live demos of web applications.
-- **Team Page:**
-  - Profiles for key team members.
-  - Pop-up dialogs with detailed bios.
-  - Social media links.
-- **Contact Page:**
-  - Contact form with validation and email notification (via Nodemailer).
-  - Company contact information (phone, email, address).
-  - Embedded map image.
+- **Halaman Utama:**
+  - Bagian hero dengan carousel yang berputar otomatis dan konten dinamis.
+  - Bagian untuk Tentang, Layanan, Portofolio, FAQ, dan Kontak.
+- **Bagian Tentang:**
+  - Tinjauan dan misi perusahaan.
+  - Gambar berkualitas tinggi yang mewakili tim/perusahaan.
+- **Bagian Layanan:**
+  - Daftar semua layanan bergaya akordeon dengan deskripsi terperinci.
+  - Informasi harga yang jelas untuk setiap layanan.
+  - Penawaran paket untuk layanan yang dibundel.
+- **Galeri Portofolio & Demo:**
+  - Halaman khusus yang menampilkan proyek klien dan studi kasus.
+  - Demo langsung aplikasi web yang disematkan.
+- **Halaman Tim:**
+  - Profil untuk anggota tim kunci.
+  - Dialog pop-up dengan biografi terperinci.
+  - Tautan media sosial.
+- **Halaman Kontak:**
+  - Formulir kontak dengan validasi dan pemberitahuan email (melalui Nodemailer).
+  - Informasi kontak perusahaan (telepon, email, alamat).
+  - Gambar peta yang disematkan.
 
-## 3. AI & Interactivity
+## 3. AI & Interaktivitas
 
-- **AI-Powered FAQ:**
-  - Users can ask questions in natural language.
-  - Powered by Google Genkit, trained on company-specific information.
-  - Provides instant, context-aware answers.
-- **General AI Help:**
-  - A separate AI assistant page for broader, general questions.
-- **Digital vCard Download:**
-  - A dedicated page for CTO Azwar Riyadh's contact card.
-  - Users enter their email to receive a PDF vCard download link.
-  - Includes a visual preview of the vCard.
-- **QR Code Integration:**
-  - The vCard preview includes a QR code linking directly to the "Request a Proposal" page.
+- **FAQ Berbasis AI:**
+  - Pengguna dapat mengajukan pertanyaan dalam bahasa alami.
+  - Didukung oleh Google Genkit, dilatih dengan informasi spesifik perusahaan.
+  - Memberikan jawaban yang instan dan sadar konteks.
+- **Bantuan AI Umum:**
+  - Halaman asisten AI terpisah untuk pertanyaan yang lebih luas dan umum.
+- **Unduhan vCard Digital:**
+  - Halaman khusus untuk kartu kontak CTO Azwar Riyadh.
+  - Pengguna memasukkan email mereka untuk menerima tautan unduhan vCard dalam format PDF.
+  - Termasuk pratinjau visual vCard.
+- **Integrasi Kode QR:**
+  - Pratinjau vCard menyertakan kode QR yang mengarah langsung ke halaman "Minta Proposal".
 
-## 4. Client Engagement Tools
+## 4. Alat Keterlibatan Klien
 
-- **Appointment Scheduling:** A form for clients to book a consultation session, with date and time pickers.
-- **Proposal Request Form:** A detailed form for potential clients to submit project requirements and receive a custom proposal.
-- **Brochure Download:** A page allowing users to download a PDF of the company's service brochure.
-- **Investor & Partnership Page:** Information for potential investors and partners.
+- **Penjadwalan Janji Temu:** Formulir bagi klien untuk memesan sesi konsultasi, dengan pemilih tanggal dan waktu.
+- **Formulir Permintaan Proposal:** Formulir terperinci bagi calon klien untuk mengirimkan persyaratan proyek dan menerima proposal khusus.
+- **Unduhan Brosur:** Halaman yang memungkinkan pengguna mengunduh PDF brosur layanan perusahaan.
+- **Halaman Investor & Kemitraan:** Informasi untuk calon investor dan mitra.
 
-## 5. Technology & Infrastructure
+## 5. Teknologi & Infrastruktur
 
-- **Framework:** Next.js 15 with App Router.
-- **Styling:** Tailwind CSS with ShadCN UI components.
-- **AI Engine:** Google Genkit with the Gemini model family.
-- **Email Service:** Nodemailer for transactional emails.
-- **Sitemap & SEO:** `next-sitemap` is configured for automatic sitemap generation to improve search engine visibility.
+- **Framework:** Next.js 15 dengan App Router.
+- **Styling:** Tailwind CSS dengan komponen ShadCN UI.
+- **Mesin AI:** Google Genkit dengan keluarga model Gemini.
+- **Layanan Email:** Nodemailer untuk email transaksional.
+- **Peta Situs & SEO:** `next-sitemap` dikonfigurasi untuk pembuatan peta situs otomatis guna meningkatkan visibilitas di mesin pencari.

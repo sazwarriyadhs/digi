@@ -1,161 +1,156 @@
-# PT Digi Media Komunika - Company Profile Website
+# Website Profil Perusahaan PT Digi Media Komunika
 
-This is a Next.js project for the PT Digi Media Komunika company profile, built with Firebase Studio. It features a modern, responsive design, multi-language support (Bahasa Indonesia & English), multi-currency display (IDR & USD), and an AI-powered FAQ section.
+Ini adalah proyek Next.js untuk profil perusahaan PT Digi Media Komunika, yang dibangun dengan Firebase Studio. Proyek ini menampilkan desain modern yang responsif, dukungan multi-bahasa (Bahasa Indonesia & Inggris), tampilan multi-mata uang (IDR & USD), dan bagian FAQ yang didukung oleh AI.
 
-## Project Documentation
+## Dokumentasi Proyek
 
-For detailed information about the project, please refer to the following documents:
+Untuk informasi terperinci tentang proyek ini, silakan merujuk ke dokumen berikut:
 
-- **[Features](./feature.md):** A comprehensive list of the application's features and functionalities.
-- **[Proposal](./PROPOSAL.md):** The official project proposal, outlining the scope, objectives, and deliverables.
-- **[Pitch Deck](./pitchdeck.md):** A presentation of the project's value proposition and business case.
+- **[Fitur](./feature.md):** Daftar lengkap fitur dan fungsionalitas aplikasi.
+- **[Proposal](./PROPOSAL.md):** Proposal proyek resmi, yang menguraikan ruang lingkup, tujuan, dan hasil kerja.
+- **[Pitch Deck](./pitchdeck.md):** Presentasi proposisi nilai dan kasus bisnis proyek.
 
-## Features
+## Fitur Unggulan
 
-- **Next.js 15 & React 18:** Utilizes the latest features of Next.js with the App Router.
-- **ShadCN UI & Tailwind CSS:** For a modern, responsive, and customizable component library.
-- **Genkit (Google AI):** Powers the intelligent FAQ assistant.
-- **Nodemailer:** Handles email sending for the contact form.
-- **Multi-language & Multi-currency:** Supports Bahasa Indonesia (ID) and English (EN), with currency conversion between IDR and USD.
-- **TypeScript:** For robust, type-safe code.
-- **Fully Responsive:** Designed to work seamlessly across all devices.
+- **Next.js 15 & React 18:** Memanfaatkan fitur-fitur terbaru dari Next.js dengan App Router.
+- **ShadCN UI & Tailwind CSS:** Untuk pustaka komponen yang modern, responsif, dan dapat disesuaikan.
+- **Genkit (Google AI):** Mendukung asisten FAQ yang cerdas.
+- **Nodemailer:** Menangani pengiriman email untuk formulir kontak.
+- **Multi-bahasa & Multi-mata uang:** Mendukung Bahasa Indonesia (ID) dan Inggris (EN), dengan konversi mata uang antara IDR dan USD.
+- **TypeScript:** Untuk kode yang kuat dan aman dari segi tipe.
+- **Sepenuhnya Responsif:** Didesain untuk bekerja dengan lancar di semua perangkat.
 
-## Prerequisites
+## Prasyarat
 
-Before you begin, ensure you have the following installed on your local machine:
-- [Node.js](https://nodejs.org/en/) (v18 or later recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+Sebelum memulai, pastikan Anda telah menginstal yang berikut di mesin lokal Anda:
+- [Node.js](https://nodejs.org/en/) (v18 atau lebih baru direkomendasikan)
+- [npm](https://www.npmjs.com/) atau [yarn](https://yarnpkg.com/)
 
-## Getting Started
+## Memulai
 
-Follow these steps to get the project running on your local machine.
+Ikuti langkah-langkah ini untuk menjalankan proyek di mesin lokal Anda.
 
-### 1. Clone the Repository
+### 1. Kloning Repositori
 
-First, clone the repository to your local machine:
+Pertama, kloning repositori ke mesin lokal Anda:
 
 ```bash
 git clone https://github.com/your-username/your-repository-name.git
 cd your-repository-name
 ```
 
-### 2. Install Dependencies
+### 2. Instal Dependensi
 
-Install the necessary project dependencies using npm or yarn:
+Instal dependensi proyek yang diperlukan menggunakan npm atau yarn:
 
 ```bash
 npm install
-# or
+# atau
 yarn install
 ```
 
-### 3. Set Up Environment Variables
+### 3. Atur Variabel Lingkungan
 
-This project uses environment variables for configuration. You'll need to set them up for the AI features, database connection, and email sending.
+Proyek ini menggunakan variabel lingkungan untuk konfigurasi. Anda harus mengaturnya untuk fitur AI dan pengiriman email.
 
-1.  This repository includes a file named `.env.template`. Make a copy of this file and rename it to `.env.local`.
+1.  Repositori ini menyertakan file bernama `.env.template`. Buat salinan file ini dan ganti namanya menjadi `.env.local`.
 
     ```bash
     cp .env.template .env.local
     ```
 
-2.  Update the `.env.local` file with your credentials:
+2.  Perbarui file `.env.local` dengan kredensial Anda:
 
-    -   **`GOOGLE_API_KEY`**: Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
-    -   **`DATABASE_URL`**: Your PostgreSQL database connection string.
-    -   **`SMTP_HOST`**: Hostname of your SMTP server (e.g., `smtp.example.com`).
-    -   **`SMTP_PORT`**: Port for your SMTP server (e.g., `587` or `465`).
-    -   **`SMTP_USER`**: Username for SMTP authentication.
-    -   **`SMTP_PASS`**: Password for SMTP authentication.
-    -   **`SMTP_FROM_EMAIL`**: The email address that will send the notifications (this will also be the recipient of the contact form submissions).
+    -   **`GOOGLE_API_KEY`**: Dapatkan kunci API dari [Google AI Studio](https://aistudio.google.com/app/apikey).
+    -   **`SMTP_HOST`**: Nama host server SMTP Anda (misalnya, `smtp.example.com`).
+    -   **`SMTP_PORT`**: Port untuk server SMTP Anda (misalnya, `587` atau `465`).
+    -   **`SMTP_USER`**: Nama pengguna untuk otentikasi SMTP.
+    -   **`SMTP_PASS`**: Kata sandi untuk otentikasi SMTP.
+    -   **`SMTP_FROM_EMAIL`**: Alamat email yang akan mengirim pemberitahuan (ini juga akan menjadi penerima kiriman formulir kontak).
 
-    Your `.env.local` file should look something like this:
+    File `.env.local` Anda akan terlihat seperti ini:
 
     ```
     # .env.local
 
-    # Genkit/Google AI API Key
-    GOOGLE_API_KEY=your_google_api_key_here
+    # Kunci API Genkit/Google AI
+    GOOGLE_API_KEY=kunci_api_google_anda_di_sini
 
-    # Database Connection URL
-    DATABASE_URL="postgresql://postgres:postgres@localhost:5432/digimed"
-    
-    # SMTP Configuration for sending emails
-    SMTP_HOST=smtp.your-provider.com
+    # Konfigurasi SMTP untuk mengirim email
+    SMTP_HOST=smtp.penyedia-anda.com
     SMTP_PORT=587
-    SMTP_USER=your-email@your-provider.com
-    SMTP_PASS=your-email-password
-    SMTP_FROM_EMAIL=your-email@your-provider.com
+    SMTP_USER=email-anda@penyedia-anda.com
+    SMTP_PASS=kata-sandi-email-anda
+    SMTP_FROM_EMAIL=email-anda@penyedia-anda.com
     ```
-    **Note:** The `.env.local` file is included in `.gitignore` and should never be committed to your version control system.
+    **Catatan:** File `.env.local` termasuk dalam `.gitignore` dan tidak boleh dikomit ke sistem kontrol versi Anda.
 
-### 4. Run the Development Server
+### 4. Jalankan Server Pengembangan
 
-Start the Next.js development server:
+Mulai server pengembangan Next.js:
 
 ```bash
 npm run dev
-# or
+# atau
 yarn dev
 ```
 
-Open [http://localhost:9002](http://localhost:9002) in your browser to see the application running.
+Buka [http://localhost:9002](http://localhost:9002) di browser Anda untuk melihat aplikasi berjalan.
 
-## Building for Production
+## Membangun untuk Produksi
 
-To create a production-ready build of your application, run the following command:
+Untuk membuat build aplikasi yang siap untuk produksi, jalankan perintah berikut:
 
 ```bash
 npm run build
 ```
 
-This command will generate an optimized version of your site in the `.next` directory.
+Perintah ini akan menghasilkan versi situs Anda yang dioptimalkan di direktori `.next`.
 
-## Deployment on Your Own Hosting
+## Penyebaran di Hosting Anda Sendiri
 
-You can deploy this Next.js application to any hosting provider that supports Node.js (e.g., Vercel, Netlify, AWS, DigitalOcean). Here are the general steps:
+Anda dapat menyebarkan aplikasi Next.js ini ke penyedia hosting mana pun yang mendukung Node.js (misalnya, Vercel, Netlify, AWS, DigitalOcean). Berikut adalah langkah-langkah umumnya:
 
-### 1. Choose a Hosting Provider
+### 1. Pilih Penyedia Hosting
 
-- **Vercel (Recommended):** As the creators of Next.js, Vercel provides the most seamless deployment experience. Simply connect your Git repository, and Vercel will handle the build and deployment process automatically.
-- **Other Providers (Netlify, AWS Amplify, etc.):** Most modern hosting platforms have built-in support for Next.js. The setup is typically similar to Vercel.
-- **Custom Node.js Server:** You can host the application on a traditional VPS or server, as you are doing.
+- **Vercel (Disarankan):** Sebagai pencipta Next.js, Vercel menyediakan pengalaman penyebaran yang paling lancar. Cukup hubungkan repositori Git Anda, dan Vercel akan menangani proses build dan penyebaran secara otomatis.
+- **Penyedia Lain (Netlify, AWS Amplify, dll.):** Sebagian besar platform hosting modern memiliki dukungan bawaan untuk Next.js. Pengaturannya biasanya mirip dengan Vercel.
+- **Server Node.js Kustom:** Anda dapat meng-host aplikasi di VPS atau server tradisional, seperti yang Anda lakukan.
 
-### 2. Configure Environment Variables on the Server
+### 2. Konfigurasi Variabel Lingkungan di Server
 
-On your hosting provider's dashboard, you must set the same environment variables that you defined in your `.env.local` file. Look for a section called "Environment Variables" or "Secrets" in your project's settings.
+Di dasbor penyedia hosting Anda, Anda harus mengatur variabel lingkungan yang sama dengan yang Anda definisikan di file `.env.local` Anda. Cari bagian yang disebut "Environment Variables" atau "Secrets" di pengaturan proyek Anda.
 
 -   `GOOGLE_API_KEY`
--   `DATABASE_URL`
 -   `SMTP_HOST`
 -   `SMTP_PORT`
 -   `SMTP_USER`
 -   `SMTP_PASS`
 -   `SMTP_FROM_EMAIL`
 
-This is a critical step. The application will not be able to connect to the AI services, database, or send emails without these keys.
+Ini adalah langkah penting. Aplikasi tidak akan dapat terhubung ke layanan AI atau mengirim email tanpa kunci-kunci ini.
 
-### 3. Build and Start the Application
+### 3. Build dan Mulai Aplikasi
 
-If you are using a custom server (like a VPS), you will need to:
+Jika Anda menggunakan server kustom (seperti VPS), Anda perlu:
 
-1.  Push your code to the server.
-2.  Install dependencies: `npm install`
-3.  Build the project: `npm run build`
-4.  Start the production server: `npm run start`
+1.  Mendorong kode Anda ke server.
+2.  Instal dependensi: `npm install`
+3.  Build proyek: `npm run build`
+4.  Mulai server produksi: `npm run start`
 
-It's highly recommended to use a process manager like [PM2](https://pm2.keymetrics.io/) to keep your application running continuously.
+Sangat disarankan untuk menggunakan manajer proses seperti [PM2](https://pm2.keymetrics.io/) untuk menjaga aplikasi Anda berjalan terus-menerus.
 
 ```bash
-# Install PM2 globally
+# Instal PM2 secara global
 npm install pm2 -g
 
-# Start the application with PM2
+# Mulai aplikasi dengan PM2
 pm2 start npm --name "digimediakomunika-app" -- start
 ```
 
-### 4. Domain and SSL
+### 4. Domain dan SSL
 
-Finally, configure your custom domain to point to your hosting provider's server IP or CNAME record, and ensure you have an SSL certificate installed for HTTPS. Most modern providers handle SSL automatically.
+Terakhir, konfigurasikan domain kustom Anda untuk menunjuk ke alamat IP server atau catatan CNAME penyedia hosting Anda, dan pastikan Anda telah menginstal sertifikat SSL untuk HTTPS. Sebagian besar penyedia modern menangani SSL secara otomatis.
 
-For your setup, you would configure your domain `digimediakomunika.cloud` to point to your server's IP address, which is `103.247.11.222`.
+Untuk pengaturan Anda, Anda akan mengkonfigurasi domain Anda `digimediakomunika.cloud` untuk menunjuk ke alamat IP server Anda, yaitu `103.247.11.222`.
