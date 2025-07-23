@@ -38,7 +38,7 @@ function NavLinks({
 }) {
   const commonLinkClass = "text-sm font-medium transition-colors";
   const mobileLinkClass = "py-2 px-4 block w-full text-left";
-  const desktopLinkClass = "px-3 py-2 rounded-md hover:bg-primary-foreground/10";
+  const desktopLinkClass = "px-3 py-2 rounded-md hover:bg-primary/80 hover:text-primary-foreground";
   const linkClass = isMobile ? `${commonLinkClass} ${mobileLinkClass}` : `${commonLinkClass} ${desktopLinkClass}`;
 
   const renderLink = (link: any) => (
