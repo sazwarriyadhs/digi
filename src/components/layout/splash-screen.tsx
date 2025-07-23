@@ -1,27 +1,40 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Logo } from '../logo';
 
 export function SplashScreen() {
   const [isVisible, setIsVisible] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Hide the splash screen after 3 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 3000);
+    const video = videoRef.current;
+    if (!video) return;
 
-    return () => clearTimeout(timer);
+    const handleVideoEnd = () => {
+      setIsVisible(false);
+    };
+
+    video.addEventListener('ended', handleVideoEnd);
+
+    // Fallback timer in case the 'ended' event doesn't fire
+    const timer = setTimeout(() => {
+        setIsVisible(false);
+    }, (video.duration || 5) * 1000); // Defaults to 5 seconds if duration is not available
+
+    return () => {
+      video.removeEventListener('ended', handleVideoEnd);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
     <div className={`splash-screen ${!isVisible ? 'hidden' : ''}`}>
       <video
+        ref={videoRef}
         autoPlay
         muted
-        loop
         playsInline
         className="splash-video"
       >
