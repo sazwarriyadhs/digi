@@ -22,7 +22,7 @@ export function AboutSection() {
           </div>
           <Image
             src="/images/aboutus.jpg"
-            alt="About Us Image"
+            alt="Tim PT Digi Media Komunika sedang berkolaborasi di kantor"
             width={600}
             height={400}
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"

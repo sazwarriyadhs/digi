@@ -6,9 +6,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { AppProvider } from "@/context/AppContext";
 
 export const metadata: Metadata = {
-  title: "Digi Media Komunika",
+  title: "PT Digi Media Komunika - Solusi Transformasi Digital",
   description:
-    "Innovative digital media solutions to elevate your brand. From web development to digital marketing, we craft experiences that deliver results.",
+    "PT Digi Media Komunika menyediakan solusi transformasi digital inovatif. Dari pengembangan web dan aplikasi, layanan cloud & DevOps, hingga keamanan siber dan konsultasi AI.",
 };
 
 export default function RootLayout({
