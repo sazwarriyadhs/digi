@@ -4,9 +4,15 @@
 import Link from 'next/link';
 import { useAppContext } from '@/context/AppContext';
 import { Logo } from '../logo';
+import { useEffect, useState } from 'react';
 
 export function Footer() {
   const { t } = useAppContext();
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
   
   return (
     <footer className="bg-muted py-8 text-sm text-muted-foreground">
@@ -16,7 +22,7 @@ export function Footer() {
                 <Logo />
             </div>
             <div className="flex flex-col md:flex-row items-center gap-4 text-center">
-                 <div>&copy; {new Date().getFullYear()} PT Digi Media Komunika. All rights reserved.</div>
+                 <div>&copy; {currentYear || new Date().getFullYear()} PT Digi Media Komunika. All rights reserved.</div>
             </div>
             <div className="flex gap-4 mt-4 md:mt-0">
                 <Link href="/privacy" className="hover:text-foreground">
