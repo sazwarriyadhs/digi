@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { AppProvider } from "@/context/AppContext";
+import { SplashScreen } from "@/components/layout/splash-screen";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digimediakomunika.cloud';
 const siteTitle = "PT Digi Media Komunika - Solusi Transformasi Digital";
@@ -69,6 +70,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <AppProvider>
+          <SplashScreen />
           <Header />
           <main>{children}</main>
           <Footer />
