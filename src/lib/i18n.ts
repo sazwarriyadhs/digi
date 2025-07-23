@@ -4,7 +4,7 @@ export const translations = {
         navLinks: [
             { href: "/#about", label: "Tentang" },
             { href: "/#services", label: "Layanan" },
-            { href: "/portfolio", label: "Portofolio" },
+            { href: "/#portfolio", label: "Portofolio" },
             { 
                 label: "Klien Kami",
                 children: [
@@ -98,10 +98,10 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Galeri Demo",
-            title: "Galeri Demo Interaktif",
-            description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
-            cta: "Kunjungi Galeri Demo"
+            badge: "Portofolio Unggulan",
+            title: "Karya yang Kami Banggakan",
+            description: "Lihat beberapa proyek sukses yang telah kami selesaikan, menunjukkan keahlian kami dalam memberikan solusi digital yang berdampak.",
+            cta: "Lihat Semua Portofolio"
         },
         portfolioPage: {
             badge: "Portofolio",
@@ -380,7 +380,7 @@ export const translations = {
         navLinks: [
             { href: "/#about", label: "About" },
             { href: "/#services", label: "Services" },
-            { href: "/portfolio", label: "Portfolio" },
+            { href: "/#portfolio", label: "Portfolio" },
             { 
                 label: "Our Clients",
                 children: [
@@ -474,10 +474,10 @@ export const translations = {
             }
         },
         portfolio: {
-            badge: "Demo Gallery",
-            title: "Interactive Demo Gallery",
-            description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
-            cta: "Go to Demo Gallery"
+            badge: "Featured Portfolio",
+            title: "Work We're Proud Of",
+            description: "Check out some of the successful projects we've completed, showcasing our expertise in delivering impactful digital solutions.",
+            cta: "View All Portfolio"
         },
         portfolioPage: {
             badge: "Portfolio",
