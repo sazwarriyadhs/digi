@@ -5,10 +5,33 @@ import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { AppProvider } from "@/context/AppContext";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://digimediakomunika.cloud';
+const siteTitle = "PT Digi Media Komunika - Solusi Transformasi Digital";
+const siteDescription = "PT Digi Media Komunika menyediakan solusi transformasi digital inovatif. Dari pengembangan web dan aplikasi, layanan cloud & DevOps, hingga keamanan siber dan konsultasi AI.";
+
 export const metadata: Metadata = {
-  title: "PT Digi Media Komunika - Solusi Transformasi Digital",
-  description:
-    "PT Digi Media Komunika menyediakan solusi transformasi digital inovatif. Dari pengembangan web dan aplikasi, layanan cloud & DevOps, hingga keamanan siber dan konsultasi AI.",
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: `${siteUrl}/images/hero1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'PT Digi Media Komunika',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: [`${siteUrl}/images/hero1.jpg`],
+  },
 };
 
 export default function RootLayout({
