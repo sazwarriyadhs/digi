@@ -9,22 +9,21 @@ export function SplashScreen() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleVideoEnd = () => {
-      setIsVisible(false);
-    };
-
-    video.addEventListener('ended', handleVideoEnd);
-
-    // Fallback timer in case the 'ended' event doesn't fire
+    // Timer untuk menyembunyikan splash screen setelah 5 detik
     const timer = setTimeout(() => {
-        setIsVisible(false);
-    }, (video.duration || 5) * 1000); // Defaults to 5 seconds if duration is not available
+      setIsVisible(false);
+    }, 5000); // 5000 milidetik = 5 detik
+
+    const video = videoRef.current;
+    if (video) {
+        // Memastikan video diputar
+        video.play().catch(error => {
+            console.error("Video autoplay was prevented:", error);
+            // Jika video diblokir, tetap sembunyikan setelah 5 detik
+        });
+    }
 
     return () => {
-      video.removeEventListener('ended', handleVideoEnd);
       clearTimeout(timer);
     };
   }, []);
