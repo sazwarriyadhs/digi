@@ -376,7 +376,7 @@ export const portfolioItems = [
         },
         duration: { id: "3 Bulan", en: "3 Months" },
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
-        imageUrl: "/images/visionask.png",
+        imageUrl: "/images/vision.png",
         aiHint: "education platform dashboard",
     }
 ];
@@ -580,7 +580,7 @@ export const demoItems = [
     {
         href: "/demo/visionask",
         aiHint: "education platform",
-        imageUrl: "/images/visionask.png",
+        imageUrl: "/images/vision.png",
         id: {
             name: "Visionask AI",
             description: "Demo platform pembelajaran interaktif berbasis AI untuk edukasi."
