@@ -366,18 +366,18 @@ export const portfolioItems = [
         href: "/demo/visionask",
         id: {
             client: "Visionask",
-            project: "Platform Edukasi Berbasis AI",
-            details: "Mengembangkan platform pembelajaran interaktif yang didukung AI untuk membantu siswa memahami konsep-konsep kompleks melalui kuis dan materi yang dipersonalisasi."
+            project: "Aplikasi OCR untuk Dokumen",
+            details: "Mengembangkan aplikasi OCR canggih untuk mengekstrak teks dari berbagai jenis dokumen secara akurat dan efisien."
         },
         en: {
             client: "Visionask",
-            project: "AI-Powered Education Platform",
-            details: "Developed an AI-powered interactive learning platform to help students understand complex concepts through personalized quizzes and materials."
+            project: "Document OCR Application",
+            details: "Developed an advanced OCR application to accurately and efficiently extract text from various document types."
         },
         duration: { id: "3 Bulan", en: "3 Months" },
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
         imageUrl: "/images/vision.png",
-        aiHint: "education platform dashboard",
+        aiHint: "document scanner ocr",
     }
 ];
 
@@ -579,15 +579,15 @@ export const demoItems = [
     },
     {
         href: "/demo/visionask",
-        aiHint: "education platform",
+        aiHint: "document scanner ocr",
         imageUrl: "/images/vision.png",
         id: {
-            name: "Visionask AI",
-            description: "Demo platform pembelajaran interaktif berbasis AI untuk edukasi."
+            name: "Visionask OCR",
+            description: "Demo aplikasi OCR canggih untuk mengekstrak teks dari dokumen."
         },
         en: {
-            name: "Visionask AI",
-            description: "Demo of an AI-powered interactive learning platform for education."
+            name: "Visionask OCR",
+            description: "Demo of an advanced OCR application for extracting text from documents."
         }
     }
 ];
