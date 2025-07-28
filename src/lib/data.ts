@@ -1,4 +1,5 @@
 
+
 import { Lightbulb, Codepen, ShieldCheck, CloudCog, DatabaseZap, Briefcase, LifeBuoy, Presentation, GanttChartSquare, Bot, Search } from "lucide-react";
 import React from "react";
 
@@ -360,6 +361,23 @@ export const portfolioItems = [
         projectOfficer: "Titi Ariwati",
         imageUrl: "/images/cintakita.jpeg",
         aiHint: "community social platform",
+    },
+    {
+        href: "/demo/visionask",
+        id: {
+            client: "Visionask",
+            project: "Platform Edukasi Berbasis AI",
+            details: "Mengembangkan platform pembelajaran interaktif yang didukung AI untuk membantu siswa memahami konsep-konsep kompleks melalui kuis dan materi yang dipersonalisasi."
+        },
+        en: {
+            client: "Visionask",
+            project: "AI-Powered Education Platform",
+            details: "Developed an AI-powered interactive learning platform to help students understand complex concepts through personalized quizzes and materials."
+        },
+        duration: { id: "3 Bulan", en: "3 Months" },
+        projectOfficer: "Azwar Riyadh, Titi Ariwati",
+        imageUrl: "/images/visionask.png",
+        aiHint: "education platform dashboard",
     }
 ];
 
@@ -558,6 +576,19 @@ export const demoItems = [
             name: "Cinta Kita",
             description: "Demo of a community platform with donations, events, and discussion forums."
         }
+    },
+    {
+        href: "/demo/visionask",
+        aiHint: "education platform",
+        imageUrl: "/images/visionask.png",
+        id: {
+            name: "Visionask AI",
+            description: "Demo platform pembelajaran interaktif berbasis AI untuk edukasi."
+        },
+        en: {
+            name: "Visionask AI",
+            description: "Demo of an AI-powered interactive learning platform for education."
+        }
     }
 ];
 
@@ -602,5 +633,3 @@ export const teamMembers = [
         }
     }
 ];
-
-    

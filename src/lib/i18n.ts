@@ -30,6 +30,7 @@ export const translations = {
                     { href: "/demo/lasertrack", label: "LaserTrack" },
                     { href: "/demo/cintakita", label: "Cinta Kita" },
                     { href: "/demo/serenity-trade", label: "AgriBid" },
+                    { href: "/demo/visionask", label: "Visionask" },
                 ]
             },
         ],
@@ -406,6 +407,7 @@ export const translations = {
                     { href: "/demo/lasertrack", label: "LaserTrack" },
                     { href: "/demo/cintakita", label: "Cinta Kita" },
                     { href: "/demo/serenity-trade", label: "AgriBid" },
+                    { href: "/demo/visionask", label: "Visionask" },
                 ]
             },
         ],
