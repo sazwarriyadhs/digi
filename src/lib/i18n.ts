@@ -31,6 +31,7 @@ export const translations = {
                     { href: "/demo/cintakita", label: "Cinta Kita" },
                     { href: "/demo/serenity-trade", label: "AgriBid" },
                     { href: "/demo/visionask", label: "Visionask" },
+                    { href: "/demo/resume-ace", label: "Resume Ace" },
                 ]
             },
         ],
@@ -408,6 +409,7 @@ export const translations = {
                     { href: "/demo/cintakita", label: "Cinta Kita" },
                     { href: "/demo/serenity-trade", label: "AgriBid" },
                     { href: "/demo/visionask", label: "Visionask" },
+                    { href: "/demo/resume-ace", label: "Resume Ace" },
                 ]
             },
         ],

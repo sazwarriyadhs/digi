@@ -378,6 +378,23 @@ export const portfolioItems = [
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
         imageUrl: "/images/vision.png",
         aiHint: "document scanner ocr",
+    },
+    {
+        href: "/demo/resume-ace",
+        id: {
+            client: "Internal Project",
+            project: "Resume Ace - AI Resume Builder",
+            details: "Membangun platform berbasis AI untuk membuat resume profesional dengan templat yang ramah ATS dan saran cerdas untuk membantu pengguna mendapatkan pekerjaan impian mereka."
+        },
+        en: {
+            client: "Internal Project",
+            project: "Resume Ace - AI Resume Builder",
+            details: "Built an AI-powered platform to create professional resumes with ATS-friendly templates and smart suggestions to help users land their dream job."
+        },
+        duration: { id: "1 Bulan", en: "1 Month" },
+        projectOfficer: "Azwar Riyadh, Titi Ariwati",
+        imageUrl: "/images/resumeace.png",
+        aiHint: "resume builder application",
     }
 ];
 
@@ -588,6 +605,19 @@ export const demoItems = [
         en: {
             name: "Visionask OCR",
             description: "Demo of an advanced OCR application for extracting text from documents."
+        }
+    },
+    {
+        href: "/demo/resume-ace",
+        aiHint: "resume builder application",
+        imageUrl: "/images/resumeace.png",
+        id: {
+            name: "Resume Ace",
+            description: "Demo aplikasi pembuat resume berbasis AI dengan templat profesional."
+        },
+        en: {
+            name: "Resume Ace",
+            description: "Demo of an AI-powered resume builder with professional templates."
         }
     }
 ];
