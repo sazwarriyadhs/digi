@@ -400,13 +400,13 @@ export const portfolioItems = [
         href: "/demo/tradeflow",
         id: {
             client: "Internal Project",
-            project: "TradeFlow - Platform Trading & Logistik",
-            details: "Platform canggih untuk manajemen trading dan logistik komoditas, mengintegrasikan alur kerja dari hulu ke hilir."
+            project: "TradeFlow - Integrasi Trading Kripto & Saham AS",
+            details: "Platform canggih untuk integrasi trading Kripto dan Saham AS."
         },
         en: {
             client: "Internal Project",
-            project: "TradeFlow - Trading & Logistics Platform",
-            details: "An advanced platform for commodity trading and logistics management, integrating workflows from upstream to downstream."
+            project: "TradeFlow - Crypto & US Equities Trading Integration",
+            details: "An advanced platform for Crypto and US Equities trading integration."
         },
         duration: { id: "2 Bulan", en: "2 Months" },
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
@@ -642,12 +642,12 @@ export const demoItems = [
         aiHint: "trading platform logistics",
         imageUrl: "/images/tradeflow.png",
         id: {
-            name: "TradeFlow",
-            description: "Demo platform canggih untuk trading dan logistik komoditas."
+            name: "TradeFlow - Integrasi Trading Kripto & Saham AS",
+            description: "Platform canggih untuk integrasi trading Kripto dan Saham AS."
         },
         en: {
-            name: "TradeFlow",
-            description: "Demo of an advanced platform for commodity trading and logistics."
+            name: "TradeFlow - Crypto & US Equities Trading Integration",
+            description: "An advanced platform for Crypto and US Equities trading integration."
         }
     }
 ];
