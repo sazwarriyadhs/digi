@@ -32,6 +32,7 @@ export const translations = {
                     { href: "/demo/serenity-trade", label: "AgriBid" },
                     { href: "/demo/visionask", label: "Visionask" },
                     { href: "/demo/resume-ace", label: "Resume Ace" },
+                    { href: "/demo/tradeflow", label: "TradeFlow" },
                 ]
             },
         ],
@@ -410,6 +411,7 @@ export const translations = {
                     { href: "/demo/serenity-trade", label: "AgriBid" },
                     { href: "/demo/visionask", label: "Visionask" },
                     { href: "/demo/resume-ace", label: "Resume Ace" },
+                    { href: "/demo/tradeflow", label: "TradeFlow" },
                 ]
             },
         ],

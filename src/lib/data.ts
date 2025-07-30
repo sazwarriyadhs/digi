@@ -395,6 +395,23 @@ export const portfolioItems = [
         projectOfficer: "Azwar Riyadh, Titi Ariwati",
         imageUrl: "/images/resumeace.png",
         aiHint: "resume builder application",
+    },
+    {
+        href: "/demo/tradeflow",
+        id: {
+            client: "Internal Project",
+            project: "TradeFlow - Platform Trading & Logistik",
+            details: "Platform canggih untuk manajemen trading dan logistik komoditas, mengintegrasikan alur kerja dari hulu ke hilir."
+        },
+        en: {
+            client: "Internal Project",
+            project: "TradeFlow - Trading & Logistics Platform",
+            details: "An advanced platform for commodity trading and logistics management, integrating workflows from upstream to downstream."
+        },
+        duration: { id: "2 Bulan", en: "2 Months" },
+        projectOfficer: "Azwar Riyadh, Titi Ariwati",
+        imageUrl: "/images/tradeflow.png",
+        aiHint: "trading platform logistics",
     }
 ];
 
@@ -618,6 +635,19 @@ export const demoItems = [
         en: {
             name: "Resume Ace",
             description: "Demo of an AI-powered resume builder with professional templates."
+        }
+    },
+    {
+        href: "/demo/tradeflow",
+        aiHint: "trading platform logistics",
+        imageUrl: "/images/tradeflow.png",
+        id: {
+            name: "TradeFlow",
+            description: "Demo platform canggih untuk trading dan logistik komoditas."
+        },
+        en: {
+            name: "TradeFlow",
+            description: "Demo of an advanced platform for commodity trading and logistics."
         }
     }
 ];
