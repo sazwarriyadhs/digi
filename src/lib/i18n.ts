@@ -17,6 +17,7 @@ export const translations = {
                 label: "Perusahaan",
                 children: [
                     { href: "/team", label: "Tim Kami" },
+                    { href: "/news", label: "Artikel" },
                     { href: "/investor", label: "Investasi & Kemitraan" },
                     { href: "/#faq", label: "FAQ" },
                     { href: "/brochure", label: "Brosur" },
@@ -307,6 +308,15 @@ export const translations = {
             },
             downloadBrochure: "Unduh Profil Perusahaan"
         },
+        news: {
+            badge: "Artikel & Berita",
+            title: "Wawasan & Pembaruan Terbaru",
+            description: "Tetap terinformasi dengan berita terbaru perusahaan, wawasan industri, dan artikel dari tim kami.",
+            readMore: "Baca Selengkapnya",
+            author: "Penulis",
+            publishedDate: "Tanggal Terbit",
+            category: "Kategori",
+        },
         privacyPolicy: {
             title: "Kebijakan Privasi",
             lastUpdated: "Terakhir diperbarui: 29 Juni 2024",
@@ -396,6 +406,7 @@ export const translations = {
                 label: "Company",
                 children: [
                     { href: "/team", label: "Our Team" },
+                    { href: "/news", label: "News" },
                     { href: "/investor", label: "Investment & Partnership" },
                     { href: "/#faq", label: "FAQ" },
                     { href: "/brochure", label: "Brochure" },
@@ -685,6 +696,15 @@ export const translations = {
                 confidentiality: "All inquiries will be treated with the utmost confidentiality.",
             },
             downloadBrochure: "Download Company Profile"
+        },
+        news: {
+            badge: "Articles & News",
+            title: "Latest Insights & Updates",
+            description: "Stay informed with the latest company news, industry insights, and articles from our team.",
+            readMore: "Read More",
+            author: "Author",
+            publishedDate: "Published Date",
+            category: "Category",
         },
         privacyPolicy: {
             title: "Privacy Policy",

@@ -693,3 +693,64 @@ export const teamMembers = [
         }
     }
 ];
+
+export const articles = [
+    {
+        slug: "tren-transformasi-digital-2024",
+        imageUrl: "/images/article1.jpg",
+        aiHint: "digital transformation trends",
+        id: {
+            title: "5 Tren Transformasi Digital yang Akan Mendominasi di Tahun 2024",
+            description: "Pelajari tren-tren kunci dalam transformasi digital, mulai dari AI generatif hingga komputasi kuantum, dan bagaimana bisnis Anda dapat memanfaatkannya.",
+            category: "Teknologi",
+            author: "Azwar Riyadh",
+            date: "2024-07-01",
+        },
+        en: {
+            title: "5 Digital Transformation Trends That Will Dominate in 2024",
+            description: "Learn about the key trends in digital transformation, from generative AI to quantum computing, and how your business can leverage them.",
+            category: "Technology",
+            author: "Azwar Riyadh",
+            date: "2024-07-01",
+        }
+    },
+    {
+        slug: "pentingnya-keamanan-siber-untuk-ukm",
+        imageUrl: "/images/article2.jpg",
+        aiHint: "cyber security small business",
+        id: {
+            title: "Mengapa Keamanan Siber Penting untuk Usaha Kecil dan Menengah (UKM)?",
+            description: "UKM sering menjadi target serangan siber. Temukan langkah-langkah praktis untuk melindungi bisnis Anda dari ancaman digital yang terus berkembang.",
+            category: "Keamanan Siber",
+            author: "Titi Ariwati",
+            date: "2024-06-25",
+        },
+        en: {
+            title: "Why is Cybersecurity Important for Small and Medium Enterprises (SMEs)?",
+            description: "SMEs are often targets of cyber attacks. Discover practical steps to protect your business from evolving digital threats.",
+            category: "Cybersecurity",
+            author: "Titi Ariwati",
+            date: "2024-06-25",
+        }
+    },
+    {
+        slug: "membangun-budaya-inovasi-di-perusahaan",
+        imageUrl: "/images/article3.jpg",
+        aiHint: "innovation culture team",
+        id: {
+            title: "Studi Kasus: Bagaimana Kami Membangun Budaya Inovasi di PT Digi Media Komunika",
+            description: "Dari sesi brainstorming rutin hingga proyek internal, kami membagikan cara kami menumbuhkan budaya kreativitas dan inovasi di dalam tim.",
+            category: "Budaya Perusahaan",
+            author: "Azwar Riyadh",
+            date: "2024-06-18",
+        },
+        en: {
+            title: "Case Study: How We Built a Culture of Innovation at PT Digi Media Komunika",
+            description: "From regular brainstorming sessions to internal projects, we share how we foster a culture of creativity and innovation within the team.",
+            category: "Company Culture",
+            author: "Azwar Riyadh",
+            date: "2024-06-18",
+        }
+    }
+];
+
