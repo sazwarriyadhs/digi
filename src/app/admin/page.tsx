@@ -4,11 +4,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { handleGenerateArticle } from "../actions";
 import { Loader } from "lucide-react";
-import { Input } from "@/components/ui/input";
 
 export default function AdminPage() {
     const [topic, setTopic] = useState("");
@@ -58,7 +57,7 @@ export default function AdminPage() {
                     <CardContent>
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <Input
-                                placeholder="Enter article topic..."
+                                placeholder="Enter article topic (e.g., 'Digital Transformation Trends')"
                                 value={topic}
                                 onChange={(e) => setTopic(e.target.value)}
                                 disabled={isLoading}
@@ -70,7 +69,7 @@ export default function AdminPage() {
                                         Generating...
                                     </>
                                 ) : (
-                                    "Generate Article"
+                                    "Generate and Save Article"
                                 )}
                             </Button>
                         </form>
