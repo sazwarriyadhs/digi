@@ -8,21 +8,20 @@ import { collection, addDoc, getDocs, query, where, Timestamp, orderBy, doc, get
 export interface Article {
     id: string;
     title: string;
-    slug: string;
-    summary: string;
+    summary?: string;
     content: string;
-    image: string;
+    image?: string;
     createdAt: Timestamp;
 }
 
 // Function to add a new article to Firestore
-export async function addArticle(article: Omit<Article, 'id' | 'createdAt' | 'slug'> & { slug: string }) {
+export async function addArticle(article: Omit<Article, 'id' | 'createdAt'>) {
     if (!db) {
         console.error("Firestore is not initialized.");
         return { success: false, error: "Firestore not initialized" };
     }
     try {
-        const docRef = await addDoc(collection(db, 'articles'), {
+        const docRef = await addDoc(collection(db, 'artikel'), {
             ...article,
             createdAt: Timestamp.now()
         });
@@ -39,7 +38,7 @@ export async function getArticles(): Promise<Article[]> {
         console.error("Firestore is not initialized. Returning empty array.");
         return [];
     }
-    const articlesRef = collection(db, 'articles');
+    const articlesRef = collection(db, 'artikel');
     const q = query(articlesRef, orderBy('createdAt', 'desc'));
     const querySnapshot = await getDocs(q);
     const articles: Article[] = [];
@@ -49,20 +48,6 @@ export async function getArticles(): Promise<Article[]> {
     return articles;
 }
 
-// Function to get a single article by its slug
-export async function getArticleBySlug(slug: string): Promise<Article | null> {
-    if (!db) {
-        console.error("Firestore is not initialized. Returning null.");
-        return null;
-    }
-    const q = query(collection(db, 'articles'), where('slug', '==', slug));
-    const querySnapshot = await getDocs(q);
-    if (querySnapshot.empty) {
-        return null;
-    }
-    const docData = querySnapshot.docs[0].data();
-    return { id: querySnapshot.docs[0].id, ...docData } as Article;
-}
 
 // Function to get a single article by its document ID
 export async function getArticleById(id: string): Promise<Article | null> {
@@ -70,11 +55,19 @@ export async function getArticleById(id: string): Promise<Article | null> {
         console.error("Firestore is not initialized. Returning null.");
         return null;
     }
-    const docRef = doc(db, 'articles', id);
+    const docRef = doc(db, 'artikel', id);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-        return { id: docSnap.id, ...docSnap.data() } as Article;
+        const data = docSnap.data();
+        return { 
+            id: docSnap.id, 
+            title: data.title,
+            content: data.content,
+            createdAt: data.createdAt,
+            summary: data.summary || data.content.slice(0, 150),
+            image: data.image || `https://source.unsplash.com/800x400/?${encodeURIComponent(data.title)}`,
+        } as Article;
     } else {
         return null;
     }

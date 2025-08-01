@@ -1,29 +1,11 @@
 
-import { db } from "@/lib/firebase"
-import { collection, getDocs, orderBy, query, Timestamp } from "firebase/firestore"
+import { getArticles } from "@/lib/firestore"
 import Link from "next/link";
-import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic"
 
-interface Article {
-    id: string;
-    title: string;
-    content: string;
-    createdAt: Timestamp;
-}
-
 export default async function NewsPage() {
-    let articles: Article[] = [];
-    try {
-        const snapshot = await getDocs(query(collection(db, "artikel"), orderBy("createdAt", "desc")))
-        articles = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Article[];
-    } catch(e) {
-        console.error("Failed to fetch articles: ", e);
-        // Silently fail or render an error message.
-        // For now, we'll just render an empty list.
-    }
-
+    const articles = await getArticles();
 
   return (
     <div className="bg-background">
@@ -44,7 +26,7 @@ export default async function NewsPage() {
                     <p className="text-sm text-muted-foreground mt-2">
                        {new Date(a.createdAt.seconds * 1000).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}
                     </p>
-                    <div className="prose prose-neutral dark:prose-invert mt-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: a.content }} />
+                    <div className="prose prose-neutral dark:prose-invert mt-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: a.content.replace(/\n/g, '<br />') }} />
                     <Link href={`/news/${a.id}`} className="text-primary hover:underline mt-4 inline-block">Baca Selengkapnya</Link>
                 </div>
                 )) : (

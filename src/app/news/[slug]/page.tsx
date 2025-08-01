@@ -1,55 +1,20 @@
 
 
-import { db } from '@/lib/firestore';
+import { getArticleById } from '@/lib/firestore';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Calendar, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { doc, getDoc, Timestamp } from 'firebase/firestore';
+import type { Article } from '@/lib/firestore';
+
 
 type Props = {
-  params: { slug: string }; // Using slug as the document ID
+  params: { slug: string }; // slug is now the document ID
 };
 
-interface Article {
-    id: string;
-    title: string;
-    content: string;
-    createdAt: Timestamp;
-    image?: string;
-    summary?: string;
-}
-
 export const revalidate = 60; // Revalidate at most every 60 seconds
-
-async function getArticleById(id: string): Promise<Article | null> {
-    try {
-        const docRef = doc(db, 'artikel', id);
-        const docSnap = await getDoc(docRef);
-
-        if (!docSnap.exists()) {
-            return null;
-        }
-        
-        const data = docSnap.data();
-        return { 
-            id: docSnap.id, 
-            title: data.title,
-            content: data.content,
-            createdAt: data.createdAt,
-            // Add optional fields for metadata if they exist
-            summary: data.summary || data.content.slice(0, 150),
-            image: data.image || `https://source.unsplash.com/800x400/?${encodeURIComponent(data.title)}`,
-        } as Article;
-
-    } catch (error) {
-        console.error("Error fetching article by ID:", error);
-        return null;
-    }
-}
-
 
 // Generate metadata dynamically for each article page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
