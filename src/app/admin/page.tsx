@@ -44,10 +44,13 @@ export default function AdminArtikel() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic }),
       })
-      if (!res.ok) {
-        throw new Error(`API error: ${res.statusText}`)
-      }
+      
       const data = await res.json()
+
+      if (!res.ok) {
+        throw new Error(data.error || `API error: ${res.statusText}`)
+      }
+      
       setResult(data.result)
       toast({
         title: "Content Generated!",
