@@ -7,7 +7,7 @@ if (!process.env.GOOGLE_API_KEY) {
 }
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY)
-const model = genAI.getGenerativeModel({ model: "gemini-pro" })
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" })
 
 const schema = z.object({
   topic: z.string(),
