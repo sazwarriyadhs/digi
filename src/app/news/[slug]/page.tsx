@@ -1,6 +1,5 @@
 
-
-import { getArticleById } from '@/lib/firestore';
+import { getArticleById, getArticles } from '@/lib/firestore';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -9,12 +8,25 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import type { Article } from '@/lib/firestore';
 
+// This tells Next.js to revalidate the page every 60 seconds.
+export const revalidate = 60;
 
 type Props = {
-  params: { slug: string }; // slug is now the document ID
+  params: { slug: string }; // Using slug as the document ID
 };
 
-export const revalidate = 60; // Revalidate at most every 60 seconds
+// This function generates static paths at build time.
+export async function generateStaticParams() {
+    try {
+        const articles = await getArticles();
+        return articles.map((article) => ({
+            slug: article.id,
+        }));
+    } catch (error) {
+        console.error("Failed to generate static params for news:", error);
+        return [];
+    }
+}
 
 // Generate metadata dynamically for each article page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -69,7 +81,7 @@ export default async function ArticlePage({ params }: Props) {
       <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
         <article className="prose lg:prose-xl dark:prose-invert mx-auto">
           <div className="space-y-4 not-prose">
-            <Button asChild variant="ghost" className="mb-4">
+            <Button asChild variant="ghost" className="mb-4 -ml-4">
                 <Link href="/news">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Kembali ke Semua Artikel
@@ -87,19 +99,19 @@ export default async function ArticlePage({ params }: Props) {
           </div>
 
           {article.image && (
-            <div className="my-8">
+            <div className="my-8 rounded-lg overflow-hidden">
                 <Image
                 src={article.image}
                 alt={article.title}
                 width={800}
                 height={400}
-                className="w-full rounded-lg object-cover"
+                className="w-full h-auto object-cover"
                 priority
                 />
             </div>
           )}
           
-          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }} />
+          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.content.replace(/\\n/g, '<br />') }} />
         </article>
       </div>
     </div>
