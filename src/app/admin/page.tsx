@@ -11,14 +11,14 @@ import { collection, addDoc, Timestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { useToast } from '@/hooks/use-toast';
 import { Loader } from 'lucide-react';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { onAuthStateChanged, signOut, User } from 'firebase/auth';
 import { auth } from '@/lib/firebaseClient';
 
 export default function AdminArtikel() {
   const [topic, setTopic] = useState('');
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState<any>(null); // Firebase user object
+  const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const { toast } = useToast();
   const router = useRouter();
