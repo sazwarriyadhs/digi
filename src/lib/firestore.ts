@@ -26,7 +26,16 @@ export async function getArticles(): Promise<Article[]> {
         const querySnapshot = await getDocs(q);
         const articles: Article[] = [];
         querySnapshot.forEach((doc) => {
-            articles.push({ id: doc.id, ...doc.data() } as Article);
+            const data = doc.data();
+            const titleForImage = encodeURIComponent(data.title.split(' ').slice(0, 5).join(' '));
+            articles.push({ 
+                id: doc.id, 
+                title: data.title,
+                content: data.content,
+                createdAt: data.createdAt,
+                summary: data.summary || data.content.slice(0, 150),
+                image: data.image || `https://source.unsplash.com/800x400/?${titleForImage}`,
+            } as Article);
         });
         return articles;
     } catch (error) {
