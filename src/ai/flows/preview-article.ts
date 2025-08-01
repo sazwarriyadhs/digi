@@ -13,7 +13,7 @@ import {z} from 'genkit';
 import { ArticleData } from './generate-article'; // Re-use the same output type
 
 // Define the input schema, including the writing style
-export const PreviewArticleInputSchema = z.object({
+const PreviewArticleInputSchema = z.object({
   topic: z.string().describe('The topic for the article.'),
   style: z.string().describe("The desired writing style for the article (e.g., 'Profesional', 'Santai')."),
 });

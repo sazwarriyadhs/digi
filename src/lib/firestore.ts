@@ -17,6 +17,10 @@ export interface Article {
 
 // Function to add a new article to Firestore
 export async function addArticle(article: Omit<Article, 'id' | 'createdAt'>) {
+    if (!db) {
+        console.error("Firestore is not initialized.");
+        return { success: false, error: "Firestore not initialized" };
+    }
     try {
         const docRef = await addDoc(collection(db, 'articles'), {
             ...article,
@@ -31,6 +35,10 @@ export async function addArticle(article: Omit<Article, 'id' | 'createdAt'>) {
 
 // Function to get all articles from Firestore, ordered by creation date
 export async function getArticles(): Promise<Article[]> {
+    if (!db) {
+        console.error("Firestore is not initialized. Returning empty array.");
+        return [];
+    }
     const articlesRef = collection(db, 'articles');
     const q = query(articlesRef, orderBy('createdAt', 'desc'));
     const querySnapshot = await getDocs(q);
@@ -43,6 +51,10 @@ export async function getArticles(): Promise<Article[]> {
 
 // Function to get a single article by its slug
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
+    if (!db) {
+        console.error("Firestore is not initialized. Returning null.");
+        return null;
+    }
     const q = query(collection(db, 'articles'), where('slug', '==', slug));
     const querySnapshot = await getDocs(q);
     if (querySnapshot.empty) {
