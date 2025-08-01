@@ -28,7 +28,7 @@ export default function AdminArtikel() {
       if (currentUser) {
         setUser(currentUser);
       } else {
-        router.push('/admin/login');
+        router.push('/login');
       }
       setAuthLoading(false);
     });
@@ -111,7 +111,7 @@ export default function AdminArtikel() {
   async function handleLogout() {
     try {
       await signOut(auth);
-      router.push('/admin/login');
+      router.push('/login');
     } catch (error) {
       toast({
         variant: 'destructive',

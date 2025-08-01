@@ -1,3 +1,4 @@
+
 "use client"
 
 import { auth } from "@/lib/firebase"
@@ -7,10 +8,12 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { LogIn, LogOut } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { useRouter } from "next/navigation"
 
 export function AuthButton() {
   const [user, setUser] = useState<User | null>(null)
   const { toast } = useToast()
+  const router = useRouter()
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -26,6 +29,7 @@ export function AuthButton() {
         title: "Logout Berhasil",
         description: "Anda telah berhasil keluar.",
       });
+      router.push("/login");
     } catch (error) {
       toast({
         variant: "destructive",
@@ -45,7 +49,7 @@ export function AuthButton() {
   } else {
     return (
         <Button asChild variant="ghost">
-            <Link href="/admin/login">
+            <Link href="/login">
                 <LogIn className="mr-2 h-4 w-4" />
                 Admin Login
             </Link>
