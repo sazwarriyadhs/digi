@@ -80,6 +80,7 @@ export default async function ArticlePage({ params }: Props) {
   const category = lang === 'id' ? article.id_category : article.en_category;
   const author = lang === 'id' ? article.id_author : article.en_author;
   const date = lang === 'id' ? article.id_date : article.en_date;
+  const createdAt = article.createdAt ? new Date(article.createdAt.seconds * 1000) : new Date(date);
 
   return (
     <div className="bg-background">
@@ -103,7 +104,7 @@ export default async function ArticlePage({ params }: Props) {
                 </div>
                 <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{new Date(date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    <span>{createdAt.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </div>
             </div>
           </div>
