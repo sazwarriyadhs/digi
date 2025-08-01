@@ -2,7 +2,7 @@
 
 import { answerFAQ } from "@/ai/flows/answer-faq";
 import { answerGeneralQuestion } from "@/ai/flows/general-question";
-import { generateArticle } from "@/ai/flows/generate-article";
+import { generateArticle, ArticleData } from "@/ai/flows/generate-article";
 import { companyInfo } from "@/lib/data";
 import { sendEmail } from "@/lib/email";
 import { addArticle } from "@/lib/firestore";
@@ -127,16 +127,19 @@ export async function handleGenerateArticle(topic: string) {
     }
 
     try {
-        const articleData = await generateArticle({ topic });
+        const articleData: ArticleData = await generateArticle({ topic });
         const result = await addArticle(articleData);
 
         if (result.success) {
             return { success: true, message: `Article "${articleData.id_title}" has been generated and saved!`, articleId: result.id };
         } else {
-            throw result.error;
+            // Make sure the error is an actual error object or string
+            const errorMessage = result.error instanceof Error ? result.error.message : String(result.error);
+            throw new Error(errorMessage);
         }
     } catch (e) {
         console.error("Error generating or saving article:", e);
-        return { success: false, message: "An error occurred while generating the article. Please try again." };
+        const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
+        return { success: false, message: `An error occurred while generating the article: ${errorMessage}` };
     }
 }

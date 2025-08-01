@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from './firebase';
-import { collection, addDoc, getDocs, query, where, getDoc, doc, Timestamp } from 'firebase/firestore';
+import { collection, addDoc, getDocs, query, where, getDoc, doc, Timestamp, orderBy } from 'firebase/firestore';
 
 // Define the Article type
 export interface Article {
@@ -25,7 +25,7 @@ export interface Article {
 }
 
 // Function to add a new article to Firestore
-export async function addArticle(article: Omit<Article, 'id'>) {
+export async function addArticle(article: Omit<Article, 'id' | 'createdAt'>) {
     try {
         const docRef = await addDoc(collection(db, 'articles'), {
             ...article,
@@ -38,9 +38,11 @@ export async function addArticle(article: Omit<Article, 'id'>) {
     }
 }
 
-// Function to get all articles from Firestore
+// Function to get all articles from Firestore, ordered by creation date
 export async function getArticles(): Promise<Article[]> {
-    const querySnapshot = await getDocs(collection(db, 'articles'));
+    const articlesRef = collection(db, 'articles');
+    const q = query(articlesRef, orderBy('createdAt', 'desc'));
+    const querySnapshot = await getDocs(q);
     const articles: Article[] = [];
     querySnapshot.forEach((doc) => {
         articles.push({ id: doc.id, ...doc.data() } as Article);

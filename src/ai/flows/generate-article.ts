@@ -33,7 +33,7 @@ const GenerateArticleOutputSchema = z.object({
 });
 export type GenerateArticleOutput = z.infer<typeof GenerateArticleOutputSchema>;
 
-export async function generateArticle(input: GenerateArticleInput): Promise<GenerateArticleOutput> {
+export async function generateArticle(input: GenerateArticleInput): Promise<ArticleData> {
   return generateArticleFlow(input);
 }
 
@@ -54,13 +54,19 @@ Topic: {{{topic}}}
 `,
 });
 
+// Define the type for the data returned by the flow, including the date fields
+export type ArticleData = GenerateArticleOutput & {
+    id_date: string;
+    en_date: string;
+};
+
 const generateArticleFlow = ai.defineFlow(
   {
     name: 'generateArticleFlow',
     inputSchema: GenerateArticleInputSchema,
-    outputSchema: GenerateArticleOutputSchema,
+    outputSchema: z.custom<ArticleData>(),
   },
-  async input => {
+  async (input): Promise<ArticleData> => {
     const {output} = await prompt(input);
     if (!output) {
       throw new Error('The AI model did not return a valid article.');

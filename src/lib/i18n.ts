@@ -197,6 +197,12 @@ export const translations = {
             description: "Jelajahi demo interaktif dari beberapa solusi unggulan kami untuk melihat fungsionalitasnya secara langsung.",
             viewDemo: "Lihat Demo"
         },
+        demoLink: {
+            badge: "Galeri Demo",
+            title: "Lihat Demo Kami",
+            description: "Jelajahi demo interaktif dari solusi kami dan lihat langsung bagaimana kami dapat mengubah bisnis Anda.",
+            cta: "Jelajahi Galeri Demo"
+        },
         appointment: {
             badge: "Jadwalkan Temu",
             title: "Pesan Sesi Konsultasi Anda",
@@ -585,6 +591,12 @@ export const translations = {
             title: "Interactive Demo Gallery",
             description: "Explore interactive demos of some of our flagship solutions to see their functionality firsthand.",
             viewDemo: "View Demo"
+        },
+        demoLink: {
+            badge: "Demo Gallery",
+            title: "Check Out Our Demos",
+            description: "Explore interactive demos of our solutions and see firsthand how we can transform your business.",
+            cta: "Explore Demo Gallery"
         },
         appointment: {
             badge: "Schedule an Appointment",
