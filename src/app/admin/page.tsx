@@ -1,150 +1,139 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { handleSaveArticle, handlePreviewArticle } from "../actions";
-import { Loader } from "lucide-react";
-import type { ArticleData } from "@/ai/flows/generate-article";
+import { useState } from "react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { collection, addDoc, Timestamp } from "firebase/firestore"
+import { db } from "@/lib/firebase"
+import { useToast } from "@/hooks/use-toast"
+import { Loader } from "lucide-react"
 
-export default function AdminPage() {
-    const [topic, setTopic] = useState("");
-    const [style, setStyle] = useState("Profesional");
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [isSaving, setIsSaving] = useState(false);
-    const [generatedArticle, setGeneratedArticle] = useState<ArticleData | null>(null);
+export default function AdminArtikel() {
+  const [topic, setTopic] = useState("")
+  const [title, setTitle] = useState("")
+  const [content, setContent] = useState("")
+  const [loading, setLoading] = useState(false)
+  const { toast } = useToast()
 
-    const { toast } = useToast();
+  async function generateArtikel() {
+    if (!topic.trim()) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Please enter a topic.",
+      })
+      return
+    }
+    setLoading(true)
+    try {
+      const res = await fetch("/api/genkit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic }),
+      })
+      if (!res.ok) {
+        throw new Error(`API error: ${res.statusText}`)
+      }
+      const data = await res.json()
+      // Simple parsing of title and content
+      const lines = (data.result || "").split('\n')
+      const generatedTitle = lines.length > 0 ? lines[0].replace('**', '').replace('**', '').trim() : topic;
+      const generatedContent = lines.slice(1).join('\n').trim();
 
-    const handleGenerateClick = async () => {
-        if (!topic.trim()) {
-            toast({ variant: "destructive", title: "Error", description: "Please enter a topic." });
-            return;
-        }
+      setTitle(generatedTitle)
+      setContent(generatedContent)
+      toast({
+        title: "Content Generated!",
+        description: "The article content has been generated below.",
+      })
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : "An unknown error occurred"
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: `Failed to generate content: ${errorMessage}`,
+      })
+    }
+    setLoading(false)
+  }
 
-        setIsGenerating(true);
-        setGeneratedArticle(null);
-        
-        try {
-            const result = await handlePreviewArticle({ topic, style });
+  async function saveArtikel() {
+    if (!title || !content) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Title and content cannot be empty.",
+      })
+      return
+    }
 
-            if (result.success && result.article) {
-                setGeneratedArticle(result.article);
-                toast({ title: "Success!", description: "Article preview has been generated." });
-            } else {
-                toast({ variant: "destructive", title: "Error", description: result.message });
-            }
-        } catch (error) {
-            const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
-            toast({ variant: "destructive", title: "Error", description: errorMessage });
-        } finally {
-            setIsGenerating(false);
-        }
-    };
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    const summary = content.slice(0, 150) + '...';
 
-    const handleSaveClick = async () => {
-        if (!generatedArticle) return;
+    try {
+      await addDoc(collection(db, "articles"), {
+        title,
+        slug,
+        summary,
+        content,
+        image: `https://source.unsplash.com/800x400/?${encodeURIComponent(topic)}`,
+        createdAt: Timestamp.now(),
+      })
+      toast({
+        title: "Success!",
+        description: "Article has been saved successfully!",
+      })
+      setTopic("")
+      setTitle("")
+      setContent("")
+    } catch (error) {
+       const errorMessage = error instanceof Error ? error.message : "An unknown error occurred"
+       toast({
+        variant: "destructive",
+        title: "Error",
+        description: `Failed to save article: ${errorMessage}`,
+      })
+    }
+  }
 
-        setIsSaving(true);
-        const result = await handleSaveArticle(generatedArticle);
-        setIsSaving(false);
-
-        if (result.success) {
-            toast({ title: "Success!", description: result.message });
-            setTopic("");
-            setStyle("Profesional");
-            setGeneratedArticle(null);
-        } else {
-            toast({ variant: "destructive", title: "Error", description: result.message });
-        }
-    };
-    
-    const handleArticleChange = (field: keyof ArticleData, value: string) => {
-        if (generatedArticle) {
-            setGeneratedArticle({ ...generatedArticle, [field]: value });
-        }
-    };
-
-    return (
-        <div className="container mx-auto py-12 px-4 md:px-6">
-            <div className="max-w-4xl mx-auto space-y-8">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>AI Article Generator</CardTitle>
-                        <CardDescription>
-                            Enter a topic and select a writing style to generate a draft article with AI. You can review and edit it before saving.
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <div className="space-y-2">
-                            <Label htmlFor="topic">Topic</Label>
-                            <Input
-                                id="topic"
-                                placeholder="e.g., 'Digital Transformation Trends'"
-                                value={topic}
-                                onChange={(e) => setTopic(e.target.value)}
-                                disabled={isGenerating || isSaving}
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <Label htmlFor="style">Writing Style</Label>
-                             <Select value={style} onValueChange={setStyle} disabled={isGenerating || isSaving}>
-                                <SelectTrigger id="style">
-                                    <SelectValue placeholder="Select a style" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="Profesional">Profesional</SelectItem>
-                                    <SelectItem value="Santai">Santai</SelectItem>
-                                    <SelectItem value="Persuasif">Persuasif</SelectItem>
-                                    <SelectItem value="Gaya Berita">Gaya Berita</SelectItem>
-                                </SelectContent>
-                            </Select>
-                        </div>
-                    </CardContent>
-                    <CardFooter>
-                         <Button onClick={handleGenerateClick} disabled={isGenerating || isSaving || !topic} className="w-full">
-                            {isGenerating ? <><Loader className="mr-2 h-4 w-4 animate-spin" /> Generating...</> : "Generate Article"}
-                        </Button>
-                    </CardFooter>
-                </Card>
-
-                {generatedArticle && (
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>Article Preview & Editor</CardTitle>
-                            <CardDescription>Review and edit the generated content below before saving.</CardDescription>
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                             <div className="space-y-2">
-                                <Label htmlFor="edit-title">Title</Label>
-                                <Input id="edit-title" value={generatedArticle.title} onChange={e => handleArticleChange('title', e.target.value)} disabled={isSaving} />
-                            </div>
-                             <div className="space-y-2">
-                                <Label htmlFor="edit-summary">Summary</Label>
-                                <Textarea id="edit-summary" value={generatedArticle.summary} onChange={e => handleArticleChange('summary', e.target.value)} disabled={isSaving} rows={3} />
-                            </div>
-                            <div className="space-y-2">
-                                <Label htmlFor="edit-content">Content (HTML)</Label>
-                                <Textarea id="edit-content" value={generatedArticle.content} onChange={e => handleArticleChange('content', e.target.value)} disabled={isSaving} rows={15} />
-                            </div>
-                             <div className="space-y-2">
-                                <Label htmlFor="edit-image">Image URL</Label>
-                                <Input id="edit-image" value={generatedArticle.image} onChange={e => handleArticleChange('image', e.target.value)} disabled={isSaving} />
-                            </div>
-                        </CardContent>
-                        <CardFooter>
-                             <Button onClick={handleSaveClick} disabled={isSaving} className="w-full">
-                                {isSaving ? <><Loader className="mr-2 h-4 w-4 animate-spin" /> Saving...</> : "Save to Firestore"}
-                            </Button>
-                        </CardFooter>
-                    </Card>
-                )}
-            </div>
-        </div>
-    );
+  return (
+    <div className="container mx-auto py-12 px-4 md:px-6">
+      <div className="max-w-3xl mx-auto space-y-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Admin Artikel Generator</CardTitle>
+            <CardDescription>Generate and save new articles to your blog.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Input
+              placeholder="Masukkan Topik Artikel"
+              value={topic}
+              onChange={(e) => setTopic(e.target.value)}
+              disabled={loading}
+            />
+             <Button onClick={generateArtikel} disabled={loading} className="w-full">
+              {loading ? <><Loader className="mr-2 h-4 w-4 animate-spin" /> Menghasilkan...</> : 'Generate Artikel'}
+            </Button>
+            <hr />
+            <Input
+              placeholder="Judul Artikel akan muncul di sini..."
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <Textarea
+              placeholder="Konten Artikel akan muncul di sini..."
+              rows={15}
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+          </CardContent>
+          <CardFooter>
+            <Button onClick={saveArtikel} disabled={!title || !content} className="w-full">Simpan ke Firestore</Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
+  )
 }
