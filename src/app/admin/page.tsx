@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -9,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { handleSaveArticle } from "../actions";
+import { handleSaveArticle, handlePreviewArticle } from "../actions";
 import { Loader } from "lucide-react";
 import type { ArticleData } from "@/ai/flows/generate-article";
 
@@ -32,18 +31,8 @@ export default function AdminPage() {
         setGeneratedArticle(null);
         
         try {
-            const response = await fetch('/api/gen-article', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ topic, style }),
-            });
+            const result = await handlePreviewArticle({ topic, style });
 
-            const result = await response.json();
-
-            if (!response.ok) {
-                throw new Error(result.message || 'Failed to generate article');
-            }
-            
             if (result.success && result.article) {
                 setGeneratedArticle(result.article);
                 toast({ title: "Success!", description: "Article preview has been generated." });
