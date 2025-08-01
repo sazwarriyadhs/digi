@@ -126,6 +126,10 @@ export default function AdminPage() {
                                 <Label htmlFor="edit-content">Content (HTML)</Label>
                                 <Textarea id="edit-content" value={generatedArticle.content} onChange={e => handleArticleChange('content', e.target.value)} disabled={isSaving} rows={15} />
                             </div>
+                             <div className="space-y-2">
+                                <Label htmlFor="edit-image">Image URL</Label>
+                                <Input id="edit-image" value={generatedArticle.image} onChange={e => handleArticleChange('image', e.target.value)} disabled={isSaving} />
+                            </div>
                         </CardContent>
                         <CardFooter>
                              <Button onClick={handleSaveClick} disabled={isSaving} className="w-full">
