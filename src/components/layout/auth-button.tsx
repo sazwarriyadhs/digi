@@ -1,50 +1,24 @@
 
 "use client"
 
-import { auth } from "@/lib/firebase"
-import { onAuthStateChanged, signOut, User } from "firebase/auth"
-import { useEffect, useState } from "react"
+import { useSession, signOut } from "next-auth/react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { LogIn, LogOut } from "lucide-react"
-import { useToast } from "@/hooks/use-toast"
-import { useRouter } from "next/navigation"
+import { LogIn, LogOut, User } from "lucide-react"
 
 export function AuthButton() {
-  const [user, setUser] = useState<User | null>(null)
-  const { toast } = useToast()
-  const router = useRouter()
+  const { data: session, status } = useSession()
+  const isAuthenticated = status === "authenticated"
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser)
-    })
-    return () => unsubscribe()
-  }, [])
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      toast({
-        title: "Logout Berhasil",
-        description: "Anda telah berhasil keluar.",
-      });
-      router.push("/login");
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Logout Gagal",
-        description: "Terjadi kesalahan saat mencoba keluar.",
-      });
-    }
-  };
-
-  if (user) {
+  if (isAuthenticated) {
     return (
-        <Button variant="ghost" onClick={handleLogout}>
+      <div className="flex items-center gap-2">
+        <span className="text-sm font-medium hidden sm:inline">{session.user?.email}</span>
+        <Button variant="ghost" onClick={() => signOut({ callbackUrl: '/' })}>
             <LogOut className="mr-2 h-4 w-4" />
-            Logout Admin
+            Logout
         </Button>
+      </div>
     )
   } else {
     return (

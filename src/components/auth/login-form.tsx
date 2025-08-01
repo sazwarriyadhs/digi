@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,8 +17,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Loader } from "lucide-react";
-import { auth } from "@/lib/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
 export function LoginForm() {
   const [email, setEmail] = useState("");
@@ -29,17 +28,24 @@ export function LoginForm() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
+    
+    const result = await signIn("credentials", {
+      redirect: false,
+      email,
+      password,
+    });
+
+    setLoading(false);
+
+    if (result?.ok) {
       router.push("/admin");
-    } catch (error) {
+    } else {
       toast({
         variant: "destructive",
         title: "Login Gagal",
         description: "Email atau kata sandi salah.",
       });
     }
-    setLoading(false);
   };
 
   return (
@@ -48,7 +54,7 @@ export function LoginForm() {
         <CardHeader className="text-center">
           <CardTitle>Admin Login</CardTitle>
           <CardDescription>
-            Gunakan akun Firebase Anda untuk mengakses halaman admin.
+            Gunakan akun Anda untuk mengakses halaman admin.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
