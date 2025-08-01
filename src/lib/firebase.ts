@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDRRvOXpnHTnDtXbnhnO4DLnU0bWN472_8",
+  apiKey: "AIzaSyD7aN952ju_pRHMeyjnjGZbmZ3G-U9afp0",
   authDomain: "digi-media-komunika.firebaseapp.com",
   projectId: "digi-media-komunika",
   storageBucket: "digi-media-komunika.appspot.com",
