@@ -1,34 +1,59 @@
 
-import { getArticleBySlug, getArticles } from '@/lib/firestore';
+
+import { db } from '@/lib/firestore';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Calendar, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { doc, getDoc, Timestamp } from 'firebase/firestore';
 
 type Props = {
-  params: { slug: string };
+  params: { slug: string }; // Using slug as the document ID
 };
+
+interface Article {
+    id: string;
+    title: string;
+    content: string;
+    createdAt: Timestamp;
+    image?: string;
+    summary?: string;
+}
 
 export const revalidate = 60; // Revalidate at most every 60 seconds
 
-// Generate static paths for all articles at build time
-export async function generateStaticParams() {
-  try {
-    const articles = await getArticles();
-    return articles.map((article) => ({
-      slug: article.slug,
-    }));
-  } catch (error) {
-    console.error("Failed to generate static params for news:", error);
-    return [];
-  }
+async function getArticleById(id: string): Promise<Article | null> {
+    try {
+        const docRef = doc(db, 'artikel', id);
+        const docSnap = await getDoc(docRef);
+
+        if (!docSnap.exists()) {
+            return null;
+        }
+        
+        const data = docSnap.data();
+        return { 
+            id: docSnap.id, 
+            title: data.title,
+            content: data.content,
+            createdAt: data.createdAt,
+            // Add optional fields for metadata if they exist
+            summary: data.summary || data.content.slice(0, 150),
+            image: data.image || `https://source.unsplash.com/800x400/?${encodeURIComponent(data.title)}`,
+        } as Article;
+
+    } catch (error) {
+        console.error("Error fetching article by ID:", error);
+        return null;
+    }
 }
+
 
 // Generate metadata dynamically for each article page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+  const article = await getArticleById(params.slug);
 
   if (!article) {
     return {
@@ -46,7 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: new Date(article.createdAt.seconds * 1000).toISOString(),
       images: [
         {
-          url: article.image,
+          url: article.image!,
           width: 800,
           height: 400,
           alt: article.title,
@@ -57,16 +82,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         card: 'summary_large_image',
         title: article.title,
         description: article.summary,
-        images: [article.image],
+        images: [article.image!],
     },
     alternates: {
-      canonical: `/news/${article.slug}`,
+      canonical: `/news/${article.id}`,
     },
   };
 }
 
 export default async function ArticlePage({ params }: Props) {
-  const article = await getArticleBySlug(params.slug);
+  const article = await getArticleById(params.slug);
 
   if (!article) {
     notFound();
@@ -96,18 +121,20 @@ export default async function ArticlePage({ params }: Props) {
             </div>
           </div>
 
-          <div className="my-8">
-            <Image
-              src={article.image}
-              alt={article.title}
-              width={800}
-              height={400}
-              className="w-full rounded-lg object-cover"
-              priority
-            />
-          </div>
+          {article.image && (
+            <div className="my-8">
+                <Image
+                src={article.image}
+                alt={article.title}
+                width={800}
+                height={400}
+                className="w-full rounded-lg object-cover"
+                priority
+                />
+            </div>
+          )}
           
-          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.content }} />
+          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }} />
         </article>
       </div>
     </div>

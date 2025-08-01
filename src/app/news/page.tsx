@@ -1,29 +1,33 @@
 
-import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
-import { getArticles, Article } from "@/lib/firestore";
-import Image from "next/image";
+import { db } from "@/lib/firebase"
+import { collection, getDocs, orderBy, query, Timestamp } from "firebase/firestore"
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-export const revalidate = 60; // Revalidate at most every 60 seconds
+export const dynamic = "force-dynamic"
 
-export const metadata: Metadata = {
-  title: 'Artikel & Berita | PT Digi Media Komunika',
-  description: 'Tetap terinformasi dengan berita terbaru perusahaan, wawasan industri, dan artikel dari tim kami tentang teknologi, AI, dan transformasi digital.',
-  alternates: {
-    canonical: '/news',
-  },
-};
+interface Article {
+    id: string;
+    title: string;
+    content: string;
+    createdAt: Timestamp;
+}
 
 export default async function NewsPage() {
-  const articles = await getArticles();
-  
+    let articles: Article[] = [];
+    try {
+        const snapshot = await getDocs(query(collection(db, "artikel"), orderBy("createdAt", "desc")))
+        articles = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as Article[];
+    } catch(e) {
+        console.error("Failed to fetch articles: ", e);
+        // Silently fail or render an error message.
+        // For now, we'll just render an empty list.
+    }
+
+
   return (
     <div className="bg-background">
-        <div className="container mx-auto py-12 px-4 md:px-6">
+        <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Artikel & Berita</div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Wawasan & Pembaruan Terbaru</h1>
@@ -31,46 +35,23 @@ export default async function NewsPage() {
                     Tetap terinformasi dengan berita terbaru perusahaan, wawasan industri, dan artikel dari tim kami.
                 </p>
             </div>
-
-            <div className="mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {articles.map((article) => (
-                    <Card key={article.id} className="overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 flex flex-col bg-card">
-                        <Link href={`/news/${article.slug}`} className="block">
-                            <Image
-                                src={article.image}
-                                alt={article.title}
-                                width={800}
-                                height={400}
-                                className="w-full h-48 object-cover"
-                            />
-                        </Link>
-                        <CardHeader>
-                            <CardTitle as="h2" className="text-xl">
-                                <Link href={`/news/${article.slug}`} className="hover:text-primary transition-colors">
-                                    {article.title}
-                                </Link>
-                            </CardTitle>
-                             <div className="text-sm text-muted-foreground flex items-center gap-2 pt-2">
-                                <Calendar className="w-4 h-4" />
-                                <span>{new Date(article.createdAt.seconds * 1000).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                             <CardDescription>
-                                {article.summary}
-                            </CardDescription>
-                        </CardContent>
-                         <CardFooter>
-                            <Button asChild variant="secondary" className="w-full">
-                                <Link href={`/news/${article.slug}`}>
-                                    Baca Selengkapnya <ArrowRight className="ml-2 h-4 w-4" />
-                                </Link>
-                            </Button>
-                        </CardFooter>
-                    </Card>
-                ))}
+            <div className="space-y-8">
+                {articles.length > 0 ? articles.map((a) => (
+                <div key={a.id} className="border-b pb-6">
+                    <h2 className="text-2xl font-semibold hover:text-primary transition-colors">
+                        <Link href={`/news/${a.id}`}>{a.title}</Link>
+                    </h2>
+                    <p className="text-sm text-muted-foreground mt-2">
+                       {new Date(a.createdAt.seconds * 1000).toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    </p>
+                    <div className="prose prose-neutral dark:prose-invert mt-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: a.content }} />
+                    <Link href={`/news/${a.id}`} className="text-primary hover:underline mt-4 inline-block">Baca Selengkapnya</Link>
+                </div>
+                )) : (
+                    <p className="text-center text-muted-foreground">Belum ada artikel yang dipublikasikan.</p>
+                )}
             </div>
         </div>
     </div>
-  );
+  )
 }
