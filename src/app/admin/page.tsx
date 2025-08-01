@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
@@ -8,12 +9,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { collection, addDoc, Timestamp } from "firebase/firestore"
 import { db } from "@/lib/firebase"
 import { useToast } from "@/hooks/use-toast"
+import { Loader } from "lucide-react"
 
 export default function AdminArtikel() {
   const [topic, setTopic] = useState("")
   const [result, setResult] = useState("")
   const [loading, setLoading] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const { toast } = useToast()
+  const router = useRouter()
+
+  useEffect(() => {
+    const authStatus = localStorage.getItem("isAdminAuthenticated")
+    if (authStatus !== "true") {
+      router.push("/admin/login")
+    } else {
+      setIsAuthenticated(true)
+    }
+  }, [router])
 
   async function generateArtikel() {
     if (!topic.trim()) {
@@ -82,12 +95,26 @@ export default function AdminArtikel() {
     }
   }
 
+  function handleLogout() {
+    localStorage.removeItem("isAdminAuthenticated");
+    router.push("/admin/login");
+  }
+  
+  if (!isAuthenticated) {
+    return (
+        <div className="flex h-screen items-center justify-center">
+            <Loader className="h-8 w-8 animate-spin" />
+        </div>
+    )
+  }
+
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
         <div className="max-w-3xl mx-auto space-y-6">
             <Card>
-                <CardHeader>
-                <CardTitle>Admin Artikel Generator</CardTitle>
+                <CardHeader className="flex flex-row items-center justify-between">
+                    <CardTitle>Admin Artikel Generator</CardTitle>
+                    <Button variant="outline" onClick={handleLogout}>Logout</Button>
                 </CardHeader>
                 <CardContent className="space-y-4">
                 <Input
