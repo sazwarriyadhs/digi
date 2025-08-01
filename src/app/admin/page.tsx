@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { handlePreviewArticle, handleSaveArticle } from "../actions";
+import { handleSaveArticle } from "../actions";
 import { Loader } from "lucide-react";
 import type { ArticleData } from "@/ai/flows/generate-article";
 
@@ -30,14 +30,31 @@ export default function AdminPage() {
 
         setIsGenerating(true);
         setGeneratedArticle(null);
-        const result = await handlePreviewArticle({ topic, style });
-        setIsGenerating(false);
+        
+        try {
+            const response = await fetch('/api/gen-article', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ topic, style }),
+            });
 
-        if (result.success && result.article) {
-            setGeneratedArticle(result.article);
-            toast({ title: "Success!", description: "Article preview has been generated." });
-        } else {
-            toast({ variant: "destructive", title: "Error", description: result.message });
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || 'Failed to generate article');
+            }
+            
+            if (result.success && result.article) {
+                setGeneratedArticle(result.article);
+                toast({ title: "Success!", description: "Article preview has been generated." });
+            } else {
+                toast({ variant: "destructive", title: "Error", description: result.message });
+            }
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+            toast({ variant: "destructive", title: "Error", description: errorMessage });
+        } finally {
+            setIsGenerating(false);
         }
     };
 
