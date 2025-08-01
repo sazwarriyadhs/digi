@@ -15,10 +15,15 @@ export const revalidate = 60; // Revalidate at most every 60 seconds
 
 // Generate static paths for all articles at build time
 export async function generateStaticParams() {
-  const articles = await getArticles();
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
+  try {
+    const articles = await getArticles();
+    return articles.map((article) => ({
+      slug: article.slug,
+    }));
+  } catch (error) {
+    console.error("Failed to generate static params for news:", error);
+    return [];
+  }
 }
 
 // Generate metadata dynamically for each article page
@@ -53,7 +58,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: article.title,
         description: article.summary,
         images: [article.image],
-    }
+    },
+    alternates: {
+      canonical: `/news/${article.slug}`,
+    },
   };
 }
 
@@ -74,7 +82,7 @@ export default async function ArticlePage({ params }: Props) {
             <Button asChild variant="ghost" className="mb-4">
                 <Link href="/news">
                     <ArrowLeft className="mr-2 h-4 w-4" />
-                    Kembali ke Artikel
+                    Kembali ke Semua Artikel
                 </Link>
             </Button>
             <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl font-headline">
@@ -83,7 +91,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{createdAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    <span>Diterbitkan pada {createdAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </div>
             </div>
           </div>

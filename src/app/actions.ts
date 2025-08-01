@@ -4,6 +4,7 @@
 import { answerFAQ } from "@/ai/flows/answer-faq";
 import { answerGeneralQuestion } from "@/ai/flows/general-question";
 import { generateArticle, ArticleData } from "@/ai/flows/generate-article";
+import { previewArticle, PreviewArticleInput } from "@/ai/flows/preview-article";
 import { companyInfo } from "@/lib/data";
 import { sendEmail } from "@/lib/email";
 import { addArticle } from "@/lib/firestore";
@@ -128,10 +129,8 @@ export async function handleGenerateArticle(topic: string) {
     }
 
     try {
-        // The generateArticle flow now returns the simplified, monolingual structure.
         const articleData: ArticleData = await generateArticle({ topic });
         
-        // The addArticle function expects the correct structure, without createdAt.
         const result = await addArticle(articleData);
 
         if (result.success) {
@@ -144,5 +143,34 @@ export async function handleGenerateArticle(topic: string) {
         console.error("Error generating or saving article:", e);
         const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
         return { success: false, message: `An error occurred while generating the article: ${errorMessage}` };
+    }
+}
+
+// Action to generate a preview of an article without saving it
+export async function handlePreviewArticle(input: PreviewArticleInput) {
+    try {
+        const articleData = await previewArticle(input);
+        return { success: true, article: articleData };
+    } catch (e) {
+        console.error("Error generating article preview:", e);
+        const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
+        return { success: false, message: `An error occurred while generating the preview: ${errorMessage}` };
+    }
+}
+
+// Action to save a finalized (and potentially edited) article to Firestore
+export async function handleSaveArticle(articleData: ArticleData) {
+    try {
+        const result = await addArticle(articleData);
+        if (result.success) {
+            return { success: true, message: `Article "${articleData.title}" has been saved successfully!`, articleId: result.id };
+        } else {
+            const errorMessage = result.error instanceof Error ? result.error.message : String(result.error);
+            throw new Error(errorMessage);
+        }
+    } catch (e) {
+        console.error("Error saving article:", e);
+        const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
+        return { success: false, message: `An error occurred while saving the article: ${errorMessage}` };
     }
 }
