@@ -41,10 +41,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const adsensePublisherId = "ca-pub-2279227107562302";
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-2279227107562302"></meta>
+        <meta name="google-adsense-account" content={adsensePublisherId}></meta>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -64,16 +65,11 @@ export default function RootLayout({
             `,
           }}
         />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2279227107562302"
+        {/* ✅ Google AdSense */}
+        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}`}
      crossOrigin="anonymous"></script>
-     <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
       </head>
       <body className="font-body antialiased">
-        <amp-auto-ads type="adsense"
-            data-ad-client="ca-pub-2279227107562302">
-        </amp-auto-ads>
         <AppProvider>
           <SplashScreen />
           <Header />
