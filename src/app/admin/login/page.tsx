@@ -1,53 +1,40 @@
 
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import { useToast } from '@/hooks/use-toast'
-import { Loader } from 'lucide-react'
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
+import { Loader } from 'lucide-react';
+import { auth } from '@/lib/firebaseClient';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function AdminLoginPage() {
-  const [password, setPassword] = useState('')
-  const [loading, setLoading] = useState(false)
-  const router = useRouter()
-  const { toast } = useToast()
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const { toast } = useToast();
 
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
     try {
-      const res = await fetch('/api/admin/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ password }),
-      })
-
-      if (res.ok) {
-        localStorage.setItem('isAdminAuthenticated', 'true')
-        router.push('/admin')
-      } else {
-        const data = await res.json()
-        toast({
-          variant: 'destructive',
-          title: 'Login Gagal',
-          description: data.error || 'Password salah.',
-        })
-      }
+      await signInWithEmailAndPassword(auth, email, password);
+      // Redirect handled by auth state listener in admin page/layout
+      router.push('/admin');
     } catch (error) {
       toast({
         variant: 'destructive',
-        title: 'Error',
-        description: 'Terjadi kesalahan saat mencoba login.',
-      })
+        title: 'Login Gagal',
+        description: 'Email atau kata sandi salah.',
+      });
     }
-    setLoading(false)
-  }
+    setLoading(false);
+  };
 
   return (
     <div className="flex h-screen items-center justify-center bg-muted/40">
@@ -55,9 +42,21 @@ export default function AdminLoginPage() {
         <form onSubmit={handleLogin}>
           <CardHeader className="text-center">
             <CardTitle>Admin Login</CardTitle>
-            <CardDescription>Masukkan kata sandi untuk mengakses halaman admin.</CardDescription>
+            <CardDescription>Gunakan akun Firebase Anda untuk mengakses halaman admin.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="admin@contoh.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={loading}
+              />
+            </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input
@@ -66,6 +65,7 @@ export default function AdminLoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                disabled={loading}
               />
             </div>
           </CardContent>
@@ -78,5 +78,5 @@ export default function AdminLoginPage() {
         </form>
       </Card>
     </div>
-  )
+  );
 }
