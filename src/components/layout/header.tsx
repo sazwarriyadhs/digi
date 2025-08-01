@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/accordion"
 import { Separator } from '../ui/separator';
 import { cn } from '@/lib/utils';
+import { AuthButton } from './auth-button';
 
 function NavLinks({
   navLinks,
@@ -151,6 +152,8 @@ export function Header() {
         <div className="flex items-center gap-2">
           {/* Language and Currency Switchers */}
           <div className="hidden md:flex items-center gap-2">
+            <AuthButton />
+            <Separator orientation="vertical" className="h-6"/>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -204,6 +207,10 @@ export function Header() {
                 </div>
                 <div className="py-4">
                   <NavLinks navLinks={navLinks} isMobile={true} onLinkClick={() => setIsMobileMenuOpen(false)} />
+                  <Separator className="my-4" />
+                  <div className="px-4">
+                    <AuthButton />
+                  </div>
                   <Separator className="my-4" />
                    <div className="flex flex-col space-y-2 px-4">
                         <h3 className="font-medium">Pengaturan</h3>
