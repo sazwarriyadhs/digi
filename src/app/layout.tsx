@@ -71,6 +71,9 @@ export default function RootLayout({
     </script>
       </head>
       <body className="font-body antialiased">
+        <amp-auto-ads type="adsense"
+            data-ad-client="ca-pub-2279227107562302">
+        </amp-auto-ads>
         <AppProvider>
           <SplashScreen />
           <Header />
