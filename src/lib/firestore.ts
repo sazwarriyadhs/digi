@@ -2,7 +2,7 @@
 "use server";
 
 import { db } from './firebase';
-import { collection, getDocs, query, Timestamp, orderBy, doc, getDoc } from 'firebase/firestore';
+import { collection, getDocs, query, Timestamp, orderBy, doc, getDoc, addDoc } from 'firebase/firestore';
 
 // Define the simplified Article type
 export interface Article {
@@ -74,4 +74,11 @@ export async function getArticleById(id: string): Promise<Article | null> {
         console.error(`Error fetching article by ID "${id}":`, error);
         return null;
     }
+}
+
+export async function addArticle(data: { title: string, summary: string, content: string, image?: string }) {
+  return await addDoc(collection(db, "artikel"), {
+    ...data,
+    createdAt: Timestamp.now()
+  });
 }

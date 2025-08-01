@@ -1,4 +1,5 @@
 
+
 import { getArticleById, getArticles } from '@/lib/firestore';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
@@ -7,6 +8,7 @@ import { Calendar, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import type { Article } from '@/lib/firestore';
+import { Timestamp } from 'firebase/firestore';
 
 // This tells Next.js to revalidate the page every 60 seconds.
 export const revalidate = 60;
@@ -37,6 +39,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: 'Artikel Tidak Ditemukan',
     };
   }
+  
+  const publishedTime = article.createdAt instanceof Timestamp 
+    ? new Date(article.createdAt.seconds * 1000).toISOString()
+    : new Date(article.createdAt).toISOString();
+
 
   return {
     title: `${article.title} | PT Digi Media Komunika`,
@@ -45,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: article.title,
       description: article.summary,
       type: 'article',
-      publishedTime: new Date(article.createdAt.seconds * 1000).toISOString(),
+      publishedTime: publishedTime,
       images: [
         {
           url: article.image!,
@@ -74,7 +81,10 @@ export default async function ArticlePage({ params }: Props) {
     notFound();
   }
   
-  const createdAt = new Date(article.createdAt.seconds * 1000);
+  const createdAt = article.createdAt instanceof Timestamp
+    ? new Date(article.createdAt.seconds * 1000)
+    : new Date(article.createdAt);
+
 
   return (
     <div className="bg-background">
@@ -117,3 +127,4 @@ export default async function ArticlePage({ params }: Props) {
     </div>
   );
 }
+

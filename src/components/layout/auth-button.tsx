@@ -1,6 +1,6 @@
 "use client"
 
-import { auth } from "@/lib/firebaseClient"
+import { auth } from "@/lib/firebase"
 import { onAuthStateChanged, signOut, User } from "firebase/auth"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"

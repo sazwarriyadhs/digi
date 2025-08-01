@@ -3,12 +3,13 @@ import { getArticles } from "@/lib/firestore";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import type { Article } from "@/lib/firestore";
 
 // Force dynamic rendering to ensure fresh data on each request.
 export const dynamic = "force-dynamic";
 
 export default async function NewsPage() {
-    const articles = await getArticles();
+    const articles: Article[] = await getArticles();
 
   return (
     <div className="bg-background">

@@ -7,15 +7,15 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { collection, addDoc, Timestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import { useToast } from '@/hooks/use-toast';
 import { Loader } from 'lucide-react';
 import { onAuthStateChanged, signOut, User } from 'firebase/auth';
-import { auth } from '@/lib/firebaseClient';
+import { auth } from '@/lib/firebase';
+import { addArticle } from '@/lib/firestore';
 
 export default function AdminArtikel() {
   const [topic, setTopic] = useState('');
+  const [summary, setSummary] = useState('');
   const [result, setResult] = useState('');
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState<User | null>(null);
@@ -77,25 +77,26 @@ export default function AdminArtikel() {
   }
 
   async function saveArtikel() {
-    if (!topic || !result) {
+    if (!topic || !result || !summary) {
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: 'Title and content cannot be empty.',
+        description: 'Title, summary, and content cannot be empty.',
       });
       return;
     }
     try {
-      await addDoc(collection(db, 'artikel'), {
+      await addArticle({
         title: topic,
+        summary: summary,
         content: result,
-        createdAt: Timestamp.now(),
       });
       toast({
         title: 'Success!',
         description: 'Artikel berhasil disimpan!',
       });
       setTopic('');
+      setSummary('');
       setResult('');
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
@@ -145,8 +146,15 @@ export default function AdminArtikel() {
               onChange={(e) => setTopic(e.target.value)}
               disabled={loading}
             />
+             <Textarea
+              placeholder="Ringkasan Artikel"
+              value={summary}
+              onChange={(e) => setSummary(e.target.value)}
+              disabled={loading}
+              rows={3}
+            />
             <Button onClick={generateArtikel} disabled={loading} className="w-full">
-              {loading ? 'Memproses...' : 'Generate Artikel'}
+              {loading ? 'Memproses...' : 'Generate Konten Artikel'}
             </Button>
             {result && (
               <div className="space-y-4 pt-4">
