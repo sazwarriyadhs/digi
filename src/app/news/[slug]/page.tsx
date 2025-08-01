@@ -1,5 +1,5 @@
 
-import { articles } from '@/lib/data';
+import { getArticleBySlug, getArticles } from '@/lib/firestore';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -12,9 +12,19 @@ type Props = {
   params: { slug: string };
 };
 
+export const revalidate = 60; // Revalidate at most every 60 seconds
+
+// Generate static paths for all articles at build time
+export async function generateStaticParams() {
+  const articles = await getArticles();
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 // Generate metadata dynamically for each article page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = articles.find((a) => a.slug === params.slug);
+  const article = await getArticleBySlug(params.slug);
 
   if (!article) {
     return {
@@ -22,47 +32,41 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  // Assuming 'en' is the primary language for metadata if 'id' is not available
-  const lang = 'id'; // Or detect language context if available
-  const articleLang = article[lang] || article.en;
-
   return {
-    title: `${articleLang.title} | PT Digi Media Komunika`,
-    description: articleLang.description,
+    title: `${article.id_title} | PT Digi Media Komunika`,
+    description: article.id_description,
     openGraph: {
-      title: articleLang.title,
-      description: articleLang.description,
+      title: article.id_title,
+      description: article.id_description,
       type: 'article',
-      publishedTime: articleLang.date,
-      authors: [articleLang.author],
+      publishedTime: article.id_date,
+      authors: [article.id_author],
       images: [
         {
           url: article.imageUrl,
           width: 1200,
           height: 630,
-          alt: articleLang.title,
+          alt: article.id_title,
         },
       ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: articleLang.title,
-        description: articleLang.description,
+        title: article.id_title,
+        description: article.id_description,
         images: [article.imageUrl],
     }
   };
 }
 
-export default function ArticlePage({ params }: Props) {
-  const article = articles.find((p) => p.slug === params.slug);
+export default async function ArticlePage({ params }: Props) {
+  const article = await getArticleBySlug(params.slug);
 
   if (!article) {
     notFound();
   }
-
-  // Assuming 'id' as the primary language, fallback to 'en'
-  const lang = 'id'; // This could be dynamic based on context
-  const articleLang = article[lang] || article.en;
+  
+  const lang = 'id';
 
   return (
     <div className="bg-background">
@@ -75,18 +79,18 @@ export default function ArticlePage({ params }: Props) {
                     Kembali ke Artikel
                 </Link>
             </Button>
-            <Badge className="w-fit mb-2">{articleLang.category}</Badge>
+            <Badge className="w-fit mb-2">{article.id_category}</Badge>
             <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl font-headline">
-              {articleLang.title}
+              {article.id_title}
             </h1>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                     <User className="w-4 h-4" />
-                    <span>{articleLang.author}</span>
+                    <span>{article.id_author}</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{new Date(articleLang.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    <span>{new Date(article.id_date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </div>
             </div>
           </div>
@@ -94,7 +98,7 @@ export default function ArticlePage({ params }: Props) {
           <div className="my-8">
             <Image
               src={article.imageUrl}
-              alt={articleLang.title}
+              alt={article.id_title}
               width={1200}
               height={675}
               className="w-full rounded-lg object-cover"
@@ -103,11 +107,9 @@ export default function ArticlePage({ params }: Props) {
             />
           </div>
           
-          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: articleLang.content }} />
+          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.id_content }} />
         </article>
       </div>
     </div>
   );
 }
-
-    

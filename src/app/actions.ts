@@ -2,8 +2,10 @@
 
 import { answerFAQ } from "@/ai/flows/answer-faq";
 import { answerGeneralQuestion } from "@/ai/flows/general-question";
+import { generateArticle } from "@/ai/flows/generate-article";
 import { companyInfo } from "@/lib/data";
 import { sendEmail } from "@/lib/email";
+import { addArticle } from "@/lib/firestore";
 import * as z from "zod";
 
 export async function handleFaq(question: string, language: 'id' | 'en', source: 'faq' | 'aiHelp') {
@@ -116,5 +118,25 @@ export async function handleContactCardRequest(email: string) {
     } catch (error) {
         console.error(error);
         return { success: false, message: 'There was an error sending the email. Please try again later.' };
+    }
+}
+
+export async function handleGenerateArticle(topic: string) {
+    if (!topic) {
+        return { success: false, message: "Topic is required." };
+    }
+
+    try {
+        const articleData = await generateArticle({ topic });
+        const result = await addArticle(articleData);
+
+        if (result.success) {
+            return { success: true, message: `Article "${articleData.id_title}" has been generated and saved!`, articleId: result.id };
+        } else {
+            throw result.error;
+        }
+    } catch (e) {
+        console.error("Error generating or saving article:", e);
+        return { success: false, message: "An error occurred while generating the article. Please try again." };
     }
 }
