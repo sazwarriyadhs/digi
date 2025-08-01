@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
 import { AppProvider } from "@/context/AppContext";
 import { SplashScreen } from "@/components/layout/splash-screen";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: 'PT Digi Media Komunika - Solusi Transformasi Digital',
@@ -77,6 +78,7 @@ export default function RootLayout({
           <Footer />
           <Toaster />
         </AppProvider>
+        <Analytics />
       </body>
     </html>
   );
