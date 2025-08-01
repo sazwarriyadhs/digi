@@ -1,3 +1,4 @@
+
 "use server";
 
 import { answerFAQ } from "@/ai/flows/answer-faq";
@@ -127,13 +128,15 @@ export async function handleGenerateArticle(topic: string) {
     }
 
     try {
+        // The generateArticle flow now returns the simplified, monolingual structure.
         const articleData: ArticleData = await generateArticle({ topic });
+        
+        // The addArticle function expects the correct structure, without createdAt.
         const result = await addArticle(articleData);
 
         if (result.success) {
-            return { success: true, message: `Article "${articleData.id_title}" has been generated and saved!`, articleId: result.id };
+            return { success: true, message: `Article "${articleData.title}" has been generated and saved!`, articleId: result.id };
         } else {
-            // Make sure the error is an actual error object or string
             const errorMessage = result.error instanceof Error ? result.error.message : String(result.error);
             throw new Error(errorMessage);
         }

@@ -3,8 +3,7 @@ import { getArticleBySlug, getArticles } from '@/lib/firestore';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { Calendar, User, ArrowLeft } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { Calendar, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
@@ -28,38 +27,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!article) {
     return {
-      title: 'Article Not Found',
+      title: 'Artikel Tidak Ditemukan',
     };
   }
 
-  // Assuming you might want to switch metadata language based on some logic,
-  // but for now, we'll default to Indonesian (id).
-  const title = article.id_title;
-  const description = article.id_description;
-
   return {
-    title: `${title} | PT Digi Media Komunika`,
-    description: description,
+    title: `${article.title} | PT Digi Media Komunika`,
+    description: article.summary,
     openGraph: {
-      title: title,
-      description: description,
+      title: article.title,
+      description: article.summary,
       type: 'article',
-      publishedTime: article.id_date,
-      authors: [article.id_author],
+      publishedTime: new Date(article.createdAt.seconds * 1000).toISOString(),
       images: [
         {
-          url: article.imageUrl,
-          width: 1200,
-          height: 630,
-          alt: title,
+          url: article.image,
+          width: 800,
+          height: 400,
+          alt: article.title,
         },
       ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: title,
-        description: description,
-        images: [article.imageUrl],
+        title: article.title,
+        description: article.summary,
+        images: [article.image],
     }
   };
 }
@@ -71,16 +64,7 @@ export default async function ArticlePage({ params }: Props) {
     notFound();
   }
   
-  // Here you could potentially use a cookie or another mechanism to determine language.
-  // For this server component, we'll default to 'id'.
-  const lang = 'id';
-
-  const title = lang === 'id' ? article.id_title : article.en_title;
-  const content = lang === 'id' ? article.id_content : article.en_content;
-  const category = lang === 'id' ? article.id_category : article.en_category;
-  const author = lang === 'id' ? article.id_author : article.en_author;
-  const date = lang === 'id' ? article.id_date : article.en_date;
-  const createdAt = article.createdAt ? new Date(article.createdAt.seconds * 1000) : new Date(date);
+  const createdAt = new Date(article.createdAt.seconds * 1000);
 
   return (
     <div className="bg-background">
@@ -93,35 +77,29 @@ export default async function ArticlePage({ params }: Props) {
                     Kembali ke Artikel
                 </Link>
             </Button>
-            <Badge className="w-fit mb-2">{category}</Badge>
             <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl font-headline">
-              {title}
+              {article.title}
             </h1>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
-                    <User className="w-4 h-4" />
-                    <span>{author}</span>
-                </div>
-                <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{createdAt.toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    <span>{createdAt.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                 </div>
             </div>
           </div>
 
           <div className="my-8">
             <Image
-              src={article.imageUrl}
-              alt={title}
-              width={1200}
-              height={675}
+              src={article.image}
+              alt={article.title}
+              width={800}
+              height={400}
               className="w-full rounded-lg object-cover"
-              data-ai-hint={article.aiHint}
               priority
             />
           </div>
           
-          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.content }} />
         </article>
       </div>
     </div>

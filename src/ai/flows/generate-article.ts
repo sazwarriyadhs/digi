@@ -1,3 +1,4 @@
+
 'use server';
 
 /**
@@ -17,21 +18,16 @@ const GenerateArticleInputSchema = z.object({
 export type GenerateArticleInput = z.infer<typeof GenerateArticleInputSchema>;
 
 const GenerateArticleOutputSchema = z.object({
-  slug: z.string().describe("The URL-friendly slug for the article, e.g., '5-digital-transformation-trends'."),
-  imageUrl: z.string().url().describe("The URL for a relevant featured image for the article. Use placehold.co for this."),
-  aiHint: z.string().describe("A one or two-word hint for the AI to find a relevant image, e.g., 'digital transformation'."),
-  id_title: z.string().describe("The title of the article in Indonesian."),
-  id_description: z.string().describe("A short, compelling description of the article in Indonesian (1-2 sentences)."),
-  id_category: z.string().describe("The category of the article in Indonesian (e.g., 'Teknologi', 'Keamanan Siber')."),
-  id_author: z.string().describe("The author of the article. Use 'Azwar Riyadh' or 'Titi Ariwati'."),
-  id_content: z.string().describe("The full content of the article in Indonesian, formatted as a single HTML string."),
-  en_title: z.string().describe("The title of the article in English."),
-  en_description: z.string().describe("A short, compelling description of the article in English (1-2 sentences)."),
-  en_category: z.string().describe("The category of the article in English (e.g., 'Technology', 'Cybersecurity')."),
-  en_author: z.string().describe("The author of the article. Use 'Azwar Riyadh' or 'Titi Ariwati'."),
-  en_content: z.string().describe("The full content of the article in English, formatted as a single HTML string."),
+  title: z.string().describe("The title of the article."),
+  slug: z.string().describe("The URL-friendly slug for the article, e.g., 'tren-ai-di-industri-kreatif'."),
+  summary: z.string().describe("A short, compelling summary of the article (1-2 sentences)."),
+  content: z.string().describe("The full content of the article, formatted as a single HTML string with tags like <p>, <h3>, <ul>, etc."),
+  image: z.string().url().describe("The URL for a relevant featured image. Use `https://source.unsplash.com/800x400/?<topic>` format."),
 });
-export type GenerateArticleOutput = z.infer<typeof GenerateArticleOutputSchema>;
+
+// This is the final data structure that will be saved to Firestore.
+// It matches the output schema but we will add the createdAt timestamp in the action.
+export type ArticleData = z.infer<typeof GenerateArticleOutputSchema>;
 
 export async function generateArticle(input: GenerateArticleInput): Promise<ArticleData> {
   return generateArticleFlow(input);
@@ -44,39 +40,28 @@ const prompt = ai.definePrompt({
   model: 'googleai/gemini-1.5-flash-latest',
   prompt: `You are an expert content creator for a tech company, PT Digi Media Komunika.
 Your task is to generate a complete, SEO-friendly blog article based on the provided topic.
-The article must be generated in both Indonesian and English.
+The language is Indonesian.
 The content should be professional, insightful, and well-structured.
 The HTML content should use proper tags like <p>, <h3>, <ul>, <ol>, <li>, and <strong> for formatting.
-The article should be from the perspective of one of the company's experts, Azwar Riyadh or Titi Ariwati.
-For the imageUrl, create a placeholder using https://placehold.co/1200x675.png.
+For the image URL, create a URL using the format: https://source.unsplash.com/800x400/?<topic-in-english-for-search>. Replace spaces in topic with a comma.
+The slug should be a URL-friendly version of the title.
+The summary should be a concise overview of the article content.
 
 Topic: {{{topic}}}
 `,
 });
 
-// Define the type for the data returned by the flow, including the date fields
-export type ArticleData = GenerateArticleOutput & {
-    id_date: string;
-    en_date: string;
-};
-
 const generateArticleFlow = ai.defineFlow(
   {
     name: 'generateArticleFlow',
     inputSchema: GenerateArticleInputSchema,
-    outputSchema: z.custom<ArticleData>(),
+    outputSchema: GenerateArticleOutputSchema,
   },
   async (input): Promise<ArticleData> => {
     const {output} = await prompt(input);
     if (!output) {
       throw new Error('The AI model did not return a valid article.');
     }
-    // Add current date for both languages
-    const currentDate = new Date().toISOString().split('T')[0];
-    return {
-        ...output,
-        id_date: currentDate,
-        en_date: currentDate,
-    };
+    return output;
   }
 );

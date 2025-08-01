@@ -1,27 +1,18 @@
+
 "use server";
 
 import { db } from './firebase';
-import { collection, addDoc, getDocs, query, where, getDoc, doc, Timestamp, orderBy } from 'firebase/firestore';
+import { collection, addDoc, getDocs, query, where, Timestamp, orderBy } from 'firebase/firestore';
 
-// Define the Article type
+// Define the simplified Article type
 export interface Article {
     id?: string;
+    title: string;
     slug: string;
-    imageUrl: string;
-    aiHint: string;
-    id_title: string;
-    id_description: string;
-    id_category: string;
-    id_author: string;
-    id_date: string; 
-    id_content: string;
-    en_title: string;
-    en_description: string;
-    en_category: string;
-    en_author: string;
-    en_date: string;
-    en_content: string;
-    createdAt?: Timestamp;
+    summary: string;
+    content: string;
+    image: string;
+    createdAt: Timestamp;
 }
 
 // Function to add a new article to Firestore
