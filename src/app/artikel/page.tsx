@@ -116,7 +116,7 @@ export default function ArticleGeneratorPage() {
             <CardContent>
               <div
                 className="prose dark:prose-invert max-w-none text-foreground"
-                dangerouslySetInnerHTML={{ __html: generatedContent.replace(/\n/g, '<br />') }}
+                dangerouslySetInnerHTML={{ __html: generatedContent.replace(/\\n/g, '<br />') }}
               />
             </CardContent>
           </Card>
