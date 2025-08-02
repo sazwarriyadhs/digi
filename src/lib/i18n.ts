@@ -1,3 +1,4 @@
+
 export const translations = {
     id: {
         companyName: "PT Digi Media Komunika",
@@ -20,6 +21,7 @@ export const translations = {
                     { href: "/team", label: "Tim Kami" },
                     { href: "/investor", label: "Investasi & Kemitraan" },
                     { href: "/#faq", label: "FAQ" },
+                    { href: "/artikel", label: "Generator Artikel" },
                     { href: "/brochure", label: "Brosur" },
                     { href: "/#contact", label: "Kontak" },
                 ]
@@ -415,6 +417,7 @@ export const translations = {
                     { href: "/team", label: "Our Team" },
                     { href: "/investor", label: "Investment & Partnership" },
                     { href: "/#faq", label: "FAQ" },
+                    { href: "/artikel", label: "Article Generator" },
                     { href: "/brochure", label: "Brochure" },
                     { href: "/#contact", label: "Contact" },
                 ]

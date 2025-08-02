@@ -1,4 +1,5 @@
-import { collection, getDocs, doc, getDoc, Timestamp } from 'firebase/firestore';
+
+import { collection, getDocs, doc, getDoc, Timestamp, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
 
 export interface Article {
@@ -10,6 +11,15 @@ export interface Article {
     category: string;
     image?: string;
     createdAt: any;
+}
+
+export interface NewArticle {
+    title: string;
+    content: string;
+    summary: string;
+    author: string;
+    category: string;
+    image?: string;
 }
 
 const articlesCollection = collection(db, 'articles');
@@ -61,5 +71,18 @@ export async function getArticleById(id: string): Promise<Article | null> {
     } catch (error) {
         console.error("Error fetching article by ID: ", error);
         throw new Error("Could not fetch article from Firestore.");
+    }
+}
+
+export async function addArticle(article: NewArticle): Promise<string> {
+    try {
+        const docRef = await addDoc(articlesCollection, {
+            ...article,
+            createdAt: serverTimestamp()
+        });
+        return docRef.id;
+    } catch (error) {
+        console.error("Error adding article: ", error);
+        throw new Error("Could not add article to Firestore.");
     }
 }
