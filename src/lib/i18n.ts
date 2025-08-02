@@ -6,7 +6,6 @@ export const translations = {
             { href: "/#about", label: "Tentang" },
             { href: "/#services", label: "Layanan" },
             { href: "/#portfolio", label: "Portofolio" },
-            { href: "/news", label: "Artikel" },
             { 
                 label: "Klien Kami",
                 children: [
@@ -21,7 +20,6 @@ export const translations = {
                     { href: "/team", label: "Tim Kami" },
                     { href: "/investor", label: "Investasi & Kemitraan" },
                     { href: "/#faq", label: "FAQ" },
-                    { href: "/artikel", label: "Generator Artikel" },
                     { href: "/brochure", label: "Brosur" },
                     { href: "/#contact", label: "Kontak" },
                 ]
@@ -402,7 +400,6 @@ export const translations = {
             { href: "/#about", label: "About" },
             { href: "/#services", label: "Services" },
             { href: "/#portfolio", label: "Portfolio" },
-            { href: "/news", label: "Articles" },
             { 
                 label: "Our Clients",
                 children: [
@@ -417,7 +414,6 @@ export const translations = {
                     { href: "/team", label: "Our Team" },
                     { href: "/investor", label: "Investment & Partnership" },
                     { href: "/#faq", label: "FAQ" },
-                    { href: "/artikel", label: "Article Generator" },
                     { href: "/brochure", label: "Brochure" },
                     { href: "/#contact", label: "Contact" },
                 ]
