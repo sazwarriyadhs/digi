@@ -17,7 +17,6 @@ export const translations = {
                 label: "Perusahaan",
                 children: [
                     { href: "/team", label: "Tim Kami" },
-                    { href: "/news", label: "Artikel" },
                     { href: "/investor", label: "Investasi & Kemitraan" },
                     { href: "/#faq", label: "FAQ" },
                     { href: "/brochure", label: "Brosur" },
@@ -412,7 +411,6 @@ export const translations = {
                 label: "Company",
                 children: [
                     { href: "/team", label: "Our Team" },
-                    { href: "/news", label: "News" },
                     { href: "/investor", label: "Investment & Partnership" },
                     { href: "/#faq", label: "FAQ" },
                     { href: "/brochure", label: "Brochure" },
