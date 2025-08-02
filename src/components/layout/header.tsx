@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Logo } from '../logo';
 import { useAppContext } from '@/context/AppContext';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Globe, DollarSign, ChevronDown, Languages } from 'lucide-react';
+import { Menu, X, Globe, DollarSign, ChevronDown, Languages, LogIn } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,7 +26,6 @@ import {
 } from "@/components/ui/accordion"
 import { Separator } from '../ui/separator';
 import { cn } from '@/lib/utils';
-import { AuthButton } from './auth-button';
 
 function NavLinks({
   navLinks,
@@ -152,7 +151,12 @@ export function Header() {
         <div className="flex items-center gap-2">
           {/* Language and Currency Switchers */}
           <div className="hidden md:flex items-center gap-2">
-            <AuthButton />
+            <Button asChild variant="ghost">
+                <Link href="/admin">
+                    <LogIn className="mr-2 h-4 w-4" />
+                    Admin
+                </Link>
+            </Button>
             <Separator orientation="vertical" className="h-6"/>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -209,7 +213,12 @@ export function Header() {
                   <NavLinks navLinks={navLinks} isMobile={true} onLinkClick={() => setIsMobileMenuOpen(false)} />
                   <Separator className="my-4" />
                   <div className="px-4">
-                    <AuthButton />
+                    <Button asChild variant="ghost" className="w-full justify-start">
+                        <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)}>
+                            <LogIn className="mr-2 h-4 w-4" />
+                            Admin
+                        </Link>
+                    </Button>
                   </div>
                   <Separator className="my-4" />
                    <div className="flex flex-col space-y-2 px-4">

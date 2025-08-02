@@ -7,8 +7,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { AppProvider } from "@/context/AppContext";
 import { SplashScreen } from "@/components/layout/splash-screen";
 import { Analytics } from "@vercel/analytics/react";
-import { getServerSession } from "next-auth";
-import SessionProvider from "@/context/SessionProvider";
 
 
 export const metadata: Metadata = {
@@ -47,7 +45,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const adsensePublisherId = "ca-pub-2279227107562302";
-  const session = await getServerSession();
 
   return (
     <html lang="en" className="scroll-smooth">
@@ -77,7 +74,6 @@ export default async function RootLayout({
      crossOrigin="anonymous"></script>
       </head>
       <body className="font-body antialiased">
-        <SessionProvider session={session}>
           <AppProvider>
             <SplashScreen />
             <Header />
@@ -85,7 +81,6 @@ export default async function RootLayout({
             <Footer />
             <Toaster />
           </AppProvider>
-        </SessionProvider>
         <Analytics />
       </body>
     </html>
