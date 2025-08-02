@@ -1,57 +1,34 @@
 
 
-import { db } from '@/lib/firestore';
+import { getArticleById, getArticles } from '@/lib/firestore';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Calendar, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { doc, getDoc, Timestamp } from 'firebase/firestore';
+import type { Article } from '@/lib/firestore';
+import { Timestamp } from 'firebase/firestore';
+
+// This tells Next.js to revalidate the page every 60 seconds.
+export const revalidate = 60;
 
 type Props = {
   params: { slug: string }; // Using slug as the document ID
 };
 
-interface Article {
-    id: string;
-    title: string;
-    content: string;
-    createdAt: Timestamp;
-    image?: string;
-    summary?: string;
-}
-
-export const revalidate = 60; // Revalidate at most every 60 seconds
-
-async function getArticleById(id: string): Promise<Article | null> {
+// This function generates static paths at build time.
+export async function generateStaticParams() {
     try {
-        const docRef = doc(db, 'artikel', id);
-        const docSnap = await getDoc(docRef);
-
-        if (!docSnap.exists()) {
-            return null;
-        }
-        
-        const data = docSnap.data();
-        const titleForImage = encodeURIComponent(data.title.split(' ').slice(0, 3).join(' '));
-
-        return { 
-            id: docSnap.id, 
-            title: data.title,
-            content: data.content,
-            createdAt: data.createdAt,
-            // Add optional fields for metadata if they exist
-            summary: data.summary || data.content.slice(0, 150),
-            image: data.image || `https://source.unsplash.com/800x400/?${titleForImage}`,
-        } as Article;
-
+        const articles = await getArticles();
+        return articles.map((article) => ({
+            slug: article.id,
+        }));
     } catch (error) {
-        console.error("Error fetching article by ID:", error);
-        return null;
+        console.error("Failed to generate static params for news:", error);
+        return [];
     }
 }
-
 
 // Generate metadata dynamically for each article page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -62,6 +39,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: 'Artikel Tidak Ditemukan',
     };
   }
+  
+  const publishedTime = article.createdAt instanceof Timestamp 
+    ? new Date(article.createdAt.seconds * 1000).toISOString()
+    : new Date(article.createdAt).toISOString();
+
 
   return {
     title: `${article.title} | PT Digi Media Komunika`,
@@ -70,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: article.title,
       description: article.summary,
       type: 'article',
-      publishedTime: new Date(article.createdAt.seconds * 1000).toISOString(),
+      publishedTime: publishedTime,
       images: [
         {
           url: article.image!,
@@ -99,14 +81,17 @@ export default async function ArticlePage({ params }: Props) {
     notFound();
   }
   
-  const createdAt = new Date(article.createdAt.seconds * 1000);
+  const createdAt = article.createdAt instanceof Timestamp
+    ? new Date(article.createdAt.seconds * 1000)
+    : new Date(article.createdAt);
+
 
   return (
     <div className="bg-background">
       <div className="container mx-auto py-12 px-4 md:px-6 max-w-4xl">
         <article className="prose lg:prose-xl dark:prose-invert mx-auto">
           <div className="space-y-4 not-prose">
-            <Button asChild variant="ghost" className="mb-4">
+            <Button asChild variant="ghost" className="mb-4 -ml-4">
                 <Link href="/news">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Kembali ke Semua Artikel
@@ -124,21 +109,22 @@ export default async function ArticlePage({ params }: Props) {
           </div>
 
           {article.image && (
-            <div className="my-8">
+            <div className="my-8 rounded-lg overflow-hidden">
                 <Image
                 src={article.image}
                 alt={article.title}
                 width={800}
                 height={400}
-                className="w-full rounded-lg object-cover"
+                className="w-full h-auto object-cover"
                 priority
                 />
             </div>
           )}
           
-          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }} />
+          <div className="text-foreground" dangerouslySetInnerHTML={{ __html: article.content.replace(/\\n/g, '<br />') }} />
         </article>
       </div>
     </div>
   );
 }
+
