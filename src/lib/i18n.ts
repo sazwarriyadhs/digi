@@ -5,6 +5,7 @@ export const translations = {
             { href: "/#about", label: "Tentang" },
             { href: "/#services", label: "Layanan" },
             { href: "/#portfolio", label: "Portofolio" },
+            { href: "/news", label: "Artikel" },
             { 
                 label: "Klien Kami",
                 children: [
@@ -399,6 +400,7 @@ export const translations = {
             { href: "/#about", label: "About" },
             { href: "/#services", label: "Services" },
             { href: "/#portfolio", label: "Portfolio" },
+            { href: "/news", label: "Articles" },
             { 
                 label: "Our Clients",
                 children: [
