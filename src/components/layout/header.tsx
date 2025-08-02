@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -6,7 +5,7 @@ import Link from 'next/link';
 import { Logo } from '../logo';
 import { useAppContext } from '@/context/AppContext';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Globe, DollarSign, ChevronDown, Languages, LogIn } from 'lucide-react';
+import { Menu, X, Globe, DollarSign, ChevronDown, Languages } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -151,12 +150,6 @@ export function Header() {
         <div className="flex items-center gap-2">
           {/* Language and Currency Switchers */}
           <div className="hidden md:flex items-center gap-2">
-            <Button asChild variant="ghost">
-                <Link href="/admin">
-                    <LogIn className="mr-2 h-4 w-4" />
-                    Admin
-                </Link>
-            </Button>
             <Separator orientation="vertical" className="h-6"/>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -211,15 +204,6 @@ export function Header() {
                 </div>
                 <div className="py-4">
                   <NavLinks navLinks={navLinks} isMobile={true} onLinkClick={() => setIsMobileMenuOpen(false)} />
-                  <Separator className="my-4" />
-                  <div className="px-4">
-                    <Button asChild variant="ghost" className="w-full justify-start">
-                        <Link href="/admin" onClick={() => setIsMobileMenuOpen(false)}>
-                            <LogIn className="mr-2 h-4 w-4" />
-                            Admin
-                        </Link>
-                    </Button>
-                  </div>
                   <Separator className="my-4" />
                    <div className="flex flex-col space-y-2 px-4">
                         <h3 className="font-medium">Pengaturan</h3>
